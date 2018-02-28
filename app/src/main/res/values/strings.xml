@@ -19,5 +19,14 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <!-- Slide menu options -->
+    <string name="verbs">Verbs</string>
+    <string name="cards">Cards</string>
+    <string name="favorites">Favorites</string>
+    <string name="share">Share</string>
+
+    <string name="settings">Settings</string>
+
+    <!-- Help strings -->
+    <string name="help">Help</string>
 </resources>
