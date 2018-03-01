@@ -17,6 +17,7 @@ package com.xengar.android.verbosespanol.ui
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
 import com.xengar.android.verbosespanol.R
 
 import kotlinx.android.synthetic.main.activity_help.*
@@ -29,6 +30,12 @@ class HelpActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.help, menu)
+        return true
     }
 
 }
