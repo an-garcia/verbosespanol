@@ -19,6 +19,8 @@ import android.content.Context
 import android.content.Intent
 import android.preference.PreferenceActivity
 import android.preference.PreferenceManager
+import android.text.Html
+import android.text.Spanned
 import com.xengar.android.verbosespanol.R
 import com.xengar.android.verbosespanol.ui.HelpActivity
 import com.xengar.android.verbosespanol.ui.SettingsActivity
@@ -68,6 +70,21 @@ object ActivityUtils {
         intent.putExtra(PreferenceActivity.EXTRA_SHOW_FRAGMENT_TITLE, R.string.settings)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         context.startActivity(intent)
+    }
+
+    /**
+     * Helper class to handle deprecated method.
+     * Source: http://stackoverflow.com/questions/37904739/html-fromhtml-deprecated-in-android-n
+     * @param html html string
+     * @return Spanned
+     */
+    fun fromHtml(html: String): Spanned {
+        val result: Spanned = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
+        } else {
+            Html.fromHtml(html)
+        }
+        return result
     }
 
 
