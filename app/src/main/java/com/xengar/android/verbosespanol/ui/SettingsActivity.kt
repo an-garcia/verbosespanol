@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xengar.android.verbosespaol.ui
+package com.xengar.android.verbosespanol.ui
 
 import android.annotation.TargetApi
 import android.content.Context
@@ -32,7 +32,7 @@ import android.preference.RingtonePreference
 import android.text.TextUtils
 import android.view.MenuItem
 import android.support.v4.app.NavUtils
-import com.xengar.android.verbosespaol.R
+import com.xengar.android.verbosespanol.R
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On

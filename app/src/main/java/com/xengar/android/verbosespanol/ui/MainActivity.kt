@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xengar.android.verbosespaol.ui
+package com.xengar.android.verbosespanol.ui
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -22,8 +22,8 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.xengar.android.verbosespaol.R
-import com.xengar.android.verbosespaol.utils.ActivityUtils
+import com.xengar.android.verbosespanol.R
+import com.xengar.android.verbosespanol.utils.ActivityUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

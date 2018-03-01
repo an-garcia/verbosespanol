@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.xengar.android.verbosespaol"
+        applicationId "com.xengar.android.verbosespanol"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1

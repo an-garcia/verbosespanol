@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xengar.android.verbosespaol.utils
+package com.xengar.android.verbosespanol.utils
 
 import android.content.Context
 import android.content.Intent
 import android.preference.PreferenceActivity
-import com.xengar.android.verbosespaol.R
-import com.xengar.android.verbosespaol.ui.SettingsActivity
+import com.xengar.android.verbosespanol.R
+import com.xengar.android.verbosespanol.ui.SettingsActivity
 
 /**
  * ActivityUtils. To handle common tasks.

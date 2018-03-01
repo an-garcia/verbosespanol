@@ -1,4 +1,4 @@
-package com.xengar.android.verbosespaol
+package com.xengar.android.verbosespanol
 
 import org.junit.Test
 

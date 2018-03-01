@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xengar.android.verbosespaol">
+    package="com.xengar.android.verbosespanol">
 
     <application
         android:allowBackup="true"
@@ -40,7 +40,7 @@
             android:parentActivityName=".ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.xengar.android.verbosespaol.ui.MainActivity" />
+                android:value="com.xengar.android.verbosespanol.ui.MainActivity" />
         </activity>
     </application>
 
