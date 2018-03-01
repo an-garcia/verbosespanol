@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 Angel Garcia
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<verbs>
+    <!--
+        id = id
+        ta = table of conjugation model (1, 2, ...)
+        in = infinitive
+        s1 = sample1
+        s2 = sample2
+        s3 = sample3
+        gr = group (1=1st group, 2=2nd group, 3=3rd group, 4=all groups)
+        re = regular (0=regular, 1=irregular)
+        co = common (1=TOP_25, 2=TOP_50, 3=TOP_100, 4=TOP_250, 5=TOP_500, 6=TOP_1000, 99=OTHER)
+        de = definition
+        no = notes
+        tren = translation_en
+        trfr = translation_fr
+        trpt = translation_pt
+    -->
+    <!-- TOP 25 -->
+    <verb
+        id   = "1"
+        ta   = ""
+        in   = "abrir"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "2"
+        ta   = ""
+        in   = "agarrar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "3"
+        ta   = ""
+        in   = "andar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "4"
+        ta   = ""
+        in   = "beber"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "5"
+        ta   = ""
+        in   = "caminar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "6"
+        ta   = ""
+        in   = "comer"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "7"
+        ta   = ""
+        in   = "dar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "8"
+        ta   = ""
+        in   = "decir"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "9"
+        ta   = ""
+        in   = "estar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "10"
+        ta   = ""
+        in   = "hablar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "11"
+        ta   = ""
+        in   = "hacer"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "12"
+        ta   = ""
+        in   = "ir"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "13"
+        ta   = ""
+        in   = "necesitar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "14"
+        ta   = ""
+        in   = "poder"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "15"
+        ta   = ""
+        in   = "poner"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "16"
+        ta   = ""
+        in   = "querer"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "17"
+        ta   = ""
+        in   = "ser"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "18"
+        ta   = ""
+        in   = "tener"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "19"
+        ta   = ""
+        in   = "tomar"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "20"
+        ta   = ""
+        in   = "vivir"
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "21"
+        ta   = ""
+        in   = ""
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "22"
+        ta   = ""
+        in   = ""
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "23"
+        ta   = ""
+        in   = ""
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "24"
+        ta   = ""
+        in   = ""
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+    <verb
+        id   = "25"
+        ta   = ""
+        in   = ""
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+
+    <!-- TOP 50 -->
+    <verb
+        id   = "26"
+        ta   = ""
+        in   = ""
+        s1   = ""
+        s2   = ""
+        s3   = ""
+        gr   = ""
+        re   = ""
+        co   = "1"
+        de   = ""
+        no   = ""
+        tren = ""
+        trfr = ""
+        trpt = "" />
+
+</verbs>

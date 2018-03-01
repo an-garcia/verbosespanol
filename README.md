@@ -28,8 +28,11 @@ Most used verbs lists:
 - https://www.idiomax.com/es/spanish-verb-list.aspx
 - https://lenguajeyotrasluces.com/2016/01/11/lista-de-verbos-mas-usados-en-espanol/
 - https://www.vocabulix.com/conjugacion2/a_spanish.html
+- https://quizlet.com/117397241/los-25-verbos-mas-usados-en-espanol-parte-4-20-verbos-flash-cards/
+- https://www.quia.com/jg/514331list.html
+- https://quizlet.com/504750/100-verbos-mas-usados-en-espanol-flash-cards/
 - https://quizlet.com/6282091/lista-completa-de-verbos-500-esp-4-flash-cards/
-
+- https://www.quia.com/jg/514331list.html
 
 Verbs to check
 --------------
