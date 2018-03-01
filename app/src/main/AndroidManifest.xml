@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2018 Angel Garcia
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,6 +37,15 @@
             android:name=".ui.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.xengar.android.verbosespanol.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.xengar.android.verbosespanol.ui.MainActivity" />

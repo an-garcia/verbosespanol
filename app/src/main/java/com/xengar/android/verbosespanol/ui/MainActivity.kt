@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 ActivityUtils.launchSettingsActivity(applicationContext)
             }
             R.id.nav_help -> {
-
+                ActivityUtils.launchHelpActivity(applicationContext)
             }
         }
 

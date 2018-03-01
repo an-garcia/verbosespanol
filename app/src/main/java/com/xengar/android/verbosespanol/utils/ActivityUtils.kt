@@ -20,6 +20,7 @@ import android.content.Intent
 import android.preference.PreferenceActivity
 import android.preference.PreferenceManager
 import com.xengar.android.verbosespanol.R
+import com.xengar.android.verbosespanol.ui.HelpActivity
 import com.xengar.android.verbosespanol.ui.SettingsActivity
 import com.xengar.android.verbosespanol.utils.Constants.DEFAULT_FONT_SIZE
 import com.xengar.android.verbosespanol.utils.Constants.ENGLISH
@@ -44,6 +45,16 @@ object ActivityUtils {
     private val TAG = ActivityUtils::class.java.simpleName
 
 
+
+    /**
+     * Launches Help Activity.
+     * @param context context
+     */
+    fun launchHelpActivity(context: Context) {
+        val intent = Intent(context, HelpActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(intent)
+    }
 
     /**
      * Launches Settings Activity.

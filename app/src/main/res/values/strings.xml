@@ -350,6 +350,7 @@
         <item name="hour_12">12</item>
         <item name="hour_24">24</item>
     </string-array>
+    <string name="title_activity_help">Help</string>
 
     <!-- Example General settings -->
     <!--
