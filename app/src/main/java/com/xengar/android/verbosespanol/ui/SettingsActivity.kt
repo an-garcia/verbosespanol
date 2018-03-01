@@ -18,21 +18,20 @@ package com.xengar.android.verbosespanol.ui
 import android.annotation.TargetApi
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.Configuration
-import android.media.RingtoneManager
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.preference.ListPreference
-import android.preference.Preference
-import android.preference.PreferenceActivity
-import android.preference.PreferenceFragment
-import android.preference.PreferenceManager
-import android.preference.RingtonePreference
-import android.text.TextUtils
+import android.preference.*
 import android.view.MenuItem
 import android.support.v4.app.NavUtils
+import android.support.v7.app.AppCompatDelegate
 import com.xengar.android.verbosespanol.R
+import com.xengar.android.verbosespanol.utils.ActivityUtils
+import com.xengar.android.verbosespanol.utils.Constants.TYPE_START_NOTIFICATIONS
+import com.xengar.android.verbosespanol.utils.Constants.TYPE_STOP_NOTIFICATIONS
+import com.xengar.android.verbosespanol.utils.Constants.TYPE_VERB_NOTIFICATION
+import com.xengar.android.verbosespanol.utils.FontDialog
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On
@@ -44,11 +43,17 @@ import com.xengar.android.verbosespanol.R
  * for design guidelines and the [Settings API Guide](http://developer.android.com/guide/topics/ui/settings.html)
  * for more information on developing a Settings UI.
  */
-class SettingsActivity : AppCompatPreferenceActivity() {
+class SettingsActivity : AppCompatPreferenceActivity(),
+        SharedPreferences.OnSharedPreferenceChangeListener {
+
+    //private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
         setupActionBar()
+
+        //mFirebaseAnalytics = FirebaseAnalytics.getInstance(this)
     }
 
     /**
@@ -91,8 +96,52 @@ class SettingsActivity : AppCompatPreferenceActivity() {
     override fun isValidFragment(fragmentName: String): Boolean {
         return PreferenceFragment::class.java.name == fragmentName
                 || GeneralPreferenceFragment::class.java.name == fragmentName
-                || DataSyncPreferenceFragment::class.java.name == fragmentName
-                || NotificationPreferenceFragment::class.java.name == fragmentName
+    }
+
+    public override fun onStart() {
+        super.onStart()
+    }
+
+    public override fun onStop() {
+        super.onStop()
+    }
+
+    // Registers a shared preference change listener that gets notified when preferences change.
+    override fun onResume() {
+        val sp = PreferenceManager.getDefaultSharedPreferences(this)
+        sp.registerOnSharedPreferenceChangeListener(this)
+        super.onResume()
+    }
+
+    // Unregisters a shared preference change listener.
+    override fun onPause() {
+        val sp = PreferenceManager.getDefaultSharedPreferences(this)
+        sp.unregisterOnSharedPreferenceChangeListener(this)
+        super.onPause()
+    }
+
+    /**
+     * Called after a preference changes.
+     * @param sharedPreferences SharedPreferences
+     * @param key key
+     */
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
+        if (key == getString(R.string.pref_enable_notifications)
+                || key == getString(R.string.pref_notification_list)
+                || key == getString(R.string.pref_notification_time)
+                || key == getString(R.string.pref_notification_frequency)) {
+            // Reconfigure Verb Notifications
+            val enabled = ActivityUtils.getPreferenceEnableNotifications(applicationContext)
+            if (!enabled) {
+                //ActivityUtils.cancelRepeatingNotifications(applicationContext)
+                //ActivityUtils.firebaseAnalyticsLogEventSelectContent(mFirebaseAnalytics!!,
+                //        TYPE_STOP_NOTIFICATIONS, "Preferences", TYPE_VERB_NOTIFICATION)
+            } else {
+                //ActivityUtils.scheduleRepeatingNotifications(applicationContext)
+                //ActivityUtils.firebaseAnalyticsLogEventSelectContent(mFirebaseAnalytics!!,
+                //        TYPE_START_NOTIFICATIONS, "Preferences", TYPE_VERB_NOTIFICATION)
+            }
+        }
     }
 
     /**
@@ -101,84 +150,71 @@ class SettingsActivity : AppCompatPreferenceActivity() {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     class GeneralPreferenceFragment : PreferenceFragment() {
+
+        private val sharedPrefsChangeListener =
+                SharedPreferences.OnSharedPreferenceChangeListener { _, _ -> updateSummary() }
+
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            addPreferencesFromResource(R.xml.pref_general)
+            // TODO: Find a way to calculate the start time and implement it
+            val resourceId = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                R.xml.pref_general2
+            else
+                R.xml.pref_general
+            addPreferencesFromResource(resourceId)
             setHasOptionsMenu(true)
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("example_text"))
-            bindPreferenceSummaryToValue(findPreference("example_list"))
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_translation_language)))
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_favorite_mode_list)))
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_font_size)))
+            var dataPref = findPreference(getString(R.string.pref_notification_list)) as ListPreference
+            bindPreferenceSummaryToValue(dataPref)
+            if (dataPref.value == null) {
+                dataPref.setValueIndex(1)
+                dataPref.summary = getString(R.string.most_common_25)
+            }
+            dataPref = findPreference(getString(R.string.pref_notification_frequency)) as ListPreference
+            bindPreferenceSummaryToValue(dataPref)
+            if (dataPref.value == null) {
+                dataPref.setValueIndex(4)
+                dataPref.summary = getString(R.string.hour_24)
+            }
         }
 
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
             val id = item.itemId
             if (id == android.R.id.home) {
-                startActivity(Intent(activity, SettingsActivity::class.java))
+                startActivity(Intent(activity, MainActivity::class.java))
                 return true
             }
             return super.onOptionsItemSelected(item)
         }
-    }
 
-    /**
-     * This fragment shows notification preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
-     */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    class NotificationPreferenceFragment : PreferenceFragment() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            addPreferencesFromResource(R.xml.pref_notification)
-            setHasOptionsMenu(true)
-
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("notifications_new_message_ringtone"))
+        private fun updateSummary() {
+            val fontPref = findPreference(getString(R.string.pref_font_size))
+            fontPref.summary = ActivityUtils.getPreferenceFontSize(activity)
         }
 
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            val id = item.itemId
-            if (id == android.R.id.home) {
-                startActivity(Intent(activity, SettingsActivity::class.java))
-                return true
-            }
-            return super.onOptionsItemSelected(item)
+        override fun onPause() {
+            super.onPause()
+            preferenceScreen
+                    .sharedPreferences
+                    .unregisterOnSharedPreferenceChangeListener(sharedPrefsChangeListener)
+        }
+
+        override fun onResume() {
+            super.onResume()
+            updateSummary()
+            preferenceScreen
+                    .sharedPreferences
+                    .registerOnSharedPreferenceChangeListener(sharedPrefsChangeListener)
         }
     }
 
-    /**
-     * This fragment shows data and sync preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
-     */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    class DataSyncPreferenceFragment : PreferenceFragment() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            addPreferencesFromResource(R.xml.pref_data_sync)
-            setHasOptionsMenu(true)
-
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-            bindPreferenceSummaryToValue(findPreference("sync_frequency"))
-        }
-
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            val id = item.itemId
-            if (id == android.R.id.home) {
-                startActivity(Intent(activity, SettingsActivity::class.java))
-                return true
-            }
-            return super.onOptionsItemSelected(item)
-        }
-    }
 
     companion object {
 
@@ -186,51 +222,31 @@ class SettingsActivity : AppCompatPreferenceActivity() {
          * A preference value change listener that updates the preference's summary
          * to reflect its new value.
          */
-        private val sBindPreferenceSummaryToValueListener = Preference.OnPreferenceChangeListener { preference, value ->
-            val stringValue = value.toString()
+        private val sBindPreferenceSummaryToValueListener =
+                Preference.OnPreferenceChangeListener { preference, value ->
+                    val stringValue = value.toString()
 
-            if (preference is ListPreference) {
-                // For list preferences, look up the correct display value in
-                // the preference's 'entries' list.
-                val listPreference = preference
-                val index = listPreference.findIndexOfValue(stringValue)
+                    when (preference) {
+                        is ListPreference -> {
+                            // For list preferences, look up the correct display value in
+                            // the preference's 'entries' list.
+                            val index = preference.findIndexOfValue(stringValue)
 
-                // Set the summary to reflect the new value.
-                preference.setSummary(
-                        if (index >= 0)
-                            listPreference.entries[index]
-                        else
-                            null)
-
-            } else if (preference is RingtonePreference) {
-                // For ringtone preferences, look up the correct display value
-                // using RingtoneManager.
-                if (TextUtils.isEmpty(stringValue)) {
-                    // Empty values correspond to 'silent' (no ringtone).
-                    preference.setSummary(R.string.pref_ringtone_silent)
-
-                } else {
-                    val ringtone = RingtoneManager.getRingtone(
-                            preference.getContext(), Uri.parse(stringValue))
-
-                    if (ringtone == null) {
-                        // Clear the summary if there was a lookup error.
-                        preference.setSummary(null)
-                    } else {
-                        // Set the summary to reflect the new ringtone display
-                        // name.
-                        val name = ringtone.getTitle(preference.getContext())
-                        preference.setSummary(name)
+                            // Set the summary to reflect the new value.
+                            preference.setSummary(
+                                    if (index >= 0)
+                                        preference.entries[index]
+                                    else
+                                        null)
+                        }
+                        is SwitchPreference -> // For a boolean value, set the default value "true"
+                            preference.setDefaultValue(stringValue.contains("t"))
+                        else -> // For all other preferences, set the summary to the value's
+                            // simple string representation.
+                            preference.summary = stringValue
                     }
+                    true
                 }
-
-            } else {
-                // For all other preferences, set the summary to the value's
-                // simple string representation.
-                preference.summary = stringValue
-            }
-            true
-        }
 
         /**
          * Helper method to determine if the device has an extra-large screen. For
@@ -246,19 +262,27 @@ class SettingsActivity : AppCompatPreferenceActivity() {
          * preference title) is updated to reflect the value. The summary is also
          * immediately updated upon calling this method. The exact display format is
          * dependent on the type of preference.
-
+         *
          * @see .sBindPreferenceSummaryToValueListener
          */
         private fun bindPreferenceSummaryToValue(preference: Preference) {
             // Set the listener to watch for value changes.
             preference.onPreferenceChangeListener = sBindPreferenceSummaryToValueListener
 
-            // Trigger the listener immediately with the preference's
-            // current value.
-            sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-                    PreferenceManager
-                            .getDefaultSharedPreferences(preference.context)
-                            .getString(preference.key, ""))
+            // Trigger the listener immediately with the preference' current value.
+            if (preference is ListPreference
+                    || preference is EditTextPreference
+                    || preference is FontDialog) {
+                sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                        PreferenceManager
+                                .getDefaultSharedPreferences(preference.context)
+                                .getString(preference.key, ""))
+            } else if (preference is SwitchPreference || preference is CheckBoxPreference) {
+                sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                        PreferenceManager
+                                .getDefaultSharedPreferences(preference.context)
+                                .getBoolean(preference.key, true))
+            }
         }
     }
 }

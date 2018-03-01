@@ -1,0 +1,95 @@
+<!--
+     Copyright (C) 2018 Angel Garcia
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<!-- Copy of pref_general.xml without start time selection -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_header_general"
+        android:key="pref_key_storage_settings_general">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_show_definitions_switch"
+            android:title="@string/pref_title_show_definitions" />
+
+        <ListPreference
+            android:defaultValue="@string/list"
+            android:entries="@array/pref_list_favorite_modes_titles"
+            android:entryValues="@array/pref_list_favorite_modes_values"
+            android:key="@string/pref_favorite_mode_list"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_favorite_mode" />
+
+        <com.xengar.android.verbosespanol.utils.FontDialog
+            android:key="@string/pref_font_size"
+            android:title="@string/pref_title_font_size"
+            android:defaultValue="16"
+            android:dialogTitle="@string/pref_title_font_size"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_language"
+        android:key="pref_key_storage_settings_language">
+
+        <!--suppress AndroidDomInspection -->
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/translation_languages_titles"
+            android:entryValues="@array/translation_languages_values"
+            android:key="@string/pref_translation_language"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_translation_language" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_notifications"
+        android:key="pref_key_storage_settings_notifications"> -->
+
+        <!-- A 'parent' preference, which enables/disables child preferences (below)
+            when checked/unchecked. -->
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_enable_notifications"
+            android:title="@string/pref_title_enable_notifications" />
+
+        <ListPreference
+            android:dependency="@string/pref_enable_notifications"
+            android:entries="@array/notification_list_titles"
+            android:entryValues="@array/notification_list_values"
+            android:key="@string/pref_notification_list"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_notification_list" />
+
+        <ListPreference
+            android:dependency="@string/pref_enable_notifications"
+            android:entries="@array/notification_frequency_titles"
+            android:entryValues="@array/notification_frequency_values"
+            android:key="@string/pref_notification_frequency"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_title_notification_frequency" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

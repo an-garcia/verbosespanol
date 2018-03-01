@@ -20,5 +20,23 @@
     <color name="colorPrimaryLight">#C5CAE9</color> <!-- 100 -->
     <color name="colorAccent">@color/colorRed</color>
 
+    <!-- Color for user backgrounds in list -->
+    <color name="backgroundColorWhite">#FFFFFFFF</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#2196F3</color>
     <color name="colorRed">#F44336</color>
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorPink">#E91E63</color>
+    <color name="colorPurple">#9C27B0</color>
+    <color name="colorDeepPurple">#673AB7</color>
+    <color name="colorIndigo">#3F51B5</color>
+    <color name="colorOrange">#FF9800</color>
+    <color name="colorDeepOrange">#FF5722</color>
+    <color name="colorBrown">#795548</color>
+    <color name="colorBlueGray">#607D8B</color>
+    <color name="colorGray">#9E9E9E</color>
+    <color name="colorGray500">#F6F6F6</color>
+    <color name="grey_850">#303030</color> <!-- 212121-->
+    <color name="playColor">#E8EAF6</color>
 </resources>

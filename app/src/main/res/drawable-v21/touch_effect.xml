@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2018 Angel Garcia
 
@@ -13,12 +14,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- These settings headers are only used on tablets. -->
-
-    <header
-        android:fragment="com.xengar.android.verbosespanol.ui.SettingsActivity$GeneralPreferenceFragment"
-        android:title="@string/pref_header_general" />
-
-</preference-headers>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#FFFFFF">
+    <item android:drawable="@color/playColor" />
+</ripple>

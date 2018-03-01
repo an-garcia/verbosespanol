@@ -13,6 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
+<!-- Copy of pref_general.xml without start time selection -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
@@ -20,11 +21,13 @@
         android:key="pref_key_storage_settings_general">
 
         <SwitchPreference
+            android:icon="@drawable/ic_info_black_24dp"
             android:defaultValue="true"
             android:key="@string/pref_show_definitions_switch"
             android:title="@string/pref_title_show_definitions" />
 
         <ListPreference
+            android:icon="@drawable/ic_favorite_black_24dp"
             android:defaultValue="@string/list"
             android:entries="@array/pref_list_favorite_modes_titles"
             android:entryValues="@array/pref_list_favorite_modes_values"
@@ -34,42 +37,13 @@
             android:title="@string/pref_title_favorite_mode" />
 
         <com.xengar.android.verbosespanol.utils.FontDialog
+            android:icon="@drawable/ic_format_size_black_24dp"
             android:key="@string/pref_font_size"
             android:title="@string/pref_title_font_size"
-            android:defaultValue="16"
+            android:defaultValue="14"
             android:dialogTitle="@string/pref_title_font_size"
             android:negativeButtonText="@null"
             android:positiveButtonText="@null" />
-
-        <!-- <SwitchPreference
-            android:defaultValue="true"
-            android:key="example_switch"
-            android:summary="@string/pref_description_social_recommendations"
-            android:title="@string/pref_title_social_recommendations" /> -->
-
-        <!-- NOTE: EditTextPreference accepts EditText attributes. -->
-        <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
-        <!-- <EditTextPreference
-            android:capitalize="words"
-            android:defaultValue="@string/pref_default_display_name"
-            android:inputType="textCapWords"
-            android:key="example_text"
-            android:maxLines="1"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
-            android:title="@string/pref_title_display_name" /> -->
-
-        <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
-             dismiss it. -->
-        <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-        <!-- <ListPreference
-            android:defaultValue="-1"
-            android:entries="@array/pref_example_list_titles"
-            android:entryValues="@array/pref_example_list_values"
-            android:key="example_list"
-            android:negativeButtonText="@null"
-            android:positiveButtonText="@null"
-            android:title="@string/pref_title_add_friends_to_messages" /> -->
 
     </PreferenceCategory>
 
@@ -79,6 +53,7 @@
 
         <!--suppress AndroidDomInspection -->
         <ListPreference
+            android:icon="@drawable/ic_language_black_24dp"
             android:defaultValue=""
             android:entries="@array/translation_languages_titles"
             android:entryValues="@array/translation_languages_values"
@@ -98,10 +73,12 @@
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/pref_enable_notifications"
+            android:icon="@drawable/ic_notifications_black_24dp"
             android:title="@string/pref_title_enable_notifications" />
 
         <ListPreference
             android:dependency="@string/pref_enable_notifications"
+            android:icon="@drawable/ic_view_verbs_black_24dp"
             android:entries="@array/notification_list_titles"
             android:entryValues="@array/notification_list_values"
             android:key="@string/pref_notification_list"
@@ -109,13 +86,9 @@
             android:positiveButtonText="@null"
             android:title="@string/pref_title_notification_list" />
 
-        <com.xengar.android.verbosespanol.utils.TimePreference
-            android:dependency="@string/pref_enable_notifications"
-            android:key="@string/pref_notification_time"
-            android:title="@string/pref_title_notification_time"/>
-
         <ListPreference
             android:dependency="@string/pref_enable_notifications"
+            android:icon="@drawable/ic_timer_black_24dp"
             android:entries="@array/notification_frequency_titles"
             android:entryValues="@array/notification_frequency_values"
             android:key="@string/pref_notification_frequency"
@@ -123,49 +96,6 @@
             android:positiveButtonText="@null"
             android:title="@string/pref_title_notification_frequency" />
 
-        <!-- Allows the user to choose a ringtone in the 'notification' category. -->
-        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
-        <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
-        <!-- <RingtonePreference
-            android:defaultValue="content://settings/system/notification_sound"
-            android:dependency="notifications_new_message"
-            android:key="notifications_new_message_ringtone"
-            android:ringtoneType="notification"
-            android:title="@string/pref_title_ringtone" /> -->
-
-        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
-        <!-- <SwitchPreference
-            android:defaultValue="true"
-            android:dependency="notifications_new_message"
-            android:key="notifications_new_message_vibrate"
-            android:title="@string/pref_title_vibrate" /> -->
-
     </PreferenceCategory>
 
-
-    <!-- <PreferenceCategory
-        android:title="@string/pref_header_data_sync"
-        android:key="pref_key_storage_settings_data_sync"> -->
-
-    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
-     dismiss it. -->
-    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
-    <!-- <ListPreference
-        android:defaultValue="180"
-        android:entries="@array/pref_sync_frequency_titles"
-        android:entryValues="@array/pref_sync_frequency_values"
-        android:key="sync_frequency"
-        android:negativeButtonText="@null"
-        android:positiveButtonText="@null"
-        android:title="@string/pref_title_sync_frequency" /> -->
-
-    <!-- This preference simply launches an intent when selected. Use this UI sparingly, per
-         design guidelines. -->
-    <!-- <Preference android:title="@string/pref_title_system_sync_settings">
-        <intent android:action="android.settings.SYNC_SETTINGS" />
-    </Preference> -->
-
-    <!-- </PreferenceCategory> -->
-
 </PreferenceScreen>
-

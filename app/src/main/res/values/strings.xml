@@ -16,8 +16,14 @@
 <resources>
     <string name="app_name">Verbos Español</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_search">Search</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_most_common">Most common</string>
+    <string name="group">Group</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="select_color">Select color</string>
 
     <!-- Slide menu options -->
     <string name="verbs">Verbs</string>
@@ -25,17 +31,328 @@
     <string name="favorites">Favorites</string>
     <string name="share">Share</string>
 
+    <string name="select_show_verbs">Show verbs</string>
+    <string name="group1" translatable="false">1er groupe</string>
+    <string name="group2" translatable="false">2e groupe</string>
+    <string name="group3" translatable="false">3e groupe</string>
+
+    <string name="select_type_of_sort">Sort by</string>
+    <string name="alphabet">Alphabet</string>
+    <string name="color">Color</string>
+    <string name="most_common_25">25 most common</string>
+    <string name="most_common_50">50 most common</string>
+    <string name="most_common_100">100 most common</string>
+    <string name="most_common_300">300 most common</string>
+    <string name="most_common_500">500 most common</string>
+    <string name="most_common_1000">1000 most common</string>
+    <string name="all">all</string>
+
+    <string name="definition">Definition</string>
+    <string name="examples">Examples</string>
+    <string name="play">play</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
     <string name="settings">Settings</string>
+    <string name="details">Details</string>
+    <string name="favorites_add_message">Add to Favorites</string>
+    <string name="favorites_del_message">Remove from Favorites</string>
+
+    <!-- Verb Conjugation Titles in French -->
+    <string name="infinitif" translatable="false">Infinitif</string>
+    <string name="participe" translatable="false">Participe</string>
+    <string name="gerondif" translatable="false">Gérondif</string>
+    <string name="imperatif" translatable="false">Impératif</string>
+    <string name="indicatif" translatable="false">Indicatif</string>
+    <string name="conditionnel" translatable="false">Conditionnel</string>
+    <string name="subjonctif" translatable="false">Subjonctif</string>
+    <string name="present" translatable="false">Présent</string>
+    <string name="passe" translatable="false">Passé</string>
+    <string name="passe_compose" translatable="false">Passé composé</string>
+    <string name="imperfait" translatable="false">Imparfait</string>
+    <string name="plus_que_parfait" translatable="false">Plus-que-parfait</string>
+    <string name="passe_simple" translatable="false">Passé simple</string>
+    <string name="passe_anterieur" translatable="false">Passé antérieur</string>
+    <string name="futur_simple" translatable="false">Futur simple</string>
+    <string name="futur_anterieur" translatable="false">Futur antérieur</string>
+
+    <!-- error messages -->
+    <string name="database_error">Cannot connect to the Database.</string>
+    <string name="feedback_email" translatable="false">apps.universk@gmail.com</string>
+    <!-- Add a legend for non-supported feedback languages
+         Please use english, french or spanish for your feedback.-->
+    <string name="problem_message">
+        "Hi Verbos Español Team,\n\n"
+        "I found the following [PROBLEM TITLE HERE] in the application.\n"
+        "[PROBLEM DESCRIPTION HERE]\n\n"
+        "I was doing the following when it happened:\n"
+        "1. [ACTION 1]\n"
+        "2. [ACTION 2]\n"
+        "3. [ACTION 3]\n\n"
+        "Could you take a look at this?\n\n"
+        "Thanks,\n"
+        "[USER NAME]"
+    </string>
+    <!-- Add a legend for non-supported feedback languages
+         Please use english, french or spanish for your feedback.-->
+    <string name="feedback_message">
+        "Hi Verbos Español Team,\n\n"
+        "I [like/dislike] the application in general.\n"
+        "I think the following could be improved:\n"
+        "1. [ITEM 1]\n"
+        "2. [ITEM 2]\n"
+        "[COMMENTS HERE]\n\n"
+        "I was doing the following when I noticed it:\n"
+        "1. [ACTION 1]\n"
+        "2. [ACTION 2]\n"
+        "3. [ACTION 3]\n\n"
+        "Could you take a look at this?\n\n"
+        "Thanks,\n"
+        "[USER NAME]"
+    </string>
 
     <!-- Help strings -->
     <string name="help">Help</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="more">More</string>
+    <string name="volume">Volume</string>
+    <string name="next">Next</string>
+    <string name="got_it">Got it</string>
+    <string name="conjugations">Conjugations</string>
+    <string name="conjugations_description">Conjugations for different temps.</string>
+    <string name="volume_description">Text to speech uses the current media player volume.</string>
+    <string name="demo">demo</string>
+    <string name="verbs_text_help">Verb details include: conjugations, pronunciation, translation, definition and examples.</string>
+    <string name="add_remove_from_favorites">Add or remove from Favorites</string>
+    <string name="infinitive">Infinitive</string>
+    <string name="report_problem">Report a problem</string>
+    <string name="give_feedback">Give feedback</string>
+    <string name="license">License</string>
+    <string name="version">Version</string>
+
+    <string name="copyright" translatable="false">\@2017 Universk</string>
+    <string name="eula_string" translatable="false">
+        <![CDATA[
+<p><b>END USER LICENSE FOR ANDROID VERBOS ESPAÑOL SOFTWARE</b>
+<br/>Version 1.0, March 2018</p>
+
+<p><br/>PLEASE READ THIS DOCUMENT CAREFULLY BEFORE USING THIS SOFTWARE.
+<br/>THIS LICENSE CONTAINS WARRANTY AND LIABILITY INFORMATION AND GRANTS YOU RIGHTS TO USE THE SOFTWARE.
+<br/>BY USING THE SOFTWARE, YOU ARE ACCEPTING THE SOFTWARE \"AS IS\" AND AGREEING TO BE BOUND BY THE TERMS OF THIS LICENSE AGREEMENT.
+<br/>IN NO EVENT WILL THE AUTHORS BE HELD LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF THIS SOFTWARE.
+<br/>IF YOU DO NOT AGREE WITH THESE TERMS, DO NOT USE THE SOFTWARE.</p>
+
+<p><br/>
+<b>1. Terms of License</b>
+<br/>This license allows you to:
+<br/><b>(a) Installation and Use.</b>
+<br/>Universk grants you the right to install and use copies of the SOFTWARE PRODUCT on your device running the operating system for which the SOFTWARE PRODUCT was designed [e.g., Android].
+<br/><b>(b) Backup Copies.</b>
+<br/>You may also make copies of the SOFTWARE PRODUCT as may be necessary for backup and archival purposes.
+</p>
+
+<p>
+<b>2. Description of other rights and limitations</b>
+<br/><b>(a) Maintenance of Copyright Notices.</b>
+<br/>You must not remove or alter any copyright notices on any and all copies of the SOFTWARE PRODUCT.
+<br/><b>(b) Distribution.</b>
+<br/>You may not distribute registered copies of the SOFTWARE PRODUCT to third parties. Evaluation versions available for download from Universk\'s websites may be freely distributed.
+<br/><b>(c) Prohibition on Reverse Engineering, Decompilation, and Disassembly.</b>
+<br/>You may not reverse engineer, decompile, or disassemble the SOFTWARE PRODUCT, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.
+<br/><b>(d) Rental.</b>
+<br/>You may not rent, lease, or lend the SOFTWARE PRODUCT.
+<br/><b>(e) Support Services.</b>
+<br/>Universk may provide you with support services related to the SOFTWARE PRODUCT ("Support Services"). Any supplemental software code provided to you as part of the Support Services shall be considered part of the SOFTWARE PRODUCT and subject to the terms and conditions of this EULA.
+<br/><b>(f) Compliance with Applicable Laws.</b>
+<br/>You must comply with all applicable laws regarding use of the SOFTWARE PRODUCT.
+</p>
+
+<p>
+<b>3. Termination</b>
+<br/>Without prejudice to any other rights, Universk may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE PRODUCT in your possession.
+</p>
+
+<p>
+<b>4. Copyright</b>
+<br/>All title, including but not limited to copyrights, in and to the SOFTWARE PRODUCT and any copies thereof are owned by Universk or its suppliers. All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE PRODUCT is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This EULA grants you no rights to use such content. All rights not expressly granted are reserved by Universk.
+</p>
+
+<p>
+<b>5. No warranties</b>
+<br/>Universk expressly disclaims any warranty for the SOFTWARE PRODUCT. The SOFTWARE PRODUCT is provided \'As Is\' without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, noninfringement, or fitness of a particular purpose. Universk does not warrant or assume responsibility for the accuracy or completeness of any information, text, graphics, links or other items contained within the SOFTWARE PRODUCT. Universk further expressly disclaims any warranty or representation to Authorized Users or to any third party.
+</p>
+
+<p>
+<b>6. Limitations of Liability</b>
+<br/>In no event shall Universk be liable for any damages (including, without limitation, lost profits, business interruption, or lost information) rising out of \'Authorized Users\' use of or inability to use the SOFTWARE PRODUCT, even if Universk has been advised of the possibility of such damages. In no event will Universk be liable for loss of notes or for indirect, special, incidental, consequential (including lost profit), or other damages based in contract, tort or otherwise. Universk shall have no liability with respect to the content of the SOFTWARE PRODUCT or any part thereof, including but not limited to errors or omissions contained therein, libel, infringements of rights of publicity, privacy, trademark rights, business interruption, personal injury, loss of privacy, moral rights or the disclosure of confidential information.
+</p>
+
+<p>
+<br/>SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. YOU MAY ALSO HAVE OTHER LEGAL RIGHTS WHICH VARY FROM JURISDICTION TO JURISDICTION.
+</p>
+   ]]>
+    </string>
 
     <!-- Strings related to Settings -->
 
-    <!-- Example General settings -->
+    <!-- General settings -->
     <string name="pref_header_general">General</string>
+    <string name="pref_header_language">Language</string>
+    <string name="pref_title_favorite_mode">Favorites mode</string>
+    <string name="pref_favorite_mode_list" translatable="false">pref_favorite_mode_list</string>
+    <string-array name="pref_list_favorite_modes_titles">
+        <item>card</item>
+        <item>list</item>
+    </string-array>
+    <string name="list" translatable="false">list</string>
+    <string name="card" translatable="false">card</string>
+    <string-array name="pref_list_favorite_modes_values" translatable="false">
+        <item>@string/card</item>
+        <item>@string/list</item>
+    </string-array>
+    <string name="pref_font_size" translatable="false">pref_font_size</string>
+    <string name="pref_show_definitions_switch" translatable="false">pref_show_definitions_switch</string>
+    <string name="pref_title_show_definitions">Show verb definitions</string>
+    <string name="pref_title_translation_language">Verb translation</string>
+    <string name="pref_title_font_size">Font size</string>
+    <string name="pref_translation_language" translatable="false">pref_translation_language</string>
+    <string-array name="translation_languages_titles" translatable="false">
+        <item name="default">None</item>
+        <!--        <item name="albanian">Shqip</item>
+        <item name="arabic">العربية</item>
+        <item name="basque">Euskara</item>
+        <item name="belarusian">Беларуская</item>
+        <item name="bosnian">Bosanski</item>
+        <item name="bulgarian">Български</item>
+        <item name="catalan">Català</item>
+        <item name="chinese">中文</item>
+        <item name="chinese">文言</item>
+        <item name="czech">Čeština</item>
+        <item name="danish">Dansk</item>
+        <item name="dutch">Nederlands</item>
+        <item name="esperanto">Esperanto</item>
+        <item name="estonian">Eesti</item>
+        <item name="finnish">Suomi</item>-->
+        <item name="french">Français</item>
+        <item name="english">English</item>
+        <!--        <item name="german">Deutsch</item>
+        <item name="greek">Ελληνικά</item>
+        <item name="hebrew">עברית</item>
+        <item name="hindi">हिन्दी</item>
+        <item name="hungarian">Magyar</item>
+        <item name="irish">Gaeilge</item>
+        <item name="italian">Italiano</item>
+        <item name="japanese">日本語</item>
+        <item name="korean">韓國語</item>
+        <item name="latvian">Latviešu</item>
+        <item name="lithuanian">Lietuvių</item>
+        <item name="norwegian">Norsk bokmål</item>
+        <item name="polish">Polski</item>-->
+        <item name="portuguese">Português</item>
+        <!--<item name="romanian">Română</item>
+        <item name="russian">Русский</item>
+        <item name="serbian">Српски / srpski</item>
+        <item name="swedish">Svenska</item>
+        <item name="ukrainian">Українська</item>
+        <item name="turkish">Türkçe</item>-->
+    </string-array>
+    <string-array name="translation_languages_values" translatable="false">
+        <!--suppress CheckTagEmptyBody -->
+        <item name="default"></item>
+        <!--        <item name="albanian">sq_AL</item>
+        <item name="arabic">ar_AR</item>
+        <item name="basque">eu_ES</item>
+        <item name="belarusian">be_BE</item>
+        <item name="bosnian">bs_BS</item>
+        <item name="bulgarian">bg_BG</item>
+        <item name="catalan">ca_ES</item>
+        <item name="chinese">zh_CN</item>
+        <item name="chinese">zh_TW</item>
+        <item name="czech">cs_CZ</item>
+        <item name="danish">da_DK</item>
+        <item name="dutch">nl_NL</item>
+        <item name="esperanto">eo_EO</item>
+        <item name="estonian">et_ET</item>
+        <item name="finnish">fi_FI</item>-->
+        <item name="french">fr_FR</item>
+        <item name="english">en_EN</item>
+        <!--       <item name="german">de_DE</item>
+        <item name="greek">el_GR</item>
+        <item name="hebrew">he_IL</item>
+        <item name="hindi">hi_IN</item>
+        <item name="hungarian">hu_HU</item>
+        <item name="irish">ga_GA</item>
+        <item name="italian">it_IT</item>
+        <item name="japanese">ja_JP</item>
+        <item name="korean">ko_KR</item>
+        <item name="latvian">lv_LV</item>
+        <item name="lithuanian">lt_LT</item>
+        <item name="norwegian">no_NO</item>
+        <item name="polish">pl_PL</item>-->
+        <item name="portuguese">pt_PT</item>
+        <!--<item name="romanian">ro_RO</item>
+        <item name="russian">ru_RU</item>
+        <item name="serbian">sr_RS</item>
+        <item name="swedish">sv_SE</item>
+        <item name="ukrainian">uk_UA</item>
+        <item name="turkish">tr_TR</item>-->
+    </string-array>
 
+    <!-- Settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_enable_notifications">Verb notifications</string>
+    <string name="pref_title_notification_list">Notification verb list</string>
+    <string name="pref_title_notification_time">Notification time</string>
+    <string name="pref_notification_list" translatable="false">pref_notification_list</string>
+    <string name="pref_enable_notifications" translatable="false">pref_enable_notifications</string>
+    <string name="pref_notification_time" translatable="false">pref_notification_time</string>
+
+    <string-array name="notification_list_titles" translatable="false">
+        <item name="favorites">@string/favorites</item>
+        <item name="most_common_25">@string/most_common_25</item>
+        <item name="most_common_50">@string/most_common_50</item>
+        <item name="most_common_100">@string/most_common_100</item>
+        <!--<item name="most_common_250">@string/most_common_300</item> -->
+        <!--<item name="most_common_500">@string/most_common_500</item> -->
+        <!--<item name="most_common_1000">@string/most_common_1000</item> -->
+        <item name="all">@string/all</item>
+    </string-array>
+    <string-array name="notification_list_values" translatable="false">
+        <item name="favorites">1</item>
+        <item name="most_common_25">25</item>
+        <item name="most_common_50">50</item>
+        <item name="most_common_100">100</item>
+        <!--<item name="most_common_300">300</item> -->
+        <!--<item name="most_common_500">500</item> -->
+        <!--<item name="most_common_1000">1000</item> -->
+        <item name="all">9000</item>
+    </string-array>
+
+    <string name="pref_title_notification_frequency">Notification frequency</string>
+    <string name="pref_notification_frequency" translatable="false">pref_notification_frequency</string>
+    <string name="hour_1">1 hour</string>
+    <string name="hour_3">3 hours</string>
+    <string name="hour_6">6 hours</string>
+    <string name="hour_12">12 hours</string>
+    <string name="hour_24">24 hours</string>
+
+    <string-array name="notification_frequency_titles" translatable="false">
+        <item name="hour_1">@string/hour_1</item>
+        <item name="hour_3">@string/hour_3</item>
+        <item name="hour_6">@string/hour_6</item>
+        <item name="hour_12">@string/hour_12</item>
+        <item name="hour_24">@string/hour_24</item>
+    </string-array>
+    <string-array name="notification_frequency_values" translatable="false">
+        <item name="hour_1">1</item>
+        <item name="hour_3">3</item>
+        <item name="hour_6">6</item>
+        <item name="hour_12">12</item>
+        <item name="hour_24">24</item>
+    </string-array>
+
+    <!-- Example General settings -->
+    <!--
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact
         based on your message history
@@ -54,9 +371,10 @@
         <item>1</item>
         <item>0</item>
         <item>-1</item>
-    </string-array>
+    </string-array> -->
 
     <!-- Example settings for Data & Sync -->
+    <!--
     <string name="pref_header_data_sync">Data &amp; sync</string>
 
     <string name="pref_title_sync_frequency">Sync frequency</string>
@@ -92,8 +410,10 @@
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
+    -->
 
     <!-- Example settings for Notifications -->
+    <!--
     <string name="pref_header_notifications">Notifications</string>
 
     <string name="pref_title_new_message_notifications">New message notifications</string>
@@ -102,4 +422,5 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    -->
 </resources>
