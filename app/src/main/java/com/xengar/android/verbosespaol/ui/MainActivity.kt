@@ -23,6 +23,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.xengar.android.verbosespaol.R
+import com.xengar.android.verbosespaol.utils.ActivityUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_settings -> {
-
+                ActivityUtils.launchSettingsActivity(applicationContext)
             }
             R.id.nav_help -> {
 
