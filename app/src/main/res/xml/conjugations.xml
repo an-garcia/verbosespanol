@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 Angel Garcia
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<conjugations>
+    <!--
+            id          = Table Conjugation Number (1, 2, 3 ...)
+            term        = Terminacion ( ar, er, ir)
+            radicals    = Radicales
+            inf_si      = Infinitivo Simple
+            inf_co      = Infinitivo Compuesto
+            pa          = Participio
+            ge_si       = Gerundio Simple
+            ge_co       = Gerundio Compuesto
+
+
+            imp_t     = Imperativo Tu
+            imp_el    = Imperativo El, Ella, Ustedes
+            imp_n     = Imperativo Nosotros
+            imp_v     = Imperativo Vosotros
+            imp_ell   = Imperativo Ellos, Ellas, Ustedes
+
+            imp_neg_t     = Imperativo Tu
+            imp_neg_el    = Imperativo El, Ella, Ustedes
+            imp_neg_n     = Imperativo Nosotros
+            imp_neg_v     = Imperativo Vosotros
+            imp_neg_ell   = Imperativo Ellos, Ellas, Ustedes
+
+            
+            in_pres_y     = Indicativo Presente Yo
+            in_pres_t     = Indicativo Presente Tu
+            in_pres_el    = Indicativo Presente El, Ella, Ustedes
+            in_pres_n     = Indicativo Presente Nosotros
+            in_pres_v     = Indicativo Presente Vosotros
+            in_pres_ell   = Indicativo Presente Ellos, Ellas, Ustedes
+
+            in_pret_imp_y     = Indicativo Pretérito Imperfecto / Copretérito Yo
+            in_pret_imp_t     = Indicativo Pretérito Imperfecto / Copretérito Tu
+            in_pret_imp_el    = Indicativo Pretérito Imperfecto / Copretérito El, Ella, Ustedes
+            in_pret_imp_n     = Indicativo Pretérito Imperfecto / Copretérito Nosotros
+            in_pret_imp_v     = Indicativo Pretérito Imperfecto / Copretérito Vosotros
+            in_pret_imp_ell   = Indicativo Pretérito Imperfecto / Copretérito Ellos, Ellas, Ustedes
+
+            in_pret_perf_si_y     = Indicativo Pretérito Perfecto Simple / Pretérito Yo
+            in_pret_perf_si_t     = Indicativo Pretérito Perfecto Simple / Pretérito Tu
+            in_pret_perf_si_el    = Indicativo Pretérito Perfecto Simple / Pretérito El, Ella, Ustedes
+            in_pret_perf_si_n     = Indicativo Pretérito Perfecto Simple / Pretérito Nosotros
+            in_pret_perf_si_v     = Indicativo Pretérito Perfecto Simple / Pretérito Vosotros
+            in_pret_perf_si_ell   = Indicativo Pretérito Perfecto Simple / Pretérito Ellos, Ellas, Ustedes
+
+            in_fu_si_y     = Indicativo Futuro Simple / Futuro Yo
+            in_fu_si_t     = Indicativo Futuro Simple / Futuro Tu
+            in_fu_si_el    = Indicativo Futuro Simple / Futuro El, Ella, Ustedes
+            in_fu_si_n     = Indicativo Futuro Simple / Futuro Nosotros
+            in_fu_si_v     = Indicativo Futuro Simple / Futuro Vosotros
+            in_fu_si_ell   = Indicativo Futuro Simple / Futuro Ellos, Ellas, Ustedes
+
+            in_cond_si_y     = Indicativo Condicional Simple / Pospretérito Yo
+            in_cond_si_t     = Indicativo Condicional Simple / Pospretérito Tu
+            in_cond_si_el    = Indicativo Condicional Simple / Pospretérito El, Ella, Ustedes
+            in_cond_si_n     = Indicativo Condicional Simple / Pospretérito Nosotros
+            in_cond_si_v     = Indicativo Condicional Simple / Pospretérito Vosotros
+            in_cond_si_ell   = Indicativo Condicional Simple / Pospretérito Ellos, Ellas, Ustedes
+
+            in_pret_perf_comp_y     = Indicativo Pretérito Perfecto Compuesto / Antepresente Yo
+            in_pret_perf_comp_t     = Indicativo Pretérito Perfecto Compuesto / Antepresente Tu
+            in_pret_perf_comp_el    = Indicativo Pretérito Perfecto Compuesto / Antepresente El, Ella, Ustedes
+            in_pret_perf_comp_n     = Indicativo Pretérito Perfecto Compuesto / Antepresente Nosotros
+            in_pret_perf_comp_v     = Indicativo Pretérito Perfecto Compuesto / Antepresente Vosotros
+            in_pret_perf_comp_ell   = Indicativo Pretérito Perfecto Compuesto / Antepresente Ellos, Ellas, Ustedes
+
+            in_pret_plus_y     = Indicativo Pretérito Pluscuamperfecto / Antecopretérito Yo
+            in_pret_plus_t     = Indicativo Pretérito Pluscuamperfecto / Antecopretérito Tu
+            in_pret_plus_el    = Indicativo Pretérito Pluscuamperfecto / Antecopretérito El, Ella, Ustedes
+            in_pret_plus_n     = Indicativo Pretérito Pluscuamperfecto / Antecopretérito Nosotros
+            in_pret_plus_v     = Indicativo Pretérito Pluscuamperfecto / Antecopretérito Vosotros
+            in_pret_plus_ell   = Indicativo Pretérito Pluscuamperfecto / Antecopretérito Ellos, Ellas, Ustedes
+
+            in_pret_ant_y     = Indicativo Pretérito Anterior / Antepretérito Yo
+            in_pret_ant_t     = Indicativo Pretérito Anterior / Antepretérito Tu
+            in_pret_ant_el    = Indicativo Pretérito Anterior / Antepretérito El, Ella, Ustedes
+            in_pret_ant_n     = Indicativo Pretérito Anterior / Antepretérito Nosotros
+            in_pret_ant_v     = Indicativo Pretérito Anterior / Antepretérito Vosotros
+            in_pret_ant_ell   = Indicativo Pretérito Anterior / Antepretérito Ellos, Ellas, Ustedes
+
+            in_fu_comp_y     = Indicativo Futuro Compuesto / Antefuturo Yo
+            in_fu_comp_t     = Indicativo Futuro Compuesto / Antefuturo Tu
+            in_fu_comp_el    = Indicativo Futuro Compuesto / Antefuturo El, Ella, Ustedes
+            in_fu_comp_n     = Indicativo Futuro Compuesto / Antefuturo Nosotros
+            in_fu_comp_v     = Indicativo Futuro Compuesto / Antefuturo Vosotros
+            in_fu_comp_ell   = Indicativo Futuro Compuesto / Antefuturo Ellos, Ellas, Ustedes
+
+            in_cond_co_y     = Indicativo Condicional Compuesto / Antepospretérito Yo
+            in_cond_co_t     = Indicativo Condicional Compuesto / Antepospretérito Tu
+            in_cond_co_el    = Indicativo Condicional Compuesto / Antepospretérito El, Ella, Ustedes
+            in_cond_co_n     = Indicativo Condicional Compuesto / Antepospretérito Nosotros
+            in_cond_co_v     = Indicativo Condicional Compuesto / Antepospretérito Vosotros
+            in_cond_co_ell   = Indicativo Condicional Compuesto / Antepospretérito Ellos, Ellas, Ustedes
+
+
+            su_pres_y     = Subjuntivo Presente Yo
+            su_pres_t     = Subjuntivo Presente Tu
+            su_pres_el    = Subjuntivo Presente El, Ella, Ustedes
+            su_pres_n     = Subjuntivo Presente Nosotros
+            su_pres_v     = Subjuntivo Presente Vosotros
+            su_pres_ell   = Subjuntivo Presente Ellos, Ellas, Ustedes
+
+            su_pret_imp_y     = Subjuntivo Pretérito Imperfecto / Pretérito Yo
+            su_pret_imp_t     = Subjuntivo Pretérito Imperfecto / Pretérito Tu
+            su_pret_imp_el    = Subjuntivo Pretérito Imperfecto / Pretérito El, Ella, Ustedes
+            su_pret_imp_n     = Subjuntivo Pretérito Imperfecto / Pretérito Nosotros
+            su_pret_imp_v     = Subjuntivo Pretérito Imperfecto / Pretérito Vosotros
+            su_pret_imp_ell   = Subjuntivo Pretérito Imperfecto / Pretérito Ellos, Ellas, Ustedes
+
+            su_fu_si_y     = Subjuntivo Futuro Simple / Futuro Yo
+            su_fu_si_t     = Subjuntivo Futuro Simple / Futuro Tu
+            su_fu_si_el    = Subjuntivo Futuro Simple / Futuro El, Ella, Ustedes
+            su_fu_si_n     = Subjuntivo Futuro Simple / Futuro Nosotros
+            su_fu_si_v     = Subjuntivo Futuro Simple / Futuro Vosotros
+            su_fu_si_ell   = Subjuntivo Futuro Simple / Futuro Ellos, Ellas, Ustedes
+
+            su_pret_perf_comp_y     = Subjuntivo Pretérito Perfecto Compuesto / Antepresente Yo
+            su_pret_perf_comp_t     = Subjuntivo Pretérito Perfecto Compuesto / Antepresente Tu
+            su_pret_perf_comp_el    = Subjuntivo Pretérito Perfecto Compuesto / Antepresente El, Ella, Ustedes
+            su_pret_perf_comp_n     = Subjuntivo Pretérito Perfecto Compuesto / Antepresente Nosotros
+            su_pret_perf_comp_v     = Subjuntivo Pretérito Perfecto Compuesto / Antepresente Vosotros
+            su_pret_perf_comp_ell   = Subjuntivo Pretérito Perfecto Compuesto / Antepresente Ellos, Ellas, Ustedes
+
+            su_pret_plus_y     = Subjuntivo Pretérito Pluscuamperfecto / Antepretérito Yo
+            su_pret_plus_t     = Subjuntivo Pretérito Pluscuamperfecto / Antepretérito Tu
+            su_pret_plus_el    = Subjuntivo Pretérito Pluscuamperfecto / Antepretérito El, Ella, Ustedes
+            su_pret_plus_n     = Subjuntivo Pretérito Pluscuamperfecto / Antepretérito Nosotros
+            su_pret_plus_v     = Subjuntivo Pretérito Pluscuamperfecto / Antepretérito Vosotros
+            su_pret_plus_ell   = Subjuntivo Pretérito Pluscuamperfecto / Antepretérito Ellos, Ellas, Ustedes
+
+            su_fu_comp_y     = Subjuntivo Futuro Compuesto / Antefuturo Yo
+            su_fu_comp_t     = Subjuntivo Futuro Compuesto / Antefuturo Tu
+            su_fu_comp_el    = Subjuntivo Futuro Compuesto / Antefuturo El, Ella, Ustedes
+            su_fu_comp_n     = Subjuntivo Futuro Compuesto / Antefuturo Nosotros
+            su_fu_comp_v     = Subjuntivo Futuro Compuesto / Antefuturo Vosotros
+            su_fu_comp_ell   = Subjuntivo Futuro Compuesto / Antefuturo Ellos, Ellas, Ustedes
+        -->
+
+    <conjugation
+        id                    = "1"
+        term                  = ""
+        radicals              = "am"
+        inf_si                = "amar"
+        inf_co                = "haber amado"
+        pa                    = "amado"
+        ge_si                 = "amando"
+        ge_co                 = "habiendo amado"
+
+        imp_t                 = "ama"
+        imp_el                = "ame"
+        imp_n                 = "amemos"
+        imp_v                 = "amad"
+        imp_ell               = "amen"
+
+        imp_neg_t             = "no ames"
+        imp_neg_el            = "no ame"
+        imp_neg_n             = "no amemos"
+        imp_neg_v             = "no améis"
+        imp_neg_ell           = "no amen"
+
+        in_pres_y             = "amo"
+        in_pres_t             = "amas (amás)"
+        in_pres_el            = "ama"
+        in_pres_n             = "amamos"
+        in_pres_v             = "amáis"
+        in_pres_ell           = "aman"
+
+        in_pret_imp_y         = "amaba"
+        in_pret_imp_t         = "amabas"
+        in_pret_imp_el        = "amaba"
+        in_pret_imp_n         = "amábamos"
+        in_pret_imp_v         = "amabais"
+        in_pret_imp_ell       = "amaban"
+
+        in_pret_perf_si_y     = "amé"
+        in_pret_perf_si_t     = "amaste"
+        in_pret_perf_si_el    = "amó"
+        in_pret_perf_si_n     = "amamos"
+        in_pret_perf_si_v     = "amasteis"
+        in_pret_perf_si_ell   = "amaron"
+
+        in_fu_si_y            = "amaré"
+        in_fu_si_t            = "amarás"
+        in_fu_si_el           = "amará"
+        in_fu_si_n            = "amaremos"
+        in_fu_si_v            = "amaréis"
+        in_fu_si_ell          = "amarán"
+
+        in_cond_si_y          = "amaría"
+        in_cond_si_t          = "amarías"
+        in_cond_si_el         = "amaría"
+        in_cond_si_n          = "amaríamos"
+        in_cond_si_v          = "amaríais"
+        in_cond_si_ell        = "amarían"
+
+        in_pret_perf_comp_y   = "he amado"
+        in_pret_perf_comp_t   = "has amado"
+        in_pret_perf_comp_el  = "ha amado"
+        in_pret_perf_comp_n   = "hemos amado"
+        in_pret_perf_comp_v   = "habéis amado"
+        in_pret_perf_comp_ell = "han amado"
+
+        in_pret_plus_y        = "había amado"
+        in_pret_plus_t        = "habías amado"
+        in_pret_plus_el       = "había amado"
+        in_pret_plus_n        = "habíamos amado"
+        in_pret_plus_v        = "habíais amado"
+        in_pret_plus_ell      = "habían amado"
+
+        in_pret_ant_y         = "hube amado"
+        in_pret_ant_t         = "hubiste amado"
+        in_pret_ant_el        = "hubo amado"
+        in_pret_ant_n         = "hubimos amado"
+        in_pret_ant_v         = "hubisteis amado"
+        in_pret_ant_ell       = "hubieron amado"
+
+        in_fu_comp_y          = "habré amado"
+        in_fu_comp_t          = "habrás amado"
+        in_fu_comp_el         = "habrá amado"
+        in_fu_comp_n          = "habremos amado"
+        in_fu_comp_v          = "habréis amado"
+        in_fu_comp_ell        = "habrán amado"
+
+        in_cond_co_y          = "habría amado"
+        in_cond_co_t          = "habrías amado"
+        in_cond_co_el         = "habría amado"
+        in_cond_co_n          = "habríamos amado"
+        in_cond_co_v          = "habríais amado"
+        in_cond_co_ell        = "habrían amado"
+
+        su_pres_y             = "ame"
+        su_pres_t             = "ames"
+        su_pres_el            = "ame"
+        su_pres_n             = "amemos"
+        su_pres_v             = "améis"
+        su_pres_ell           = "amen"
+
+        su_pret_imp_y         = "amara o amase"
+        su_pret_imp_t         = "amaras o amases"
+        su_pret_imp_el        = "amara o amase"
+        su_pret_imp_n         = "amáramos o amásemos"
+        su_pret_imp_v         = "amarais o amaseis"
+        su_pret_imp_ell       = "amaran o amasen"
+
+        su_fu_si_y            = "amare"
+        su_fu_si_t            = "amares"
+        su_fu_si_el           = "amare"
+        su_fu_si_n            = "amáremos"
+        su_fu_si_v            = "amareis"
+        su_fu_si_ell          = "amaren"
+
+        su_pret_perf_comp_y   = "haya amado"
+        su_pret_perf_comp_t   = "hayas amado"
+        su_pret_perf_comp_el  = "haya amado"
+        su_pret_perf_comp_n   = "hayamos amado"
+        su_pret_perf_comp_v   = "hayáis amado"
+        su_pret_perf_comp_ell = "hayan amado"
+
+        su_pret_plus_y        = "hubiera o hubiese amado"
+        su_pret_plus_t        = "hubieras o hubieses amado"
+        su_pret_plus_el       = "hubiera o hubiese amado"
+        su_pret_plus_n        = "hubiéramos o hubiésemos amado"
+        su_pret_plus_v        = "hubierais o hubieseis amado"
+        su_pret_plus_ell      = "hubieran o hubiesen amado"
+
+        su_fu_comp_y          = "hubiere amado"
+        su_fu_comp_t          = "hubieres amado"
+        su_fu_comp_el         = "hubiere amado"
+        su_fu_comp_n          = "hubiéremos amado"
+        su_fu_comp_v          = "hubiereis amado"
+        su_fu_comp_ell        = "hubieren amado" />
+    <conjugation
+        id                    = "2"
+        term                  = ""
+        radicals              = "am"
+        inf_si                = "amar"
+        inf_co                = "haber amado"
+        pa                    = "amado"
+        ge_si                 = "amando"
+        ge_co                 = "habiendo amado"
+
+        imp_t                 = "ama"
+        imp_el                = "ame"
+        imp_n                 = "amemos"
+        imp_v                 = "amad"
+        imp_ell               = "amen"
+
+        imp_neg_t             = "no ames"
+        imp_neg_el            = "no ame"
+        imp_neg_n             = "no amemos"
+        imp_neg_v             = "no améis"
+        imp_neg_ell           = "no amen"
+
+        in_pres_y             = ""
+        in_pres_t             = ""
+        in_pres_el            = ""
+        in_pres_n             = ""
+        in_pres_v             = ""
+        in_pres_ell           = ""
+
+        in_pret_imp_y         = ""
+        in_pret_imp_t         = ""
+        in_pret_imp_el        = ""
+        in_pret_imp_n         = ""
+        in_pret_imp_v         = ""
+        in_pret_imp_ell       = ""
+
+        in_pret_perf_si_y     = ""
+        in_pret_perf_si_t     = ""
+        in_pret_perf_si_el    = ""
+        in_pret_perf_si_n     = ""
+        in_pret_perf_si_v     = ""
+        in_pret_perf_si_ell   = ""
+
+        in_fu_si_y            = ""
+        in_fu_si_t            = ""
+        in_fu_si_el           = ""
+        in_fu_si_n            = ""
+        in_fu_si_v            = ""
+        in_fu_si_ell          = ""
+
+        in_cond_si_y          = ""
+        in_cond_si_t          = ""
+        in_cond_si_el         = ""
+        in_cond_si_n          = ""
+        in_cond_si_v          = ""
+        in_cond_si_ell        = ""
+
+        in_pret_perf_comp_y   = ""
+        in_pret_perf_comp_t   = ""
+        in_pret_perf_comp_el  = ""
+        in_pret_perf_comp_n   = ""
+        in_pret_perf_comp_v   = ""
+        in_pret_perf_comp_ell = ""
+
+        in_pret_plus_y        = ""
+        in_pret_plus_t        = ""
+        in_pret_plus_el       = ""
+        in_pret_plus_n        = ""
+        in_pret_plus_v        = ""
+        in_pret_plus_ell      = ""
+
+        in_pret_ant_y         = ""
+        in_pret_ant_t         = ""
+        in_pret_ant_el        = ""
+        in_pret_ant_n         = ""
+        in_pret_ant_v         = ""
+        in_pret_ant_ell       = ""
+
+        in_fu_comp_y          = ""
+        in_fu_comp_t          = ""
+        in_fu_comp_el         = ""
+        in_fu_comp_n          = ""
+        in_fu_comp_v          = ""
+        in_fu_comp_ell        = ""
+
+        in_cond_co_y          = ""
+        in_cond_co_t          = ""
+        in_cond_co_el         = ""
+        in_cond_co_n          = ""
+        in_cond_co_v          = ""
+        in_cond_co_ell        = ""
+
+        su_pres_y             = ""
+        su_pres_t             = ""
+        su_pres_el            = ""
+        su_pres_n             = ""
+        su_pres_v             = ""
+        su_pres_ell           = ""
+
+        su_pret_imp_y         = ""
+        su_pret_imp_t         = ""
+        su_pret_imp_el        = ""
+        su_pret_imp_n         = ""
+        su_pret_imp_v         = ""
+        su_pret_imp_ell       = ""
+
+        su_fu_si_y            = ""
+        su_fu_si_t            = ""
+        su_fu_si_el           = ""
+        su_fu_si_n            = ""
+        su_fu_si_v            = ""
+        su_fu_si_ell          = ""
+
+        su_pret_perf_comp_y   = ""
+        su_pret_perf_comp_t   = ""
+        su_pret_perf_comp_el  = ""
+        su_pret_perf_comp_n   = ""
+        su_pret_perf_comp_v   = ""
+        su_pret_perf_comp_ell = ""
+
+        su_pret_plus_y        = ""
+        su_pret_plus_t        = ""
+        su_pret_plus_el       = ""
+        su_pret_plus_n        = ""
+        su_pret_plus_v        = ""
+        su_pret_plus_ell      = ""
+
+        su_fu_comp_y          = ""
+        su_fu_comp_t          = ""
+        su_fu_comp_el         = ""
+        su_fu_comp_n          = ""
+        su_fu_comp_v          = ""
+        su_fu_comp_ell        = "" />
+
+</conjugations>
