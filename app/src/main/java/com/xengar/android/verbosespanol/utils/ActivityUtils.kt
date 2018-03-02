@@ -177,6 +177,7 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.sync.AlarmReceiver
 import com.xengar.android.verbosespanol.sync.JobSchedulerService
 import com.xengar.android.verbosespanol.ui.HelpActivity
+import com.xengar.android.verbosespanol.ui.SearchActivity
 import com.xengar.android.verbosespanol.ui.SettingsActivity
 import com.xengar.android.verbosespanol.utils.Constants.CONJUGATION_ID
 import com.xengar.android.verbosespanol.utils.Constants.DEFAULT_FONT_SIZE
@@ -315,12 +316,12 @@ object ActivityUtils {
     /**
      * Launches Search Activity.
      * @param context context
-     */ /*
+     */
     fun launchSearchActivity(context: Context) {
         val intent = Intent(context, SearchActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         context.startActivity(intent)
-    } */
+    }
 
     /**
      * Helper class to handle deprecated method.

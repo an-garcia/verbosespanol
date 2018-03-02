@@ -221,7 +221,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.action_search -> {
-                //ActivityUtils.launchSearchActivity(applicationContext)
+                ActivityUtils.launchSearchActivity(applicationContext)
                 return true
             }
         }
@@ -313,7 +313,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
      * Creates if needed a new fragment with the new display configurations.
      */
     private fun changeFragmentsDisplay() {
-        /*if (!verbsFragment!!.verbGroup.contentEquals(verbGroup[0])
+        if (!verbsFragment!!.verbGroup.contentEquals(verbGroup[0])
                 || !verbsFragment!!.sortType.contentEquals(sortType[0])
                 || !verbsFragment!!.commonType.contentEquals(commonType[0])) {
             verbsFragment = createUniversalFragment(verbGroup[0], LIST, sortType[0], commonType[0])
@@ -337,7 +337,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             if (page.contentEquals(PAGE_FAVORITES)) {
                 launchFragment(PAGE_FAVORITES)
             }
-        }*/
+        }
     }
 
     /**

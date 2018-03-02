@@ -350,10 +350,6 @@
         <item name="hour_12">12</item>
         <item name="hour_24">24</item>
     </string-array>
-    <string name="title_activity_help">Help</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Example General settings -->
     <!--

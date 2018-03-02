@@ -38,8 +38,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.SearchActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.xengar.android.verbosespanol.ui.MainActivity" />
+        </activity>
+        <activity
             android:name=".ui.HelpActivity"
-            android:label="@string/title_activity_help"
+            android:label="@string/help"
             android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -79,8 +87,8 @@
         <service
             android:name=".sync.NotificationService"
             android:exported="false" />
-
-        <service android:name=".sync.JobSchedulerService"
+        <service
+            android:name=".sync.JobSchedulerService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
     </application>
