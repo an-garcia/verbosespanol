@@ -27,6 +27,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.xengar.android.verbosespanol.R
 import com.xengar.android.verbosespanol.utils.ActivityUtils
+import com.xengar.android.verbosespanol.utils.ActivityUtils.checkFirstRun
 import com.xengar.android.verbosespanol.utils.Constants.ALPHABET
 import com.xengar.android.verbosespanol.utils.Constants.CARD
 import com.xengar.android.verbosespanol.utils.Constants.COLOR
@@ -162,7 +163,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 MOST_COMMON_ALL)
         showPage(page)
         assignCheckedItem(page)
-        //checkFirstRun(applicationContext, mFirebaseAnalytics!!)
+        checkFirstRun(applicationContext/*, mFirebaseAnalytics!!*/)
     }
 
     /** Called when leaving the activity  */

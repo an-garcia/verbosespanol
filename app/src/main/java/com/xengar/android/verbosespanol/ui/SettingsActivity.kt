@@ -133,11 +133,11 @@ class SettingsActivity : AppCompatPreferenceActivity(),
             // Reconfigure Verb Notifications
             val enabled = ActivityUtils.getPreferenceEnableNotifications(applicationContext)
             if (!enabled) {
-                //ActivityUtils.cancelRepeatingNotifications(applicationContext)
+                ActivityUtils.cancelRepeatingNotifications(applicationContext)
                 //ActivityUtils.firebaseAnalyticsLogEventSelectContent(mFirebaseAnalytics!!,
                 //        TYPE_STOP_NOTIFICATIONS, "Preferences", TYPE_VERB_NOTIFICATION)
             } else {
-                //ActivityUtils.scheduleRepeatingNotifications(applicationContext)
+                ActivityUtils.scheduleRepeatingNotifications(applicationContext)
                 //ActivityUtils.firebaseAnalyticsLogEventSelectContent(mFirebaseAnalytics!!,
                 //        TYPE_START_NOTIFICATIONS, "Preferences", TYPE_VERB_NOTIFICATION)
             }

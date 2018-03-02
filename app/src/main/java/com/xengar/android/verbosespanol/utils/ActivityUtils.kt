@@ -174,6 +174,8 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_EN
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_FR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_PT
+import com.xengar.android.verbosespanol.sync.AlarmReceiver
+import com.xengar.android.verbosespanol.sync.JobSchedulerService
 import com.xengar.android.verbosespanol.ui.HelpActivity
 import com.xengar.android.verbosespanol.ui.SettingsActivity
 import com.xengar.android.verbosespanol.utils.Constants.CONJUGATION_ID
@@ -912,7 +914,7 @@ object ActivityUtils {
     /**
      * Schedules a repeating event to launch the verb Notifications.
      * @param context Context
-     *//*
+     */
     fun scheduleRepeatingNotifications(context: Context) {
         // JobScheduler works since 21+ (Lollipop).
         // But, it doesn't allow to configure start time.
@@ -922,12 +924,12 @@ object ActivityUtils {
         } else {
             startAlarm(context)
         }
-    }*/
+    }
 
     /**
      * Cancels the repeating event that launches the verb Notifications.
      * @param context Context
-     *//*
+     */
     fun cancelRepeatingNotifications(context: Context) {
         // JobScheduler works since 21+ (Lollipop).
         // But, it doesn't allow to configure start time.
@@ -937,12 +939,12 @@ object ActivityUtils {
         } else {
             cancelAlarm(context)
         }
-    }*/
+    }
 
     /**
      * Start an Alarm
      * @param context Context
-     *//*
+     */
     fun startAlarm(context: Context) {
         val alarmIntent = Intent(context, AlarmReceiver::class.java)
         val pendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0)
@@ -957,12 +959,12 @@ object ActivityUtils {
         if (LOG) {
             Toast.makeText(context, "Alarm Set", Toast.LENGTH_SHORT).show()
         }
-    }*/
+    }
 
     /**
      * Cancel Alarm
      * @param context Context
-     *//*
+     */
     fun cancelAlarm(context: Context) {
         val manager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val alarmIntent = Intent(context, AlarmReceiver::class.java)
@@ -971,12 +973,12 @@ object ActivityUtils {
         if (LOG) {
             Toast.makeText(context, "Alarm Canceled", Toast.LENGTH_SHORT).show()
         }
-    }*/
+    }
 
     /**
      * Schedules a repeating task.
      * @param context Context
-     *//*
+     */
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     fun scheduleTask(context: Context) {
         // https://code.tutsplus.com/tutorials/using-the-jobscheduler-api-on-android-lollipop--cms-23562
@@ -1005,12 +1007,12 @@ object ActivityUtils {
                         Toast.LENGTH_SHORT).show()
             }
         }
-    }*/
+    }
 
     /**
      * Cancel all tasks
      * @param context Context
-     *//*
+     */
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     fun cancelTask(context: Context) {
         val jobScheduler = context.getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
@@ -1019,14 +1021,14 @@ object ActivityUtils {
             Toast.makeText(context, "Scheduled Notification Task Canceled",
                     Toast.LENGTH_SHORT).show()
         }
-    }*/
+    }
 
     /**
      * Check if it's the first run, and launch the Verb Notifications with AlarmManager.
      * @param context Context
      * @param firebaseAnalytics FirebaseAnalytics
-     *//*
-    fun checkFirstRun(context: Context, firebaseAnalytics: FirebaseAnalytics) {
+     */
+    fun checkFirstRun(context: Context/*, firebaseAnalytics: FirebaseAnalytics*/) {
         val notFound = -1
         // Get current version code
         val currentVersionCode = BuildConfig.VERSION_CODE
@@ -1048,7 +1050,7 @@ object ActivityUtils {
 
         // Update the shared preferences with the current version code
         saveLongToPreferences(context, PREF_VERSION_CODE_KEY, currentVersionCode.toLong())
-    }*/
+    }
 
     /**
      * Check that we don't use AlarmManager since API 26+ (Oreo).

@@ -332,6 +332,7 @@
         tren = ""
         trfr = ""
         trpt = "" />
+    <!--
     <verb
         id   = "21"
         ta   = ""
@@ -406,9 +407,10 @@
         no   = ""
         tren = ""
         trfr = ""
-        trpt = "" />
+        trpt = "" /> -->
 
     <!-- TOP 50 -->
+    <!--
     <verb
         id   = "26"
         ta   = ""
@@ -424,5 +426,6 @@
         tren = ""
         trfr = ""
         trpt = "" />
+    -->
 
 </verbs>

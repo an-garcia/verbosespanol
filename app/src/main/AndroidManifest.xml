@@ -17,6 +17,8 @@
     package="com.xengar.android.verbosespanol">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permission to schedule a Notification on device reboot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -57,6 +59,29 @@
             android:name=".data.VerbProvider"
             android:authorities="com.xengar.android.verbosespanol"
             android:exported="false" />
+
+        <receiver android:name=".sync.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Will not be called unless the application explicitly enables it -->
+        <receiver
+            android:name=".sync.DeviceBootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Declaring IntentService -->
+        <service
+            android:name=".sync.NotificationService"
+            android:exported="false" />
+
+        <service android:name=".sync.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
     </application>
 
