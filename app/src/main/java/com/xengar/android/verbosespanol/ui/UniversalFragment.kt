@@ -25,6 +25,9 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.xengar.android.verbosespanol.R
+import com.xengar.android.verbosespanol.adapter.VerbAdapter
+import com.xengar.android.verbosespanol.data.Verb
+import com.xengar.android.verbosespanol.sync.FetchVerbs
 import com.xengar.android.verbosespanol.utils.Constants.ALPHABET
 import com.xengar.android.verbosespanol.utils.Constants.COMMON_TYPE
 import com.xengar.android.verbosespanol.utils.Constants.GROUP_ALL
@@ -47,8 +50,8 @@ class UniversalFragment : Fragment() {
     private var mCustomErrorView: CustomErrorView? = null
     private var mRecyclerView: RecyclerView? = null
     private var progressBar: CircularProgressBar? = null
-    //private var mAdapter: VerbAdapter? = null
-    //private var mVerbs: MutableList<Verb>? = null
+    private var mAdapter: VerbAdapter? = null
+    private var mVerbs: MutableList<Verb>? = null
     var verbGroup = GROUP_ALL
         private set   // 1er group, 2nd group, 3rd group, all groups
     var sortType = ALPHABET
@@ -77,27 +80,17 @@ class UniversalFragment : Fragment() {
         mCustomErrorView = view.findViewById(R.id.error)
         mRecyclerView = view.findViewById(R.id.recycler)
         progressBar = view.findViewById(R.id.progressBar)
-        //mVerbs = ArrayList()
+        mVerbs = ArrayList()
 
         val tts = (activity as MainActivity).tts
-        //mAdapter = VerbAdapter(mVerbs, itemType, tts!!)
+        mAdapter = VerbAdapter(mVerbs, itemType, tts!!)
 
         return view
     }
 
     override fun onResume() {
         super.onResume()
-
-        /*
-        if (!FragmentUtils.checkInternetConnection(getActivity())) {
-            if (LOG) {
-                Log.e(TAG, "Network is not available");
-            }
-            onLoadFailed(new Throwable(getString(R.string.network_not_available_message)));
-            return;
-        }*/
-
-        //mVerbs!!.clear()
+        mVerbs!!.clear()
         fillVerbs()
     }
 
@@ -110,12 +103,12 @@ class UniversalFragment : Fragment() {
     private fun fillVerbs() {
         mRecyclerView!!.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL,
                 false)
-        //mRecyclerView!!.adapter = mAdapter
-        //FragmentUtils.updateProgressBar(progressBar, true)
+        mRecyclerView!!.adapter = mAdapter
+        FragmentUtils.updateProgressBar(progressBar, true)
 
-        //val fetch = FetchVerbs(verbGroup, sortType, commonType, mAdapter!!,
-        //        activity!!.contentResolver, mVerbs!!, progressBar!!)
-        //fetch.execute()
+        val fetch = FetchVerbs(verbGroup, sortType, commonType, mAdapter!!,
+                activity!!.contentResolver, mVerbs!!, progressBar!!)
+        fetch.execute()
     }
 
 }// Required empty public constructor
