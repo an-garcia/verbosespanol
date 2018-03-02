@@ -17,6 +17,7 @@ package com.xengar.android.verbosespanol.utils
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.preference.PreferenceActivity
 import android.preference.PreferenceManager
 import android.text.Html
@@ -24,7 +25,9 @@ import android.text.Spanned
 import com.xengar.android.verbosespanol.R
 import com.xengar.android.verbosespanol.ui.HelpActivity
 import com.xengar.android.verbosespanol.ui.SettingsActivity
+import com.xengar.android.verbosespanol.utils.Constants.CONJUGATION_ID
 import com.xengar.android.verbosespanol.utils.Constants.DEFAULT_FONT_SIZE
+import com.xengar.android.verbosespanol.utils.Constants.DEMO_MODE
 import com.xengar.android.verbosespanol.utils.Constants.ENGLISH
 import com.xengar.android.verbosespanol.utils.Constants.FAVORITES
 import com.xengar.android.verbosespanol.utils.Constants.LIST
@@ -38,6 +41,9 @@ import com.xengar.android.verbosespanol.utils.Constants.MOST_COMMON_ALL
 import com.xengar.android.verbosespanol.utils.Constants.NONE
 import com.xengar.android.verbosespanol.utils.Constants.PORTUGUESE
 import com.xengar.android.verbosespanol.utils.Constants.FRENCH
+import com.xengar.android.verbosespanol.utils.Constants.SHARED_PREF_NAME
+import com.xengar.android.verbosespanol.utils.Constants.VERB_ID
+import com.xengar.android.verbosespanol.utils.Constants.VERB_NAME
 
 /**
  * ActivityUtils. To handle common tasks.
@@ -47,6 +53,80 @@ object ActivityUtils {
     private val TAG = ActivityUtils::class.java.simpleName
 
 
+    /**
+     * Saves the variable into Preferences.
+     * @param context context
+     * @param name name of preference
+     * @param value value
+     */
+    fun saveIntToPreferences(context: Context, name: String, value: Int) {
+        val prefs = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
+        val e = prefs.edit()
+        e.putInt(name, value)
+        e.commit()
+    }
+
+    /**
+     * Saves the variable into Preferences.
+     * @param context context
+     * @param name name of preference
+     * @param value value
+     */
+    fun saveLongToPreferences(context: Context, name: String, value: Long) {
+        val prefs = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
+        val e = prefs.edit()
+        e.putLong(name, value)
+        e.commit()
+    }
+
+    /**
+     * Saves the variable into Preferences.
+     * @param context context
+     * @param name name of preference
+     * @param value value
+     */
+    fun saveBooleanToPreferences(context: Context, name: String, value: Boolean) {
+        val prefs = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
+        val e = prefs.edit()
+        e.putBoolean(name, value)
+        e.commit()
+    }
+
+    /**
+     * Saves the variable into Preferences.
+     * @param context context
+     * @param name name of preference
+     * @param value value
+     */
+    fun saveStringToPreferences(context: Context, name: String, value: String) {
+        val prefs = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
+        val e = prefs.edit()
+        e.putString(name, value)
+        e.commit()
+    }
+
+    /**
+     * Launches Details Activity.
+     * @param context context
+     * @param id verb id
+     * @param cId conjugation id
+     * @param verb verb name
+     * @param demoMode demo
+     */ /*
+    fun launchDetailsActivity(context: Context, id: Long, cId: Long, verb: String,
+                              demoMode: Boolean) {
+        val intent = Intent(context, DetailsActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+        val bundle = Bundle()
+        bundle.putString(VERB_NAME, verb)
+        bundle.putLong(VERB_ID, id)
+        bundle.putLong(CONJUGATION_ID, cId)
+        bundle.putBoolean(DEMO_MODE, demoMode)
+        intent.putExtras(bundle)
+
+        context.startActivity(intent)
+    }*/
 
     /**
      * Launches Help Activity.
@@ -71,6 +151,16 @@ object ActivityUtils {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         context.startActivity(intent)
     }
+
+    /**
+     * Launches Search Activity.
+     * @param context context
+     */ /*
+    fun launchSearchActivity(context: Context) {
+        val intent = Intent(context, SearchActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(intent)
+    } */
 
     /**
      * Helper class to handle deprecated method.

@@ -38,6 +38,9 @@ import com.xengar.android.verbosespanol.utils.Constants.TYPE_PAGE
 
 import kotlinx.android.synthetic.main.activity_help.*
 
+/**
+ * HelpActivity
+ */
 class HelpActivity : AppCompatActivity(), View.OnClickListener {
 
     //private var mFirebaseAnalytics: FirebaseAnalytics? = null

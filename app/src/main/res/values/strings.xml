@@ -352,6 +352,9 @@
     </string-array>
     <string name="title_activity_help">Help</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!-- Example General settings -->
     <!--
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
