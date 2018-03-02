@@ -20,317 +20,402 @@ package com.xengar.android.verbosespanol.data
  */
 class Conjugation
 /*** Constructor  */
-(id: Long, termination: String, radicals: String,
- infinitivePresent: String,
- infinitivePasse: String,
- participePresent: String,
- participePasse1: String,
- participePasse2: String,
- gerondifPresent: String,
- gerondifPasse: String,
- imperatifPresentTu: String,
- imperatifPresentNous: String,
- imperatifPresentVous: String,
- imperatifPasseTu: String,
- imperatifPasseNous: String,
- imperatifPasseVous: String,
+(   id: Long, termination: String, radicals: String, 
+    infinitivoSimple: String,
+    infinitivoCompuesto: String,
+    participio: String,
+    gerundioSimple: String,
+    gerundioCompuesto: String,
 
- indicatifPresentJe: String,
- indicatifPresentTu: String,
- indicatifPresentIl: String,
- indicatifPresentNous: String,
- indicatifPresentVous: String,
- indicatifPresentIls: String,
- indicatifPasseComposeJe: String,
- indicatifPasseComposeTu: String,
- indicatifPasseComposeIl: String,
- indicatifPasseComposeNous: String,
- indicatifPasseComposeVous: String,
- indicatifPasseComposeIls: String,
- indicatifImperfaitJe: String,
- indicatifImperfaitTu: String,
- indicatifImperfaitIl: String,
- indicatifImperfaitNous: String,
- indicatifImperfaitVous: String,
- indicatifImperfaitIls: String,
- indicatifPlusQueParfaitJe: String,
- indicatifPlusQueParfaitTu: String,
- indicatifPlusQueParfaitIl: String,
- indicatifPlusQueParfaitNous: String,
- indicatifPlusQueParfaitVous: String,
- indicatifPlusQueParfaitIls: String,
- indicatifPasseSimpleJe: String,
- indicatifPasseSimpleTu: String,
- indicatifPasseSimpleIl: String,
- indicatifPasseSimpleNous: String,
- indicatifPasseSimpleVous: String,
- indicatifPasseSimpleIls: String,
- indicatifPasseAnterieurJe: String,
- indicatifPasseAnterieurTu: String,
- indicatifPasseAnterieurIl: String,
- indicatifPasseAnterieurNous: String,
- indicatifPasseAnterieurVous: String,
- indicatifPasseAnterieurIls: String,
- indicatifFuturSimpleJe: String,
- indicatifFuturSimpleTu: String,
- indicatifFuturSimpleIl: String,
- indicatifFuturSimpleNous: String,
- indicatifFuturSimpleVous: String,
- indicatifFuturSimpleIls: String,
- indicatifFuturAnterieurJe: String,
- indicatifFuturAnterieurTu: String,
- indicatifFuturAnterieurIl: String,
- indicatifFuturAnterieurNous: String,
- indicatifFuturAnterieurVous: String,
- indicatifFuturAnterieurIls: String,
+    imperativoTu: String,  
+    imperativoEl: String,
+    imperativoN: String,
+    imperativoV: String,
+    imperativoEll: String,
+    imperativoNegTu: String,
+    imperativoNegEl: String,
+    imperativoNegN: String,
+    imperativoNegV: String,
+    imperativoNegEll: String,
 
- subjonctifPresentJe: String,
- subjonctifPresentTu: String,
- subjonctifPresentIl: String,
- subjonctifPresentNous: String,
- subjonctifPresentVous: String,
- subjonctifPresentIls: String,
- subjonctifPasseJe: String,
- subjonctifPasseTu: String,
- subjonctifPasseIl: String,
- subjonctifPasseNous: String,
- subjonctifPasseVous: String,
- subjonctifPasseIls: String,
- subjonctifImperfaitJe: String,
- subjonctifImperfaitTu: String,
- subjonctifImperfaitIl: String,
- subjonctifImperfaitNous: String,
- subjonctifImperfaitVous: String,
- subjonctifImperfaitIls: String,
- subjonctifPlusQueParfaitJe: String,
- subjonctifPlusQueParfaitTu: String,
- subjonctifPlusQueParfaitIl: String,
- subjonctifPlusQueParfaitNous: String,
- subjonctifPlusQueParfaitVous: String,
- subjonctifPlusQueParfaitIls: String,
+    indicativoPresenteYo: String,
+    indicativoPresenteTu: String,
+    indicativoPresenteEl: String,
+    indicativoPresenteN: String,
+    indicativoPresenteV: String,
+    indicativoPresenteEll: String,
 
- conditionnelPresentJe: String,
- conditionnelPresentTu: String,
- conditionnelPresentIl: String,
- conditionnelPresentNous: String,
- conditionnelPresentVous: String,
- conditionnelPresentIls: String,
- conditionnelPasseJe: String,
- conditionnelPasseTu: String,
- conditionnelPasseIl: String,
- conditionnelPasseNous: String,
- conditionnelPasseVous: String,
- conditionnelPasseIls: String) {
+    indicativoPreteritoImperfectoYo: String,
+    indicativoPreteritoImperfectoTu: String,
+    indicativoPreteritoImperfectoEl: String,
+    indicativoPreteritoImperfectoN: String,
+    indicativoPreteritoImperfectoV: String,
+    indicativoPreteritoImperfectoEll: String,
+
+    indicativoPreteritoPerfectoSimpleYo: String,
+    indicativoPreteritoPerfectoSimpleTu: String,
+    indicativoPreteritoPerfectoSimpleEl: String,
+    indicativoPreteritoPerfectoSimpleN: String,
+    indicativoPreteritoPerfectoSimpleV: String,
+    indicativoPreteritoPerfectoSimpleEll: String,
+
+    indicativoFuturoSimpleYo: String,
+    indicativoFuturoSimpleTu: String,
+    indicativoFuturoSimpleEl: String,
+    indicativoFuturoSimpleN: String,
+    indicativoFuturoSimpleV: String,
+    indicativoFuturoSimpleEll: String,
+
+    indicativoCondicionalSimpleYo: String,
+    indicativoCondicionalSimpleTu: String,
+    indicativoCondicionalSimpleEl: String,
+    indicativoCondicionalSimpleN: String,
+    indicativoCondicionalSimpleV: String,
+    indicativoCondicionalSimpleEll: String,
+
+    indicativoPreteritoPerfectoCompuestoYo: String,
+    indicativoPreteritoPerfectoCompuestoTu: String,
+    indicativoPreteritoPerfectoCompuestoEl: String,
+    indicativoPreteritoPerfectoCompuestoN: String,
+    indicativoPreteritoPerfectoCompuestoV: String,
+    indicativoPreteritoPerfectoCompuestoEll: String,
+
+    indicativoPreteritoPluscuamperfectoYo: String,
+    indicativoPreteritoPluscuamperfectoTu: String,
+    indicativoPreteritoPluscuamperfectoEl: String,
+    indicativoPreteritoPluscuamperfectoN: String,
+    indicativoPreteritoPluscuamperfectoV: String,
+    indicativoPreteritoPluscuamperfectoEll: String,
+
+    indicativoPreteritoAnteriorYo: String,
+    indicativoPreteritoAnteriorTu: String,
+    indicativoPreteritoAnteriorEl: String,
+    indicativoPreteritoAnteriorN: String,
+    indicativoPreteritoAnteriorV: String,
+    indicativoPreteritoAnteriorEll: String,
+
+    indicativoFuturoCompuestoYo: String,
+    indicativoFuturoCompuestoTu: String,
+    indicativoFuturoCompuestoEl: String,
+    indicativoFuturoCompuestoN: String,
+    indicativoFuturoCompuestoV: String,
+    indicativoFuturoCompuestoEll: String,
+
+    indicativoCondicionalCompuestoYo: String,
+    indicativoCondicionalCompuestoTu: String,
+    indicativoCondicionalCompuestoEl: String,
+    indicativoCondicionalCompuestoN: String,
+    indicativoCondicionalCompuestoV: String,
+    indicativoCondicionalCompuestoEll: String,
+
+    subjuntivoPresenteYo: String,
+    subjuntivoPresenteTu: String,
+    subjuntivoPresenteEl: String,
+    subjuntivoPresenteN: String,
+    subjuntivoPresenteV: String,
+    subjuntivoPresenteEll: String,
+
+    subjuntivoPreteritoImperfectoYo: String,
+    subjuntivoPreteritoImperfectoTu: String,
+    subjuntivoPreteritoImperfectoEl: String,
+    subjuntivoPreteritoImperfectoN: String,
+    subjuntivoPreteritoImperfectoV: String,
+    subjuntivoPreteritoImperfectoEll: String,
+
+    subjuntivoFuturoSimpleYo: String,
+    subjuntivoFuturoSimpleTu: String,
+    subjuntivoFuturoSimpleEl: String,
+    subjuntivoFuturoSimpleN: String,
+    subjuntivoFuturoSimpleV: String,
+    subjuntivoFuturoSimpleEll: String,
+
+    subjuntivoPreteritoPerfectoCompuestoYo: String,
+    subjuntivoPreteritoPerfectoCompuestoTu: String,
+    subjuntivoPreteritoPerfectoCompuestoEl: String,
+    subjuntivoPreteritoPerfectoCompuestoN: String,
+    subjuntivoPreteritoPerfectoCompuestoV: String,
+    subjuntivoPreteritoPerfectoCompuestoEll: String,
+
+    subjuntivoPreteritoPluscuamperfectoYo: String,
+    subjuntivoPreteritoPluscuamperfectoTu: String,
+    subjuntivoPreteritoPluscuamperfectoEl: String,
+    subjuntivoPreteritoPluscuamperfectoN: String,
+    subjuntivoPreteritoPluscuamperfectoV: String,
+    subjuntivoPreteritoPluscuamperfectoEll: String,
+
+    subjuntivoFuturoCompuestoYo: String,
+    subjuntivoFuturoCompuestoTu: String,
+    subjuntivoFuturoCompuestoEl: String,
+    subjuntivoFuturoCompuestoN: String,
+    subjuntivoFuturoCompuestoV: String,
+    subjuntivoFuturoCompuestoEll: String ) {
 
     /* Getters and Setters */
     var id: Long = 0
     var termination = ""
     var radicals = ""
-    var infinitivePresent = ""
-    var infinitivePasse = ""
-    var participePresent = ""
-    var participePasse1 = ""
-    var participePasse2 = ""
-    var gerondifPresent = ""
-    var gerondifPasse = ""
-    var imperatifPresentTu = ""
-    var imperatifPresentNous = ""
-    var imperatifPresentVous = ""
-    var imperatifPasseTu = ""
-    var imperatifPasseNous = ""
-    var imperatifPasseVous = ""
+    var infinitivoSimple = ""
+    var infinitivoCompuesto = ""
+    var participio = ""
+    var gerundioSimple = ""
+    var gerundioCompuesto = ""
 
-    var indicatifPresentJe = ""
-    var indicatifPresentTu = ""
-    var indicatifPresentIl = ""
-    var indicatifPresentNous = ""
-    var indicatifPresentVous = ""
-    var indicatifPresentIls = ""
-    var indicatifPasseComposeJe = ""
-    var indicatifPasseComposeTu = ""
-    var indicatifPasseComposeIl = ""
-    var indicatifPasseComposeNous = ""
-    var indicatifPasseComposeVous = ""
-    var indicatifPasseComposeIls = ""
-    var indicatifImperfaitJe = ""
-    var indicatifImperfaitTu = ""
-    var indicatifImperfaitIl = ""
-    var indicatifImperfaitNous = ""
-    var indicatifImperfaitVous = ""
-    var indicatifImperfaitIls = ""
-    var indicatifPlusQueParfaitJe = ""
-    var indicatifPlusQueParfaitTu = ""
-    var indicatifPlusQueParfaitIl = ""
-    var indicatifPlusQueParfaitNous = ""
-    var indicatifPlusQueParfaitVous = ""
-    var indicatifPlusQueParfaitIls = ""
-    var indicatifPasseSimpleJe = ""
-    var indicatifPasseSimpleTu = ""
-    var indicatifPasseSimpleIl = ""
-    var indicatifPasseSimpleNous = ""
-    var indicatifPasseSimpleVous = ""
-    var indicatifPasseSimpleIls = ""
-    var indicatifPasseAnterieurJe = ""
-    var indicatifPasseAnterieurTu = ""
-    var indicatifPasseAnterieurIl = ""
-    var indicatifPasseAnterieurNous = ""
-    var indicatifPasseAnterieurVous = ""
-    var indicatifPasseAnterieurIls = ""
-    var indicatifFuturSimpleJe = ""
-    var indicatifFuturSimpleTu = ""
-    var indicatifFuturSimpleIl = ""
-    var indicatifFuturSimpleNous = ""
-    var indicatifFuturSimpleVous = ""
-    var indicatifFuturSimpleIls = ""
-    var indicatifFuturAnterieurJe = ""
-    var indicatifFuturAnterieurTu = ""
-    var indicatifFuturAnterieurIl = ""
-    var indicatifFuturAnterieurNous = ""
-    var indicatifFuturAnterieurVous = ""
-    var indicatifFuturAnterieurIls = ""
+    var imperativoTu = ""
+    var imperativoEl = ""
+    var imperativoN = ""
+    var imperativoV = ""
+    var imperativoEll = ""
+    var imperativoNegTu = ""
+    var imperativoNegEl = ""
+    var imperativoNegN = ""
+    var imperativoNegV = ""
+    var imperativoNegEll = ""
 
-    var subjonctifPresentJe = ""
-    var subjonctifPresentTu = ""
-    var subjonctifPresentIl = ""
-    var subjonctifPresentNous = ""
-    var subjonctifPresentVous = ""
-    var subjonctifPresentIls = ""
-    var subjonctifPasseJe = ""
-    var subjonctifPasseTu = ""
-    var subjonctifPasseIl = ""
-    var subjonctifPasseNous = ""
-    var subjonctifPasseVous = ""
-    var subjonctifPasseIls = ""
-    var subjonctifImperfaitJe = ""
-    var subjonctifImperfaitTu = ""
-    var subjonctifImperfaitIl = ""
-    var subjonctifImperfaitNous = ""
-    var subjonctifImperfaitVous = ""
-    var subjonctifImperfaitIls = ""
-    var subjonctifPlusQueParfaitJe = ""
-    var subjonctifPlusQueParfaitTu = ""
-    var subjonctifPlusQueParfaitIl = ""
-    var subjonctifPlusQueParfaitNous = ""
-    var subjonctifPlusQueParfaitVous = ""
-    var subjonctifPlusQueParfaitIls = ""
+    var indicativoPresenteYo = ""
+    var indicativoPresenteTu = ""
+    var indicativoPresenteEl = ""
+    var indicativoPresenteN = ""
+    var indicativoPresenteV = ""
+    var indicativoPresenteEll = ""
 
-    var conditionnelPresentJe = ""
-    var conditionnelPresentTu = ""
-    var conditionnelPresentIl = ""
-    var conditionnelPresentNous = ""
-    var conditionnelPresentVous = ""
-    var conditionnelPresentIls = ""
-    var conditionnelPasseJe = ""
-    var conditionnelPasseTu = ""
-    var conditionnelPasseIl = ""
-    var conditionnelPasseNous = ""
-    var conditionnelPasseVous = ""
-    var conditionnelPasseIls = ""
+    var indicativoPreteritoImperfectoYo = ""
+    var indicativoPreteritoImperfectoTu = ""
+    var indicativoPreteritoImperfectoEl = ""
+    var indicativoPreteritoImperfectoN = ""
+    var indicativoPreteritoImperfectoV = ""
+    var indicativoPreteritoImperfectoEll = ""
+
+    var indicativoPreteritoPerfectoSimpleYo = ""
+    var indicativoPreteritoPerfectoSimpleTu = ""
+    var indicativoPreteritoPerfectoSimpleEl = ""
+    var indicativoPreteritoPerfectoSimpleN = ""
+    var indicativoPreteritoPerfectoSimpleV = ""
+    var indicativoPreteritoPerfectoSimpleEll = ""
+
+    var indicativoFuturoSimpleYo = ""
+    var indicativoFuturoSimpleTu = ""
+    var indicativoFuturoSimpleEl = ""
+    var indicativoFuturoSimpleN = ""
+    var indicativoFuturoSimpleV = ""
+    var indicativoFuturoSimpleEll = ""
+
+    var indicativoCondicionalSimpleYo = ""
+    var indicativoCondicionalSimpleTu = ""
+    var indicativoCondicionalSimpleEl = ""
+    var indicativoCondicionalSimpleN = ""
+    var indicativoCondicionalSimpleV = ""
+    var indicativoCondicionalSimpleEll = ""
+
+    var indicativoPreteritoPerfectoCompuestoYo = ""
+    var indicativoPreteritoPerfectoCompuestoTu = ""
+    var indicativoPreteritoPerfectoCompuestoEl = ""
+    var indicativoPreteritoPerfectoCompuestoN = ""
+    var indicativoPreteritoPerfectoCompuestoV = ""
+    var indicativoPreteritoPerfectoCompuestoEll = ""
+
+    var indicativoPreteritoPluscuamperfectoYo = ""
+    var indicativoPreteritoPluscuamperfectoTu = ""
+    var indicativoPreteritoPluscuamperfectoEl = ""
+    var indicativoPreteritoPluscuamperfectoN = ""
+    var indicativoPreteritoPluscuamperfectoV = ""
+    var indicativoPreteritoPluscuamperfectoEll = ""
+
+    var indicativoPreteritoAnteriorYo = ""
+    var indicativoPreteritoAnteriorTu = ""
+    var indicativoPreteritoAnteriorEl = ""
+    var indicativoPreteritoAnteriorN = ""
+    var indicativoPreteritoAnteriorV = ""
+    var indicativoPreteritoAnteriorEll = ""
+
+    var indicativoFuturoCompuestoYo = ""
+    var indicativoFuturoCompuestoTu = ""
+    var indicativoFuturoCompuestoEl = ""
+    var indicativoFuturoCompuestoN = ""
+    var indicativoFuturoCompuestoV = ""
+    var indicativoFuturoCompuestoEll = ""
+
+    var indicativoCondicionalCompuestoYo = ""
+    var indicativoCondicionalCompuestoTu = ""
+    var indicativoCondicionalCompuestoEl = ""
+    var indicativoCondicionalCompuestoN = ""
+    var indicativoCondicionalCompuestoV = ""
+    var indicativoCondicionalCompuestoEll = ""
+
+    var subjuntivoPresenteYo = ""
+    var subjuntivoPresenteTu = ""
+    var subjuntivoPresenteEl = ""
+    var subjuntivoPresenteN = ""
+    var subjuntivoPresenteV = ""
+    var subjuntivoPresenteEll = ""
+
+    var subjuntivoPreteritoImperfectoYo = ""
+    var subjuntivoPreteritoImperfectoTu = ""
+    var subjuntivoPreteritoImperfectoEl = ""
+    var subjuntivoPreteritoImperfectoN = ""
+    var subjuntivoPreteritoImperfectoV = ""
+    var subjuntivoPreteritoImperfectoEll = ""
+
+    var subjuntivoFuturoSimpleYo = ""
+    var subjuntivoFuturoSimpleTu = ""
+    var subjuntivoFuturoSimpleEl = ""
+    var subjuntivoFuturoSimpleN = ""
+    var subjuntivoFuturoSimpleV = ""
+    var subjuntivoFuturoSimpleEll = ""
+
+    var subjuntivoPreteritoPerfectoCompuestoYo = ""
+    var subjuntivoPreteritoPerfectoCompuestoTu = ""
+    var subjuntivoPreteritoPerfectoCompuestoEl = ""
+    var subjuntivoPreteritoPerfectoCompuestoN = ""
+    var subjuntivoPreteritoPerfectoCompuestoV = ""
+    var subjuntivoPreteritoPerfectoCompuestoEll = ""
+
+    var subjuntivoPreteritoPluscuamperfectoYo = ""
+    var subjuntivoPreteritoPluscuamperfectoTu = ""
+    var subjuntivoPreteritoPluscuamperfectoEl = ""
+    var subjuntivoPreteritoPluscuamperfectoN = ""
+    var subjuntivoPreteritoPluscuamperfectoV = ""
+    var subjuntivoPreteritoPluscuamperfectoEll = ""
+
+    var subjuntivoFuturoCompuestoYo = ""
+    var subjuntivoFuturoCompuestoTu = ""
+    var subjuntivoFuturoCompuestoEl = ""
+    var subjuntivoFuturoCompuestoN = ""
+    var subjuntivoFuturoCompuestoV = ""
+    var subjuntivoFuturoCompuestoEll = ""
+
 
     init {
         this.id = id
         this.termination = termination
         this.radicals = radicals
-        this.infinitivePresent = infinitivePresent
-        this.infinitivePasse = infinitivePasse
-        this.participePresent = participePresent
-        this.participePasse1 = participePasse1
-        this.participePasse2 = participePasse2
-        this.gerondifPresent = gerondifPresent
-        this.gerondifPasse = gerondifPasse
-        this.imperatifPresentTu = imperatifPresentTu
-        this.imperatifPresentNous = imperatifPresentNous
-        this.imperatifPresentVous = imperatifPresentVous
-        this.imperatifPasseTu = imperatifPasseTu
-        this.imperatifPasseNous = imperatifPasseNous
-        this.imperatifPasseVous = imperatifPasseVous
+        this.infinitivoSimple = infinitivoSimple
+        this.infinitivoCompuesto = infinitivoCompuesto
+        this.participio = participio
+        this.gerundioSimple = gerundioSimple
+        this.gerundioCompuesto = gerundioCompuesto
 
-        this.indicatifPresentJe = indicatifPresentJe
-        this.indicatifPresentTu = indicatifPresentTu
-        this.indicatifPresentIl = indicatifPresentIl
-        this.indicatifPresentNous = indicatifPresentNous
-        this.indicatifPresentVous = indicatifPresentVous
-        this.indicatifPresentIls = indicatifPresentIls
-        this.indicatifPasseComposeJe = indicatifPasseComposeJe
-        this.indicatifPasseComposeTu = indicatifPasseComposeTu
-        this.indicatifPasseComposeIl = indicatifPasseComposeIl
-        this.indicatifPasseComposeNous = indicatifPasseComposeNous
-        this.indicatifPasseComposeVous = indicatifPasseComposeVous
-        this.indicatifPasseComposeIls = indicatifPasseComposeIls
-        this.indicatifImperfaitJe = indicatifImperfaitJe
-        this.indicatifImperfaitTu = indicatifImperfaitTu
-        this.indicatifImperfaitIl = indicatifImperfaitIl
-        this.indicatifImperfaitNous = indicatifImperfaitNous
-        this.indicatifImperfaitVous = indicatifImperfaitVous
-        this.indicatifImperfaitIls = indicatifImperfaitIls
-        this.indicatifPlusQueParfaitJe = indicatifPlusQueParfaitJe
-        this.indicatifPlusQueParfaitTu = indicatifPlusQueParfaitTu
-        this.indicatifPlusQueParfaitIl = indicatifPlusQueParfaitIl
-        this.indicatifPlusQueParfaitNous = indicatifPlusQueParfaitNous
-        this.indicatifPlusQueParfaitVous = indicatifPlusQueParfaitVous
-        this.indicatifPlusQueParfaitIls = indicatifPlusQueParfaitIls
-        this.indicatifPasseSimpleJe = indicatifPasseSimpleJe
-        this.indicatifPasseSimpleTu = indicatifPasseSimpleTu
-        this.indicatifPasseSimpleIl = indicatifPasseSimpleIl
-        this.indicatifPasseSimpleNous = indicatifPasseSimpleNous
-        this.indicatifPasseSimpleVous = indicatifPasseSimpleVous
-        this.indicatifPasseSimpleIls = indicatifPasseSimpleIls
-        this.indicatifPasseAnterieurJe = indicatifPasseAnterieurJe
-        this.indicatifPasseAnterieurTu = indicatifPasseAnterieurTu
-        this.indicatifPasseAnterieurIl = indicatifPasseAnterieurIl
-        this.indicatifPasseAnterieurNous = indicatifPasseAnterieurNous
-        this.indicatifPasseAnterieurVous = indicatifPasseAnterieurVous
-        this.indicatifPasseAnterieurIls = indicatifPasseAnterieurIls
-        this.indicatifFuturSimpleJe = indicatifFuturSimpleJe
-        this.indicatifFuturSimpleTu = indicatifFuturSimpleTu
-        this.indicatifFuturSimpleIl = indicatifFuturSimpleIl
-        this.indicatifFuturSimpleNous = indicatifFuturSimpleNous
-        this.indicatifFuturSimpleVous = indicatifFuturSimpleVous
-        this.indicatifFuturSimpleIls = indicatifFuturSimpleIls
-        this.indicatifFuturAnterieurJe = indicatifFuturAnterieurJe
-        this.indicatifFuturAnterieurTu = indicatifFuturAnterieurTu
-        this.indicatifFuturAnterieurIl = indicatifFuturAnterieurIl
-        this.indicatifFuturAnterieurNous = indicatifFuturAnterieurNous
-        this.indicatifFuturAnterieurVous = indicatifFuturAnterieurVous
-        this.indicatifFuturAnterieurIls = indicatifFuturAnterieurIls
+        this.imperativoTu = imperativoTu
+        this.imperativoEl = imperativoEl
+        this.imperativoN = imperativoN
+        this.imperativoV = imperativoV
+        this.imperativoEll = imperativoEll
+        this.imperativoNegTu = imperativoNegTu
+        this.imperativoNegEl = imperativoNegEl
+        this.imperativoNegN = imperativoNegN
+        this.imperativoNegV = imperativoNegV
+        this.imperativoNegEll = imperativoNegEll
 
-        this.subjonctifPresentJe = subjonctifPresentJe
-        this.subjonctifPresentTu = subjonctifPresentTu
-        this.subjonctifPresentIl = subjonctifPresentIl
-        this.subjonctifPresentNous = subjonctifPresentNous
-        this.subjonctifPresentVous = subjonctifPresentVous
-        this.subjonctifPresentIls = subjonctifPresentIls
-        this.subjonctifPasseJe = subjonctifPasseJe
-        this.subjonctifPasseTu = subjonctifPasseTu
-        this.subjonctifPasseIl = subjonctifPasseIl
-        this.subjonctifPasseNous = subjonctifPasseNous
-        this.subjonctifPasseVous = subjonctifPasseVous
-        this.subjonctifPasseIls = subjonctifPasseIls
-        this.subjonctifImperfaitJe = subjonctifImperfaitJe
-        this.subjonctifImperfaitTu = subjonctifImperfaitTu
-        this.subjonctifImperfaitIl = subjonctifImperfaitIl
-        this.subjonctifImperfaitNous = subjonctifImperfaitNous
-        this.subjonctifImperfaitVous = subjonctifImperfaitVous
-        this.subjonctifImperfaitIls = subjonctifImperfaitIls
-        this.subjonctifPlusQueParfaitJe = subjonctifPlusQueParfaitJe
-        this.subjonctifPlusQueParfaitTu = subjonctifPlusQueParfaitTu
-        this.subjonctifPlusQueParfaitIl = subjonctifPlusQueParfaitIl
-        this.subjonctifPlusQueParfaitNous = subjonctifPlusQueParfaitNous
-        this.subjonctifPlusQueParfaitVous = subjonctifPlusQueParfaitVous
-        this.subjonctifPlusQueParfaitIls = subjonctifPlusQueParfaitIls
+        this.indicativoPresenteYo = indicativoPresenteYo
+        this.indicativoPresenteTu = indicativoPresenteTu
+        this.indicativoPresenteEl = indicativoPresenteEl
+        this.indicativoPresenteN = indicativoPresenteN
+        this.indicativoPresenteV = indicativoPresenteV
+        this.indicativoPresenteEll = indicativoPresenteEll
 
-        this.conditionnelPresentJe = conditionnelPresentJe
-        this.conditionnelPresentTu = conditionnelPresentTu
-        this.conditionnelPresentIl = conditionnelPresentIl
-        this.conditionnelPresentNous = conditionnelPresentNous
-        this.conditionnelPresentVous = conditionnelPresentVous
-        this.conditionnelPresentIls = conditionnelPresentIls
-        this.conditionnelPasseJe = conditionnelPasseJe
-        this.conditionnelPasseTu = conditionnelPasseTu
-        this.conditionnelPasseIl = conditionnelPasseIl
-        this.conditionnelPasseNous = conditionnelPasseNous
-        this.conditionnelPasseVous = conditionnelPasseVous
-        this.conditionnelPasseIls = conditionnelPasseIls
+        this.indicativoPreteritoImperfectoYo = indicativoPreteritoImperfectoYo
+        this.indicativoPreteritoImperfectoTu = indicativoPreteritoImperfectoTu
+        this.indicativoPreteritoImperfectoEl = indicativoPreteritoImperfectoEl
+        this.indicativoPreteritoImperfectoN = indicativoPreteritoImperfectoN
+        this.indicativoPreteritoImperfectoV = indicativoPreteritoImperfectoV
+        this.indicativoPreteritoImperfectoEll = indicativoPreteritoImperfectoEll
+
+        this.indicativoPreteritoPerfectoSimpleYo = indicativoPreteritoPerfectoSimpleYo
+        this.indicativoPreteritoPerfectoSimpleTu = indicativoPreteritoPerfectoSimpleTu
+        this.indicativoPreteritoPerfectoSimpleEl = indicativoPreteritoPerfectoSimpleEl
+        this.indicativoPreteritoPerfectoSimpleN = indicativoPreteritoPerfectoSimpleN
+        this.indicativoPreteritoPerfectoSimpleV = indicativoPreteritoPerfectoSimpleV
+        this.indicativoPreteritoPerfectoSimpleEll = indicativoPreteritoPerfectoSimpleEll
+
+        this.indicativoFuturoSimpleYo = indicativoFuturoSimpleYo
+        this.indicativoFuturoSimpleTu = indicativoFuturoSimpleTu
+        this.indicativoFuturoSimpleEl = indicativoFuturoSimpleEl
+        this.indicativoFuturoSimpleN = indicativoFuturoSimpleN
+        this.indicativoFuturoSimpleV = indicativoFuturoSimpleV
+        this.indicativoFuturoSimpleEll = indicativoFuturoSimpleEll
+
+        this.indicativoCondicionalSimpleYo = indicativoCondicionalSimpleYo
+        this.indicativoCondicionalSimpleTu = indicativoCondicionalSimpleTu
+        this.indicativoCondicionalSimpleEl = indicativoCondicionalSimpleEl
+        this.indicativoCondicionalSimpleN = indicativoCondicionalSimpleN
+        this.indicativoCondicionalSimpleV = indicativoCondicionalSimpleV
+        this.indicativoCondicionalSimpleEll = indicativoCondicionalSimpleEll
+
+        this.indicativoPreteritoPerfectoCompuestoYo = indicativoPreteritoPerfectoCompuestoYo
+        this.indicativoPreteritoPerfectoCompuestoTu = indicativoPreteritoPerfectoCompuestoTu
+        this.indicativoPreteritoPerfectoCompuestoEl = indicativoPreteritoPerfectoCompuestoEl
+        this.indicativoPreteritoPerfectoCompuestoN = indicativoPreteritoPerfectoCompuestoN
+        this.indicativoPreteritoPerfectoCompuestoV = indicativoPreteritoPerfectoCompuestoV
+        this.indicativoPreteritoPerfectoCompuestoEll = indicativoPreteritoPerfectoCompuestoEll
+
+        this.indicativoPreteritoPluscuamperfectoYo = indicativoPreteritoPluscuamperfectoYo
+        this.indicativoPreteritoPluscuamperfectoTu = indicativoPreteritoPluscuamperfectoTu
+        this.indicativoPreteritoPluscuamperfectoEl = indicativoPreteritoPluscuamperfectoEl
+        this.indicativoPreteritoPluscuamperfectoN = indicativoPreteritoPluscuamperfectoN
+        this.indicativoPreteritoPluscuamperfectoV = indicativoPreteritoPluscuamperfectoV
+        this.indicativoPreteritoPluscuamperfectoEll = indicativoPreteritoPluscuamperfectoEll
+
+        this.indicativoPreteritoAnteriorYo = indicativoPreteritoAnteriorYo
+        this.indicativoPreteritoAnteriorTu = indicativoPreteritoAnteriorTu
+        this.indicativoPreteritoAnteriorEl = indicativoPreteritoAnteriorEl
+        this.indicativoPreteritoAnteriorN = indicativoPreteritoAnteriorN
+        this.indicativoPreteritoAnteriorV = indicativoPreteritoAnteriorV
+        this.indicativoPreteritoAnteriorEll = indicativoPreteritoAnteriorEll
+
+        this.indicativoFuturoCompuestoYo = indicativoFuturoCompuestoYo
+        this.indicativoFuturoCompuestoTu = indicativoFuturoCompuestoTu
+        this.indicativoFuturoCompuestoEl = indicativoFuturoCompuestoEl
+        this.indicativoFuturoCompuestoN = indicativoFuturoCompuestoN
+        this.indicativoFuturoCompuestoV = indicativoFuturoCompuestoV
+        this.indicativoFuturoCompuestoEll = indicativoFuturoCompuestoEll
+
+        this.indicativoCondicionalCompuestoYo = indicativoCondicionalCompuestoYo
+        this.indicativoCondicionalCompuestoTu = indicativoCondicionalCompuestoTu
+        this.indicativoCondicionalCompuestoEl = indicativoCondicionalCompuestoEl
+        this.indicativoCondicionalCompuestoN = indicativoCondicionalCompuestoN
+        this.indicativoCondicionalCompuestoV = indicativoCondicionalCompuestoV
+        this.indicativoCondicionalCompuestoEll = indicativoCondicionalCompuestoEll
+
+        this.subjuntivoPresenteYo = subjuntivoPresenteYo
+        this.subjuntivoPresenteTu = subjuntivoPresenteTu
+        this.subjuntivoPresenteEl = subjuntivoPresenteEl
+        this.subjuntivoPresenteN = subjuntivoPresenteN
+        this.subjuntivoPresenteV = subjuntivoPresenteV
+        this.subjuntivoPresenteEll = subjuntivoPresenteEll
+
+        this.subjuntivoPreteritoImperfectoYo = subjuntivoPreteritoImperfectoYo
+        this.subjuntivoPreteritoImperfectoTu = subjuntivoPreteritoImperfectoTu
+        this.subjuntivoPreteritoImperfectoEl = subjuntivoPreteritoImperfectoEl
+        this.subjuntivoPreteritoImperfectoN = subjuntivoPreteritoImperfectoN
+        this.subjuntivoPreteritoImperfectoV = subjuntivoPreteritoImperfectoV
+        this.subjuntivoPreteritoImperfectoEll = subjuntivoPreteritoImperfectoEll
+
+        this.subjuntivoFuturoSimpleYo = subjuntivoFuturoSimpleYo
+        this.subjuntivoFuturoSimpleTu = subjuntivoFuturoSimpleTu
+        this.subjuntivoFuturoSimpleEl = subjuntivoFuturoSimpleEl
+        this.subjuntivoFuturoSimpleN = subjuntivoFuturoSimpleN
+        this.subjuntivoFuturoSimpleV = subjuntivoFuturoSimpleV
+        this.subjuntivoFuturoSimpleEll = subjuntivoFuturoSimpleEll
+
+        this.subjuntivoPreteritoPerfectoCompuestoYo = subjuntivoPreteritoPerfectoCompuestoYo
+        this.subjuntivoPreteritoPerfectoCompuestoTu = subjuntivoPreteritoPerfectoCompuestoTu
+        this.subjuntivoPreteritoPerfectoCompuestoEl = subjuntivoPreteritoPerfectoCompuestoEl
+        this.subjuntivoPreteritoPerfectoCompuestoN = subjuntivoPreteritoPerfectoCompuestoN
+        this.subjuntivoPreteritoPerfectoCompuestoV = subjuntivoPreteritoPerfectoCompuestoV
+        this.subjuntivoPreteritoPerfectoCompuestoEll = subjuntivoPreteritoPerfectoCompuestoEll
+
+        this.subjuntivoPreteritoPluscuamperfectoYo = subjuntivoPreteritoPluscuamperfectoYo
+        this.subjuntivoPreteritoPluscuamperfectoTu = subjuntivoPreteritoPluscuamperfectoTu
+        this.subjuntivoPreteritoPluscuamperfectoEl = subjuntivoPreteritoPluscuamperfectoEl
+        this.subjuntivoPreteritoPluscuamperfectoN = subjuntivoPreteritoPluscuamperfectoN
+        this.subjuntivoPreteritoPluscuamperfectoV = subjuntivoPreteritoPluscuamperfectoV
+        this.subjuntivoPreteritoPluscuamperfectoEll = subjuntivoPreteritoPluscuamperfectoEll
+
+        this.subjuntivoFuturoCompuestoYo = subjuntivoFuturoCompuestoYo
+        this.subjuntivoFuturoCompuestoTu = subjuntivoFuturoCompuestoTu
+        this.subjuntivoFuturoCompuestoEl = subjuntivoFuturoCompuestoEl
+        this.subjuntivoFuturoCompuestoN = subjuntivoFuturoCompuestoN
+        this.subjuntivoFuturoCompuestoV = subjuntivoFuturoCompuestoV
+        this.subjuntivoFuturoCompuestoEll = subjuntivoFuturoCompuestoEll
     }
 
 }

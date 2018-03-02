@@ -44,19 +44,133 @@ import android.widget.TextView
 import android.widget.Toast
 import com.xengar.android.verbosespanol.BuildConfig
 import com.xengar.android.verbosespanol.R
+import com.xengar.android.verbosespanol.data.Conjugation
 import com.xengar.android.verbosespanol.data.Verb
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COLOR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COMMON
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_CONJUGATION_NUMBER
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_DEFINITION
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GERUNDIO_COMPUESTO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GERUNDIO_SIMPLE
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GROUP
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_ID
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_NEGACION_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_NEGACION_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_NEGACION_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_NEGACION_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_NEGACION_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_COMPUESTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_COMPUESTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_COMPUESTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_COMPUESTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_COMPUESTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_COMPUESTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_SIMPLE_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_SIMPLE_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_SIMPLE_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_SIMPLE_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_SIMPLE_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_FUTURO_SIMPLE_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRESENTE_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRESENTE_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRESENTE_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRESENTE_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRESENTE_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRESENTE_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_ANTERIOR_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_ANTERIOR_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_ANTERIOR_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_ANTERIOR_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_ANTERIOR_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_ANTERIOR_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_YO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INFINITIVE
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INFINITIVO_COMPUESTO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INFINITIVO_SIMPLE
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_NOTES
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_PARTICIPIO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_RADICALS
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_1
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_2
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_3
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SCORE
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRESENTE_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRESENTE_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRESENTE_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRESENTE_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRESENTE_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRESENTE_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_EL
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_ELLOS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_NOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_TU
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_VOSOTROS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_YO
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TERMINATION
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_EN
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_FR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_PT
@@ -410,61 +524,138 @@ object ActivityUtils {
     /**
      * Generate all table conjugation columns.
      * @return String[]
-     *//*
+     */
     fun allConjugationColumns(): Array<String> {
-        return arrayOf(COLUMN_ID, COLUMN_TERMINATION, COLUMN_RADICALS, COLUMN_INFINITIVE_PRESENT,
-                COLUMN_INFINITIVE_PASSE, COLUMN_PARTICIPE_PRESENT, COLUMN_PARTICIPE_PASSE_1,
-                COLUMN_PARTICIPE_PASSE_2, COLUMN_GERONDIF_PRESENT, COLUMN_GERONDIF_PASSE,
+        return arrayOf(COLUMN_ID, COLUMN_TERMINATION, COLUMN_RADICALS,
+                COLUMN_INFINITIVO_SIMPLE,
+                COLUMN_INFINITIVO_COMPUESTO,
+                COLUMN_PARTICIPIO,
+                COLUMN_GERUNDIO_SIMPLE,
+                COLUMN_GERUNDIO_COMPUESTO,
 
-                COLUMN_IMPERATIF_PRESENT_TU, COLUMN_IMPERATIF_PRESENT_NOUS,
-                COLUMN_IMPERATIF_PRESENT_VOUS, COLUMN_IMPERATIF_PASSE_TU,
-                COLUMN_IMPERATIF_PASSE_NOUS, COLUMN_IMPERATIF_PASSE_VOUS,
+                COLUMN_IMPERATIVO_TU,
+                COLUMN_IMPERATIVO_EL,
+                COLUMN_IMPERATIVO_NOSOTROS,
+                COLUMN_IMPERATIVO_VOSOTROS,
+                COLUMN_IMPERATIVO_ELLOS,
+                COLUMN_IMPERATIVO_NEGACION_TU,
+                COLUMN_IMPERATIVO_NEGACION_EL,
+                COLUMN_IMPERATIVO_NEGACION_NOSOTROS,
+                COLUMN_IMPERATIVO_NEGACION_VOSOTROS,
+                COLUMN_IMPERATIVO_NEGACION_ELLOS,
 
-                COLUMN_INDICATIF_PRESENT_JE, COLUMN_INDICATIF_PRESENT_TU,
-                COLUMN_INDICATIF_PRESENT_IL, COLUMN_INDICATIF_PRESENT_NOUS,
-                COLUMN_INDICATIF_PRESENT_VOUS, COLUMN_INDICATIF_PRESENT_ILS,
-                COLUMN_INDICATIF_PASSE_COMPOSE_JE, COLUMN_INDICATIF_PASSE_COMPOSE_TU,
-                COLUMN_INDICATIF_PASSE_COMPOSE_IL, COLUMN_INDICATIF_PASSE_COMPOSE_NOUS,
-                COLUMN_INDICATIF_PASSE_COMPOSE_VOUS, COLUMN_INDICATIF_PASSE_COMPOSE_ILS,
-                COLUMN_INDICATIF_IMPERFAIT_JE, COLUMN_INDICATIF_IMPERFAIT_TU,
-                COLUMN_INDICATIF_IMPERFAIT_IL, COLUMN_INDICATIF_IMPERFAIT_NOUS,
-                COLUMN_INDICATIF_IMPERFAIT_VOUS, COLUMN_INDICATIF_IMPERFAIT_ILS,
-                COLUMN_INDICATIF_PLUS_QUE_PARFAIT_JE, COLUMN_INDICATIF_PLUS_QUE_PARFAIT_TU,
-                COLUMN_INDICATIF_PLUS_QUE_PARFAIT_IL, COLUMN_INDICATIF_PLUS_QUE_PARFAIT_NOUS,
-                COLUMN_INDICATIF_PLUS_QUE_PARFAIT_VOUS, COLUMN_INDICATIF_PLUS_QUE_PARFAIT_ILS,
-                COLUMN_INDICATIF_PASSE_SIMPLE_JE, COLUMN_INDICATIF_PASSE_SIMPLE_TU,
-                COLUMN_INDICATIF_PASSE_SIMPLE_IL, COLUMN_INDICATIF_PASSE_SIMPLE_NOUS,
-                COLUMN_INDICATIF_PASSE_SIMPLE_VOUS, COLUMN_INDICATIF_PASSE_SIMPLE_ILS,
-                COLUMN_INDICATIF_PASSE_ANTERIEUR_JE, COLUMN_INDICATIF_PASSE_ANTERIEUR_TU,
-                COLUMN_INDICATIF_PASSE_ANTERIEUR_IL, COLUMN_INDICATIF_PASSE_ANTERIEUR_NOUS,
-                COLUMN_INDICATIF_PASSE_ANTERIEUR_VOUS, COLUMN_INDICATIF_PASSE_ANTERIEUR_ILS,
-                COLUMN_INDICATIF_FUTUR_SIMPLE_JE, COLUMN_INDICATIF_FUTUR_SIMPLE_TU,
-                COLUMN_INDICATIF_FUTUR_SIMPLE_IL, COLUMN_INDICATIF_FUTUR_SIMPLE_NOUS,
-                COLUMN_INDICATIF_FUTUR_SIMPLE_VOUS, COLUMN_INDICATIF_FUTUR_SIMPLE_ILS,
-                COLUMN_INDICATIF_FUTUR_ANTERIEUR_JE, COLUMN_INDICATIF_FUTUR_ANTERIEUR_TU,
-                COLUMN_INDICATIF_FUTUR_ANTERIEUR_IL, COLUMN_INDICATIF_FUTUR_ANTERIEUR_NOUS,
-                COLUMN_INDICATIF_FUTUR_ANTERIEUR_VOUS, COLUMN_INDICATIF_FUTUR_ANTERIEUR_ILS,
+                COLUMN_INDICATIVO_PRESENTE_YO,
+                COLUMN_INDICATIVO_PRESENTE_TU,
+                COLUMN_INDICATIVO_PRESENTE_EL,
+                COLUMN_INDICATIVO_PRESENTE_NOSOTROS,
+                COLUMN_INDICATIVO_PRESENTE_VOSOTROS,
+                COLUMN_INDICATIVO_PRESENTE_ELLOS,
 
-                COLUMN_SUBJONTIF_PRESENT_JE, COLUMN_SUBJONTIF_PRESENT_TU,
-                COLUMN_SUBJONTIF_PRESENT_IL, COLUMN_SUBJONTIF_PRESENT_NOUS,
-                COLUMN_SUBJONTIF_PRESENT_VOUS, COLUMN_SUBJONTIF_PRESENT_ILS,
-                COLUMN_SUBJONTIF_PASSE_JE, COLUMN_SUBJONTIF_PASSE_TU,
-                COLUMN_SUBJONTIF_PASSE_IL, COLUMN_SUBJONTIF_PASSE_NOUS,
-                COLUMN_SUBJONTIF_PASSE_VOUS, COLUMN_SUBJONTIF_PASSE_ILS,
-                COLUMN_SUBJONTIF_IMPERFAIT_JE, COLUMN_SUBJONTIF_IMPERFAIT_TU,
-                COLUMN_SUBJONTIF_IMPERFAIT_IL, COLUMN_SUBJONTIF_IMPERFAIT_NOUS,
-                COLUMN_SUBJONTIF_IMPERFAIT_VOUS, COLUMN_SUBJONTIF_IMPERFAIT_ILS,
-                COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_JE, COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_TU,
-                COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_IL, COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_NOUS,
-                COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_VOUS, COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_ILS,
+                COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_YO,
+                COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_TU,
+                COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_EL,
+                COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_NOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_VOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_ELLOS,
 
-                COLUMN_CONDITIONNEL_PRESENT_JE, COLUMN_CONDITIONNEL_PRESENT_TU,
-                COLUMN_CONDITIONNEL_PRESENT_IL, COLUMN_CONDITIONNEL_PRESENT_NOUS,
-                COLUMN_CONDITIONNEL_PRESENT_VOUS, COLUMN_CONDITIONNEL_PRESENT_ILS,
-                COLUMN_CONDITIONNEL_PASSE_JE, COLUMN_CONDITIONNEL_PASSE_TU,
-                COLUMN_CONDITIONNEL_PASSE_IL, COLUMN_CONDITIONNEL_PASSE_NOUS,
-                COLUMN_CONDITIONNEL_PASSE_VOUS, COLUMN_CONDITIONNEL_PASSE_ILS)
-    }*/
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_YO,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_TU,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_EL,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_NOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_VOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_ELLOS,
+
+                COLUMN_INDICATIVO_FUTURO_SIMPLE_YO,
+                COLUMN_INDICATIVO_FUTURO_SIMPLE_TU,
+                COLUMN_INDICATIVO_FUTURO_SIMPLE_EL,
+                COLUMN_INDICATIVO_FUTURO_SIMPLE_NOSOTROS,
+                COLUMN_INDICATIVO_FUTURO_SIMPLE_VOSOTROS,
+                COLUMN_INDICATIVO_FUTURO_SIMPLE_ELLOS,
+
+                COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_YO,
+                COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_TU,
+                COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_EL,
+                COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_NOSOTROS,
+                COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_VOSOTROS,
+                COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_ELLOS,
+
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_YO,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_TU,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_EL,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_NOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_VOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_ELLOS,
+
+                COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_YO,
+                COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_TU,
+                COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_EL,
+                COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_NOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_VOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_ELLOS,
+
+                COLUMN_INDICATIVO_PRETERITO_ANTERIOR_YO,
+                COLUMN_INDICATIVO_PRETERITO_ANTERIOR_TU,
+                COLUMN_INDICATIVO_PRETERITO_ANTERIOR_EL,
+                COLUMN_INDICATIVO_PRETERITO_ANTERIOR_NOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_ANTERIOR_VOSOTROS,
+                COLUMN_INDICATIVO_PRETERITO_ANTERIOR_ELLOS,
+
+                COLUMN_INDICATIVO_FUTURO_COMPUESTO_YO,
+                COLUMN_INDICATIVO_FUTURO_COMPUESTO_TU,
+                COLUMN_INDICATIVO_FUTURO_COMPUESTO_EL,
+                COLUMN_INDICATIVO_FUTURO_COMPUESTO_NOSOTROS,
+                COLUMN_INDICATIVO_FUTURO_COMPUESTO_VOSOTROS,
+                COLUMN_INDICATIVO_FUTURO_COMPUESTO_ELLOS,
+
+                COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_YO,
+                COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_TU,
+                COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_EL,
+                COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_NOSOTROS,
+                COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_VOSOTROS,
+                COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_ELLOS,
+
+                COLUMN_SUBJUNTIVO_PRESENTE_YO,
+                COLUMN_SUBJUNTIVO_PRESENTE_TU,
+                COLUMN_SUBJUNTIVO_PRESENTE_EL,
+                COLUMN_SUBJUNTIVO_PRESENTE_NOSOTROS,
+                COLUMN_SUBJUNTIVO_PRESENTE_VOSOTROS,
+                COLUMN_SUBJUNTIVO_PRESENTE_ELLOS,
+
+                COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_YO,
+                COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_TU,
+                COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_EL,
+                COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_NOSOTROS,
+                COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_VOSOTROS,
+                COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_ELLOS,
+
+                COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_YO,
+                COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_TU,
+                COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_EL,
+                COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_NOSOTROS,
+                COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_VOSOTROS,
+                COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_ELLOS,
+
+                COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_YO,
+                COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_TU,
+                COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_EL,
+                COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_NOSOTROS,
+                COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_VOSOTROS,
+                COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_ELLOS,
+
+                COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_YO,
+                COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_TU,
+                COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_EL,
+                COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_NOSOTROS,
+                COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_VOSOTROS,
+                COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_ELLOS,
+
+                COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_YO,
+                COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_TU,
+                COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_EL,
+                COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_NOSOTROS,
+                COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_VOSOTROS,
+                COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_ELLOS )
+    }
 
 
     /**
@@ -496,113 +687,141 @@ object ActivityUtils {
      * Note: columns must exist.
      * @param cursor Cursor
      * @return Conjugation
-     *//*
+     */
     fun conjugationFromCursor(cursor: Cursor): Conjugation {
         return Conjugation(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)),
                 cursor.getString(cursor.getColumnIndex(COLUMN_TERMINATION)) ?: "",
                 cursor.getString(cursor.getColumnIndex(COLUMN_RADICALS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INFINITIVE_PRESENT)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INFINITIVE_PASSE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_PARTICIPE_PRESENT)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_PARTICIPE_PASSE_1)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_PARTICIPE_PASSE_2)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_GERONDIF_PRESENT)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_GERONDIF_PASSE)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INFINITIVO_SIMPLE)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INFINITIVO_COMPUESTO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_PARTICIPIO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_GERUNDIO_SIMPLE)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_GERUNDIO_COMPUESTO)) ?: "",
 
-                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIF_PRESENT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIF_PRESENT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIF_PRESENT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIF_PASSE_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIF_PASSE_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIF_PASSE_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PRESENT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PRESENT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PRESENT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PRESENT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PRESENT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PRESENT_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_COMPOSE_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_COMPOSE_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_COMPOSE_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_COMPOSE_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_COMPOSE_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_COMPOSE_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_IMPERFAIT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_IMPERFAIT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_IMPERFAIT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_IMPERFAIT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_IMPERFAIT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_IMPERFAIT_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PLUS_QUE_PARFAIT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PLUS_QUE_PARFAIT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PLUS_QUE_PARFAIT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PLUS_QUE_PARFAIT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PLUS_QUE_PARFAIT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PLUS_QUE_PARFAIT_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_SIMPLE_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_SIMPLE_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_SIMPLE_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_SIMPLE_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_SIMPLE_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_SIMPLE_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_ANTERIEUR_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_ANTERIEUR_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_ANTERIEUR_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_ANTERIEUR_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_ANTERIEUR_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_PASSE_ANTERIEUR_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_SIMPLE_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_SIMPLE_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_SIMPLE_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_SIMPLE_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_SIMPLE_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_SIMPLE_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_ANTERIEUR_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_ANTERIEUR_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_ANTERIEUR_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_ANTERIEUR_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_ANTERIEUR_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIF_FUTUR_ANTERIEUR_ILS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_ELLOS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_NEGACION_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_NEGACION_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_NEGACION_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_NEGACION_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_IMPERATIVO_NEGACION_ELLOS)) ?: "",
 
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PRESENT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PRESENT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PRESENT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PRESENT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PRESENT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PRESENT_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PASSE_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PASSE_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PASSE_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PASSE_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PASSE_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PASSE_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_IMPERFAIT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_IMPERFAIT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_IMPERFAIT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_IMPERFAIT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_IMPERFAIT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_IMPERFAIT_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJONTIF_PLUS_QUE_PARFAIT_ILS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRESENTE_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRESENTE_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRESENTE_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRESENTE_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRESENTE_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRESENTE_ELLOS)) ?: "",
 
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PRESENT_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PRESENT_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PRESENT_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PRESENT_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PRESENT_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PRESENT_ILS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PASSE_JE)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PASSE_TU)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PASSE_IL)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PASSE_NOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PASSE_VOUS)) ?: "",
-                cursor.getString(cursor.getColumnIndex(COLUMN_CONDITIONNEL_PASSE_ILS)) ?: ""
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_IMPERFECTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_SIMPLE_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_SIMPLE_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_SIMPLE_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_SIMPLE_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_SIMPLE_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_SIMPLE_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_SIMPLE_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_SIMPLE_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PERFECTO_COMPUESTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_PLUSCUAMPERFECTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_ANTERIOR_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_ANTERIOR_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_ANTERIOR_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_ANTERIOR_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_ANTERIOR_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_PRETERITO_ANTERIOR_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_COMPUESTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_COMPUESTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_COMPUESTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_COMPUESTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_COMPUESTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_FUTURO_COMPUESTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_INDICATIVO_CONDICIONAL_COMPUESTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRESENTE_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRESENTE_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRESENTE_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRESENTE_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRESENTE_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRESENTE_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_IMPERFECTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_SIMPLE_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PERFECTO_COMPUESTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_PRETERITO_PLUSCUAMPERFECTO_ELLOS)) ?: "",
+
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_YO)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_TU)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_EL)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_NOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_VOSOTROS)) ?: "",
+                cursor.getString(cursor.getColumnIndex(COLUMN_SUBJUNTIVO_FUTURO_COMPUESTO_ELLOS)) ?: ""
         )
-    }*/
+    }
 
     /**
      * Checks if we should replace the letter with apostrophe.

@@ -32,11 +32,11 @@
             imp_v     = Imperativo Vosotros
             imp_ell   = Imperativo Ellos, Ellas, Ustedes
 
-            imp_neg_t     = Imperativo Tu
-            imp_neg_el    = Imperativo El, Ella, Ustedes
-            imp_neg_n     = Imperativo Nosotros
-            imp_neg_v     = Imperativo Vosotros
-            imp_neg_ell   = Imperativo Ellos, Ellas, Ustedes
+            imp_neg_t     = Imperativo Negacion Tu
+            imp_neg_el    = Imperativo Negacion El, Ella, Ustedes
+            imp_neg_n     = Imperativo Negacion Nosotros
+            imp_neg_v     = Imperativo Negacion Vosotros
+            imp_neg_ell   = Imperativo Negacion Ellos, Ellas, Ustedes
 
             
             in_pres_y     = Indicativo Presente Yo
@@ -152,111 +152,6 @@
             su_fu_comp_v     = Subjuntivo Futuro Compuesto / Antefuturo Vosotros
             su_fu_comp_ell   = Subjuntivo Futuro Compuesto / Antefuturo Ellos, Ellas, Ustedes
         -->
-    <conjugation
-        id          = "1"
-        term        = ""
-        radicals    = ""
-        inf_pr      = "être"
-        inf_pa      = "avoir été"
-        pa_pr       = "étant"
-        pa_pa1      = "été"
-        pa_pa2      = "ayant été"
-        ge_pr       = "en étant"
-        ge_pa       = "en ayant été"
-        im_pr_t     = "sois"
-        im_pr_n     = "soyons"
-        im_pr_v     = "soyez"
-        im_pa_t     = "aie été"
-        im_pa_n     = "ayons été"
-        im_pa_v     = "ayez été"
-
-        in_pr_j     = "suis"
-        in_pr_t     = "es"
-        in_pr_il    = "est"
-        in_pr_n     = "sommes"
-        in_pr_v     = "êtes"
-        in_pr_ils   = "sont"
-        in_pc_j     = "ai été"
-        in_pc_t     = "as été"
-        in_pc_il    = "a été"
-        in_pc_n     = "avons été"
-        in_pc_v     = "avez été"
-        in_pc_ils   = "ont été"
-        in_im_j     = "étais"
-        in_im_t     = "étais"
-        in_im_il    = "était"
-        in_im_n     = "étions"
-        in_im_v     = "étiez"
-        in_im_ils   = "étaient"
-        in_pqp_j    = "avais été"
-        in_pqp_t    = "avais été"
-        in_pqp_il   = "avait été"
-        in_pqp_n    = "avions été"
-        in_pqp_v    = "aviez été"
-        in_pqp_ils  = "avaient été"
-        in_ps_j     = "fus"
-        in_ps_t     = "fus"
-        in_ps_il    = "fut"
-        in_ps_n     = "fûmes"
-        in_ps_v     = "fûtes"
-        in_ps_ils   = "furent"
-        in_pa_j     = "eus été"
-        in_pa_t     = "eus été"
-        in_pa_il    = "eut été"
-        in_pa_n     = "eûmes été"
-        in_pa_v     = "eûtes été"
-        in_pa_ils   = "eurent été"
-        in_fs_j     = "serai"
-        in_fs_t     = "seras"
-        in_fs_il    = "sera"
-        in_fs_n     = "serons"
-        in_fs_v     = "serez"
-        in_fs_ils   = "seront"
-        in_fa_j     = "aurai été"
-        in_fa_t     = "auras été"
-        in_fa_il    = "aura été"
-        in_fa_n     = "aurons été"
-        in_fa_v     = "aurez été"
-        in_fa_ils   = "auront été"
-
-        su_pr_j     = "sois"
-        su_pr_t     = "sois"
-        su_pr_il    = "soit"
-        su_pr_n     = "soyons"
-        su_pr_v     = "soyez"
-        su_pr_ils   = "soient"
-        su_pa_j     = "aie été"
-        su_pa_t     = "aies été"
-        su_pa_il    = "ait été"
-        su_pa_n     = "ayons été"
-        su_pa_v     = "ayez été"
-        su_pa_ils   = "aient été"
-        su_im_j     = "fusse"
-        su_im_t     = "fusses"
-        su_im_il    = "fût"
-        su_im_n     = "fussions"
-        su_im_v     = "fussiez"
-        su_im_ils   = "fussent"
-        su_pqp_j    = "eusse été"
-        su_pqp_t    = "eusses été"
-        su_pqp_il   = "eût été"
-        su_pqp_n    = "eussions été"
-        su_pqp_v    = "eussiez été"
-        su_pqp_ils  = "eussent été"
-
-        co_pr_j     = "serais"
-        co_pr_t     = "serais"
-        co_pr_il    = "serait"
-        co_pr_n     = "serions"
-        co_pr_v     = "seriez"
-        co_pr_ils   = "seraient"
-        co_pa_j     = "aurais été"
-        co_pa_t     = "aurais été"
-        co_pa_il    = "aurait été"
-        co_pa_n     = "aurions été"
-        co_pa_v     = "auriez été"
-        co_pa_ils   = "auraient été" />
-    <!--
     <conjugation
         id                    = "1"
         term                  = ""
@@ -389,7 +284,7 @@
         su_fu_comp_el         = "hubiere amado"
         su_fu_comp_n          = "hubiéremos amado"
         su_fu_comp_v          = "hubiereis amado"
-        su_fu_comp_ell        = "hubieren amado" /> -->
+        su_fu_comp_ell        = "hubieren amado" />
     <!--
     <conjugation
         id                    = "2"
