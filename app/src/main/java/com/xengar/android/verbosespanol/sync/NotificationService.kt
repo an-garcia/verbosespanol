@@ -38,7 +38,6 @@ import com.bumptech.glide.Glide
 //import com.google.firebase.analytics.FirebaseAnalytics
 import com.xengar.android.verbosespanol.R
 import com.xengar.android.verbosespanol.data.Verb
-//import com.xengar.android.verbosespanol.ui.DetailsActivity
 import com.xengar.android.verbosespanol.utils.ActivityUtils
 
 import java.util.ArrayList
@@ -74,7 +73,7 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.S_
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.S_TOP_300
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.S_TOP_50
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.S_TOP_500
-import com.xengar.android.verbosespanol.ui.MainActivity
+import com.xengar.android.verbosespanol.ui.DetailsActivity
 
 /**
  * NotificationService
@@ -173,7 +172,7 @@ class NotificationService : IntentService(NotificationService::class.java.name) 
     private fun createResultIntent(context: Context, verb: Verb): Intent {
         // See https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/ui/notifiers/notifications.html
         // When the user clicks on the notification, open the verb description
-        /*val resultIntent = Intent(context, DetailsActivity::class.java)
+        val resultIntent = Intent(context, DetailsActivity::class.java)
         resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
         val bundle = Bundle()
@@ -183,14 +182,12 @@ class NotificationService : IntentService(NotificationService::class.java.name) 
         bundle.putBoolean(DEMO_MODE, false)
         resultIntent.putExtras(bundle)
 
-        return resultIntent*/
-        return Intent(context, MainActivity::class.java)
+        return resultIntent
     }
 
     private fun createTaskStackBuilder(context: Context, resultIntent: Intent): TaskStackBuilder {
         val stackBuilder = TaskStackBuilder.create(context)
-        //stackBuilder.addParentStack(DetailsActivity::class.java)
-        stackBuilder.addParentStack(MainActivity::class.java)
+        stackBuilder.addParentStack(DetailsActivity::class.java)
         stackBuilder.addNextIntent(resultIntent)
 
         return stackBuilder

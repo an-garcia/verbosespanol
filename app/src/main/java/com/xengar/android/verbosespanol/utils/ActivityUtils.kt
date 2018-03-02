@@ -176,6 +176,7 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_TRANSLATION_PT
 import com.xengar.android.verbosespanol.sync.AlarmReceiver
 import com.xengar.android.verbosespanol.sync.JobSchedulerService
+import com.xengar.android.verbosespanol.ui.DetailsActivity
 import com.xengar.android.verbosespanol.ui.HelpActivity
 import com.xengar.android.verbosespanol.ui.SearchActivity
 import com.xengar.android.verbosespanol.ui.SettingsActivity
@@ -273,7 +274,7 @@ object ActivityUtils {
      * @param cId conjugation id
      * @param verb verb name
      * @param demoMode demo
-     */ /*
+     */
     fun launchDetailsActivity(context: Context, id: Long, cId: Long, verb: String,
                               demoMode: Boolean) {
         val intent = Intent(context, DetailsActivity::class.java)
@@ -287,7 +288,7 @@ object ActivityUtils {
         intent.putExtras(bundle)
 
         context.startActivity(intent)
-    }*/
+    }
 
     /**
      * Launches Help Activity.
