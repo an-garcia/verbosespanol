@@ -36,151 +36,151 @@
         id   = "1"
         ta   = ""
         in   = "ser"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Este jardín es de mi padre."
+        s2   = "La carta es para el jefe."
+        s3   = "¿Cuánto es el periódico? Son 75 centavos."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Ocurrir o tener lugar [un hecho]. Existir, tener realidad. Servir o estar destinado para algo en concreto. Valer una determinada cantidad de dinero. Dar determinado resultado en una operación matemática. Se emplea para indicar una hora, una fecha u otra expresión temporal."
         no   = ""
-        tren = "to be"
-        trfr = ""
+        tren = "be, come, come of, play"
+        trfr = "être"
         trpt = "ser" />
     <verb
         id   = "2"
         ta   = ""
         in   = "estar"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Recuerdo cuando el kilo de papas estaba a dos centavos."
+        s2   = "La felicidad no está en el dinero."
+        s3   = "¿Qué tal la película? ― No está mal, pero podían haber sacado más jugo."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Realizar [una persona], de modo transitorio o permanente, la actividad o trabajo que se expresa. Apoyar a una persona o mostrarse de acuerdo con ella y defenderla ante una divergencia de opiniones o un enfrentamiento. Sentir [una persona] atracción por otra. Mantener una relación sentimental con alguien en un momento determinado. Seguido de un adverbio de modo, como bien o mal , o de una expresión equivalente, mantener [una persona] una buena o mala relación con otra. Tener el valor que se expresa en cierto momento. Se usa para situar a una persona en una fecha o época determinadas. Indica la situación o disposición de [una persona o una cosa] para algo. Tener [algo] base o causa en lo que se expresa. Permanecer en un lugar durante un tiempo determinado. Tardar el tiempo que se expresa en realizar una acción determinada."
         no   = ""
-        tren = "to be"
-        trfr = ""
+        tren = "be, stay, remain, stand, lie, be present, be found"
+        trfr = "être"
         trpt = "estar" />
     <verb
         id   = "3"
         ta   = ""
         in   = "decir"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Digo que es verdad."
+        s2   = "A mi hermano le dicen Paco."
+        s3   = "El color de tu vestido dice mal con el de los zapatos."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Articular, pronunciar o emitir los sonidos de una lengua. Comunicar una cosa con palabras. Asegurar algo o expresar una opinión. Expresar o denotar una cosa o dar muestras de ello. Nombrar o llamar a alguien o algo de una determinada manera. Contener [un libro, un escrito u otra cosa semejante] ciertos temas, ideas, etc.. Armonizar o convenir [una cosa] con otra. Tener [una cosa] un determinado nombre en una lengua. Hablar [alguien] mentalmente consigo mismo."
         no   = ""
-        tren = "to say"
-        trfr = ""
+        tren = "say, tell, speak, mention"
+        trfr = "dire"
         trpt = "dizer" />
     <verb
         id   = "4"
         ta   = ""
         in   = "venir"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Tras el invierno viene la primavera."
+        s2   = "La carretera que viene de Cali está en obras."
+        s3   = "Le vino una enfermedad grave, pero logró recuperarse."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Ir hacia el lugar donde está la persona que habla. Seguir inmediatamente [una cosa] a otra. Llegar [un camino] hasta el lugar en que está la persona que habla. Ajustarse, acomodarse o conformarse [una cosa] a otra o con otra. Ocurrir o producirse [cierto suceso]. Tener origen [una cosa] en otra, proceder de ella o tener dependencia [una cosa] de otra en lo físico o en lo moral. Surgir, aparecer o empezarse a mover en una persona [una idea, un afecto, un deseo o una pasión]. Estar incluido o mencionado en un libro, periódico, lista u otra publicación."
         no   = ""
-        tren = "to come"
-        trfr = ""
+        tren = "come"
+        trfr = "venir"
         trpt = "vir" />
     <verb
         id   = "5"
         ta   = ""
         in   = "ir"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Las cortinas van muy bien con el verde de la pared."
+        s2   = "¿De qué va la novela que estás leyendo?"
+        s3   = "Esta carretera va hacia el norte."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Moverse [una persona o una cosa] hacia un lugar determinado. Tener [un camino o un medio de transporte] una dirección determinada o llevar a un sitio. Dirigirse a estar presente en un lugar o un acto o asistir a él. Funcionar [un aparato]. Ser o desarrollarse [algo] de determinada manera. Extenderse [una cosa] desde un punto o un lugar hasta otro. Estar [una persona o una cosa] en un lugar dentro de una sucesión o un orden. Tener [una persona] una determinada actitud ante algo. Combinar entre sí prendas y adornos. Concernir [una cosa] a una persona o dirigirse a ella. Referirse a una persona o cosa. Mostrar ostensiblemente una actitud o un comportamiento que, en ocasiones, es afectado, no le es propio o no le corresponde. Vestir o presentarse arreglado. Amenazar con una acusación ante una persona con autoridad. Referir o tratar un tema o una cuestión. Seguir [una persona] una determinada dirección al razonar o tener una determinada intención al actuar. Tener [alguien] determinadas condiciones para ejercer un cargo, una profesión, disfrutar de una situación o estar preparándose para ello. Ser [una persona o una cosa] la que recibe el turno dentro de un conjunto. Venderse [una cosa] a un determinado precio. Ser [una persona o una cosa] adecuada a los gustos o a la manera de ser de alguien. Depender [una cosa] de otra. Dejar o abandonar un lugar para llegar a otro. Desaparecer o borrarse [una cosa] de un lugar. No poder ser [una cosa] controlada o sujetada. Gastarse o consumirse una cosa. Morir. Ventosear o hacer las necesidades fisiológicas una persona de forma involuntaria o sin darse cuenta. Salirse un líquido del recipiente que lo contiene de forma apenas perceptible."
         no   = ""
-        tren = "to go"
-        trfr = ""
+        tren = "go, be, head"
+        trfr = "aller"
         trpt = "ir" />
     <verb
         id   = "6"
         ta   = ""
         in   = "hablar"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "El ministro hablará mañana en el Parlamento."
+        s2   = "El prisionero dice que no hablará si no es en presencia de su abogado."
+        s3   = "Los cielos y la tierra hablan de Dios."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Articular sonidos y palabras [una persona] para expresarse o comunicarse. Mantener una conversación [una persona] con otra u otras acerca de un asunto. Pronunciar [una persona] un discurso, generalmente en público. Comunicarse mediante signos distintos de la palabra. Expresar [alguien] opiniones o juicios acerca de una cosa o una persona. Confesar o revelar la verdad de algo o decir todo lo que se sabe acerca de un asunto. Tratar un asunto de palabra o por escrito. Acordar o convenir una cosa entre dos o más personas. Dar a una persona un determinado tratamiento. Recordar [una cosa] a otra o hacer pensar [una cosa] en otra. Tener [una obra artística] un determinado tema. Tener una relación de noviazgo con otra persona. Expresarse [una persona] en una determinada lengua. Decir o comunicar una cosa con palabras. Tratarse de palabra o tener relación social [una persona] con otra."
         no   = ""
-        tren = "to talk"
-        trfr = ""
+        tren = "talk, speak"
+        trfr = "parler"
         trpt = "falar" />
     <verb
         id   = "7"
         ta   = ""
         in   = "tener"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Enseguida vuelvo; tenga su cambio, por favor."
+        s2   = "María Luisa tiene quince años."
+        s3   = "A las ocho tengo clase de inglés."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Agarrar o sujetar, especialmente con las manos. Haber cumplido o alcanzado una edad o un período de tiempo determinados. Experimentar una sensación, un estado de ánimo o una necesidad fisiológica. Provocar en una persona un determinado estado o situación. Deber hacer una cosa u ocuparse de ella. Considerar o juzgar a una persona de determinada manera, o apreciarla o valorarla. Parir o dar a luz. Mantenerse firme, en posición vertical, sin perder el equilibrio o caer."
         no   = ""
-        tren = "to have"
-        trfr = ""
+        tren = "have"
+        trfr = "avoir"
         trpt = "ter" />
     <verb
         id   = "8"
         ta   = ""
         in   = "hacer"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Hace que trabaja pero no mueve un dedo."
+        s2   = "Nueve y cuatro hacen trece."
+        s3   = "Esta moto hace una media de 120 km/h."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Realizar o ejecutar una acción, un movimiento o una tarea. Causar o producir determinada sensación o efecto en una persona o una cosa. Convertir determinada cosa o persona en otra cosa o persona, o provocar que se convierta en ello. Ser causa de que determinada persona o cosa tenga o adquiera cierto estado o cualidad, expresado por un adjetivo o expresión equivalente. Dar existencia a una cosa material a partir de la nada o utilizando diferentes elementos. Participar [un actor] en una película o una obra de teatro. Simular, actuar de determinada manera presentando como cierto o real lo que no lo es. Arreglar, preparar o disponer una cosa. Realizar una actividad en un momento dado o dedicarse a ella habitualmente. Estudiar una materia, un curso, una carrera, etc.. Conseguir o llegar a tener o a ganar una cosa. Ejercitar un miembro o una parte del cuerpo para fomentar su desarrollo o agilidad. Emitir o producir un sonido. Someter un alimento a la acción del fuego o el calor hasta que llegue a estar cocinado en mayor o menor medida. Creer o suponer una cosa sobre el estado o las circunstancias en que está determinada persona. Provocar que una persona realice determinada acción o que algo ocurra. Obligar a una persona a realizar determinada acción. Requerir los servicios de una persona para que realice determinada acción. Tener [una persona] determinado aspecto o actitud. Tener como resultado [la reunión de dos o más cantidades] la cantidad que se expresa. Tener [una cosa] un determinado peso, capacidad, longitud u otra medida. Cumplir años. Ocupar determinado número de orden en una serie. Recorrer una distancia o camino. Acostumbrar o habituar. Proveer a una persona de determinada cosa. Cosechar. Representar determinado personaje en una película o una obra de teatro. Provocar [una cosa] que algo o alguien parezca tener determinado aspecto. Obrar, actuar, proceder. Convenir o importar [una cosa] a un asunto o conversación. "
         no   = ""
-        tren = "to do"
-        trfr = ""
+        tren = "do, make, cause"
+        trfr = "faire"
         trpt = "fazer" />
     <verb
         id   = "9"
         ta   = ""
         in   = "haber"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Cuando él llegó, yo ya me había vestido."
+        s2   = "El martes habrá una fiesta."
+        s3   = "Hay que tener paciencia."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Existir o estar presente una persona o animal en un lugar. Tener lugar o suceder una cosa. La forma de tercera persona del singular ha , detrás o delante de una expresión temporal, indica que ha transcurrido el tiempo que indica esta expresión."
         no   = ""
         tren = "there to be"
-        trfr = ""
+        trfr = "avoir"
         trpt = "haber" />
     <verb
         id   = "10"
         ta   = ""
         in   = "poner"
-        s1   = ""
-        s2   = ""
-        s3   = ""
+        s1   = "Jose va a poner un restaurante."
+        s2   = "El profesor puso en el pizarrón un esquema para resumir lo dicho."
+        s3   = "Esto hay que ponerlo en letras de molde."
         gr   = ""
         re   = ""
         co   = "1"
-        de   = ""
+        de   = "Hacer que una persona o una cosa esté en un lugar determinado. Hacer que una persona o una cosa esté en una situación o posición determinada o adquiera un estado o una condición. Contribuir o ayudar con algo, generalmente no material, a que cierta cosa tenga lugar. Adoptar un gesto para expresar una actitud, un estado de ánimo o una manera de ser. Hacer que funcione un aparato eléctrico manejando los mandos. Establecer, instalar o montar una cosa, especialmente un negocio. Suponer una cosa como cierta o verdadera. Escribir una cosa en un lugar. Enviar un escrito a alguien, en especial una carta o una comunicación. Añadir una cosa inventada a una narración, un escrito, etc.. Exponer una cosa a la acción de un agente determinado. Dejar un asunto a la resolución, arbitrio o disposición de otra persona. Dar o asignar un nombre o un apodo a una persona, un animal o una cosa. Hablar de una cosa o de una persona ensalzando sus cualidades o haciendo notar sus defectos o inconvenientes. Imponer o señalar una obligación a alguien. Imponer o establecer una contribución, una multa, etc.. Utilizar a una persona con un fin determinado. Tratar a alguien de una manera determinada. Dar una nota o calificación a alguien. Dar una cantidad de dinero para una cosa en la que participan también otras personas. Exponer una cantidad de dinero o una pertenencia para tomar parte en un juego o en una apuesta, de forma que, si se gana, se recibe una cantidad de dinero u otro premio. Colocar una prenda, un complemento o un adorno en el cuerpo de una persona. Untar o aplicar una sustancia sobre la superficie de algo. Dedicar a alguien a un empleo o a una actividad. Mostrar o hacer patente una cosa, especialmente un sentimiento o un estado de ánimo. Soltar o expulsar [la hembra de un animal ovíparo] el huevo que ha producido, especialmente una hembra de ave. Contener un libro, un escrito u otra cosa semejante ciertos temas, ideas, etc.. Proyectar una película o un programa en el cine o la televisión, o ejecutar en público una obra de teatro u otro espectáculo. Hacer que una persona hable directamente por teléfono con otra. Aumentar en el peso [una persona, en especial un niño muy pequeño]. Mancharse o llenarse [una persona o una cosa] con algo. Ocultarse [un astro] debajo del horizonte, especialmente el Sol. Hartarse de comer [una persona]. Oponerse a una persona o enfrentarse a ella. Llegar a un lugar en un espacio de tiempo que se considera corto. Se usa para introducir en estilo directo las palabras de una persona."
         no   = ""
-        tren = "to put"
-        trfr = ""
+        tren = "put, place"
+        trfr = "mettre, poser"
         trpt = "colocar" />
     <verb
         id   = "11"
@@ -194,7 +194,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to have to"
+        tren = "have to"
         trfr = ""
         trpt = "dever" />
     <verb
@@ -224,7 +224,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to exit"
+        tren = "exit"
         trfr = ""
         trpt = "sair" />
     <verb
@@ -239,7 +239,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to enter"
+        tren = "enter"
         trfr = ""
         trpt = "entrar" />
     <verb
@@ -254,7 +254,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to write"
+        tren = "write"
         trfr = ""
         trpt = "escrever" />
     <verb
@@ -269,7 +269,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to call"
+        tren = "call"
         trfr = ""
         trpt = "chamar" />
     <verb
@@ -284,7 +284,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to dance"
+        tren = "dance"
         trfr = ""
         trpt = "dançar" />
     <verb
@@ -299,7 +299,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to order"
+        tren = "order"
         trfr = ""
         trpt = "ordenar" />
     <verb
@@ -314,7 +314,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to visit"
+        tren = "visit"
         trfr = ""
         trpt = "visitar" />
     <verb
@@ -329,7 +329,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to travel"
+        tren = "travel"
         trfr = ""
         trpt = "viajar" />
     <verb
@@ -344,7 +344,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to search"
+        tren = "search"
         trfr = ""
         trpt = "procurar" />
     <verb
@@ -359,7 +359,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to find"
+        tren = "find"
         trfr = ""
         trpt = "encontrar" />
     <verb
@@ -374,7 +374,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to celebrate"
+        tren = "celebrate"
         trfr = ""
         trpt = "celebrar" />
     <verb
@@ -389,7 +389,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to give away"
+        tren = "give away"
         trfr = ""
         trpt = "regalar" />
     <verb
@@ -404,7 +404,7 @@
         co   = "1"
         de   = ""
         no   = ""
-        tren = "to fix"
+        tren = "fix"
         trfr = ""
         trpt = "reparar" />
 
@@ -421,7 +421,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to work"
+        tren = "work"
         trfr = ""
         trpt = "trabalhar" />
     <verb
@@ -436,7 +436,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to study"
+        tren = "study"
         trfr = ""
         trpt = "estudar" />
     <verb
@@ -451,7 +451,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to form"
+        tren = "form"
         trfr = ""
         trpt = "formar" />
     <verb
@@ -466,7 +466,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to learn"
+        tren = "learn"
         trfr = ""
         trpt = "aprender" />
     <verb
@@ -481,7 +481,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to create"
+        tren = "create"
         trfr = ""
         trpt = "criar" />
     <verb
@@ -496,7 +496,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to film"
+        tren = "film"
         trfr = ""
         trpt = "filmar" />
     <verb
@@ -511,7 +511,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to investigate"
+        tren = "investigate"
         trfr = ""
         trpt = "investigar, pesquisar" />
     <verb
@@ -526,7 +526,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to prepare"
+        tren = "prepare"
         trfr = ""
         trpt = "preparar" />
     <verb
@@ -541,7 +541,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to cook"
+        tren = "cook"
         trfr = ""
         trpt = "cozinhar" />
     <verb
@@ -556,7 +556,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to have dinner"
+        tren = "have dinner"
         trfr = ""
         trpt = "jantar" />
     <verb
@@ -571,7 +571,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to have breakfast"
+        tren = "have breakfast"
         trfr = ""
         trpt = "tomar o café da manhã" />
     <verb
@@ -586,7 +586,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to have lunch"
+        tren = "have lunch"
         trfr = ""
         trpt = "almoçar" />
     <verb
@@ -601,7 +601,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to snack"
+        tren = "snack"
         trfr = ""
         trpt = "merendar" />
     <verb
@@ -616,7 +616,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to drink"
+        tren = "drink"
         trfr = ""
         trpt = "beber" />
     <verb
@@ -631,7 +631,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to fly"
+        tren = "fly"
         trfr = ""
         trpt = "voar" />
     <verb
@@ -661,7 +661,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to walk"
+        tren = "walk"
         trfr = ""
         trpt = "caminhar" />
     <verb
@@ -676,7 +676,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to march"
+        tren = "march"
         trfr = ""
         trpt = "marchar" />
     <verb
@@ -691,7 +691,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to run"
+        tren = "run"
         trfr = ""
         trpt = "correr" />
     <verb
@@ -706,7 +706,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to watch"
+        tren = "watch"
         trfr = ""
         trpt = "ver" />
     <verb
@@ -721,7 +721,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to observe"
+        tren = "observe"
         trfr = ""
         trpt = "observar" />
     <verb
@@ -736,7 +736,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to see"
+        tren = "see"
         trfr = ""
         trpt = "olhar" />
     <verb
@@ -751,7 +751,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to use"
+        tren = "use"
         trfr = ""
         trpt = "usar" />
     <verb
@@ -766,7 +766,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to comunicate"
+        tren = "comunicate"
         trfr = ""
         trpt = "comunicar-se" />
     <verb
@@ -781,7 +781,7 @@
         co   = "2"
         de   = ""
         no   = ""
-        tren = "to record"
+        tren = "record"
         trfr = ""
         trpt = "gravar" />
 
@@ -798,7 +798,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to sleep"
+        tren = "sleep"
         trfr = ""
         trpt = "dormir" />
     <verb
@@ -813,7 +813,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to wake up"
+        tren = "wake up"
         trfr = ""
         trpt = "despertar" />
     <verb
@@ -828,7 +828,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to take"
+        tren = "take"
         trfr = ""
         trpt = "sacar" />
     <verb
@@ -843,7 +843,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to sit"
+        tren = "sit"
         trfr = ""
         trpt = "sentar-se" />
     <verb
@@ -858,7 +858,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to link"
+        tren = "link"
         trfr = ""
         trpt = "ligar" />
     <verb
@@ -873,7 +873,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to flirt"
+        tren = "flirt"
         trfr = ""
         trpt = "seduzir" />
     <verb
@@ -888,7 +888,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to jump"
+        tren = "jump"
         trfr = ""
         trpt = "saltar" />
     <verb
@@ -903,7 +903,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to sing"
+        tren = "sing"
         trfr = ""
         trpt = "cantar" />
     <verb
@@ -918,7 +918,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to taste, to test"
+        tren = "taste, to test"
         trfr = ""
         trpt = "provar" />
     <verb
@@ -933,14 +933,14 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to like"
+        tren = "like"
         trfr = ""
         trpt = "gostar" />
     <verb
         id   = "61"
         ta   = ""
-        in   = ""
-        s1   = "leer"
+        in   = "leer"
+        s1   = ""
         s2   = ""
         s3   = ""
         gr   = ""
@@ -948,7 +948,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to read"
+        tren = "read"
         trfr = ""
         trpt = "ler" />
     <verb
@@ -963,7 +963,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to listen"
+        tren = "listen"
         trfr = ""
         trpt = "escutar" />
     <verb
@@ -978,7 +978,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to swim"
+        tren = "swim"
         trfr = ""
         trpt = "nadar" />
     <verb
@@ -993,7 +993,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to clean"
+        tren = "clean"
         trfr = ""
         trpt = "limpar" />
     <verb
@@ -1008,7 +1008,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to practice"
+        tren = "practice"
         trfr = ""
         trpt = "praticar" />
     <verb
@@ -1023,7 +1023,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to get up"
+        tren = "get up"
         trfr = ""
         trpt = "levantar-se" />
     <verb
@@ -1038,7 +1038,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to turn"
+        tren = "turn"
         trfr = ""
         trpt = "girar" />
     <verb
@@ -1053,7 +1053,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to dress up"
+        tren = "dress up"
         trfr = ""
         trpt = "vestir" />
     <verb
@@ -1068,7 +1068,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to live"
+        tren = "live"
         trfr = ""
         trpt = "vivir" />
     <verb
@@ -1083,7 +1083,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to die"
+        tren = "die"
         trfr = ""
         trpt = "morrer" />
     <verb
@@ -1098,7 +1098,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to deliver"
+        tren = "deliver"
         trfr = ""
         trpt = "entregar" />
     <verb
@@ -1113,7 +1113,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to send"
+        tren = "send"
         trfr = ""
         trpt = "enviar" />
     <verb
@@ -1128,7 +1128,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to attack"
+        tren = "attack"
         trfr = ""
         trpt = "atacar" />
     <verb
@@ -1143,7 +1143,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to hurt"
+        tren = "hurt"
         trfr = ""
         trpt = "ferir" />
     <verb
@@ -1158,7 +1158,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to appease"
+        tren = "appease"
         trfr = ""
         trpt = "apaziguar" />
     <verb
@@ -1173,7 +1173,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to sign, ink, autograph"
+        tren = "sign, ink, autograph"
         trfr = ""
         trpt = "firmar" />
     <verb
@@ -1188,7 +1188,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to get drunk"
+        tren = "get drunk"
         trfr = ""
         trpt = "embriagar-se, embebedar-se" />
     <verb
@@ -1203,7 +1203,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to welcome"
+        tren = "welcome"
         trfr = ""
         trpt = "acolher" />
     <verb
@@ -1218,7 +1218,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to admit"
+        tren = "admit"
         trfr = ""
         trpt = "admitir" />
     <verb
@@ -1233,7 +1233,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to apply for"
+        tren = "apply for"
         trfr = ""
         trpt = "solicitar" />
     <verb
@@ -1248,7 +1248,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to book"
+        tren = "book"
         trfr = ""
         trpt = "reservar" />
     <verb
@@ -1263,7 +1263,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to buy"
+        tren = "buy"
         trfr = ""
         trpt = "comprar" />
     <verb
@@ -1278,7 +1278,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to win"
+        tren = "win"
         trfr = ""
         trpt = "ganhar" />
     <verb
@@ -1293,7 +1293,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to share"
+        tren = "share"
         trfr = ""
         trpt = "compartir" />
     <verb
@@ -1308,7 +1308,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to save"
+        tren = "save"
         trfr = ""
         trpt = "salvar" />
     <verb
@@ -1323,7 +1323,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to help"
+        tren = "help"
         trfr = ""
         trpt = "ajudar" />
     <verb
@@ -1338,7 +1338,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to keep, save"
+        tren = "keep, save"
         trfr = ""
         trpt = "guardar" />
     <verb
@@ -1353,7 +1353,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to reaffirm"
+        tren = "reaffirm"
         trfr = ""
         trpt = "reafirmar" />
     <verb
@@ -1368,7 +1368,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to agree"
+        tren = "agree"
         trfr = ""
         trpt = "assentir" />
     <verb
@@ -1383,7 +1383,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to deny"
+        tren = "deny"
         trfr = ""
         trpt = "negar" />
     <verb
@@ -1398,7 +1398,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to rise"
+        tren = "rise"
         trfr = ""
         trpt = "subir" />
     <verb
@@ -1413,7 +1413,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to descend"
+        tren = "descend"
         trfr = ""
         trpt = "baixar, decer" />
     <verb
@@ -1428,7 +1428,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to release, launch, use for the first time"
+        tren = "release, launch, use for the first time"
         trfr = ""
         trpt = "estrear" />
     <verb
@@ -1443,7 +1443,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to stain"
+        tren = "stain"
         trfr = ""
         trpt = "manchar" />
     <verb
@@ -1458,7 +1458,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to wet, dip"
+        tren = "wet, dip"
         trfr = ""
         trpt = "molhar" />
     <verb
@@ -1473,7 +1473,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to dry"
+        tren = "dry"
         trfr = ""
         trpt = "secar" />
     <verb
@@ -1488,7 +1488,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to reproduce"
+        tren = "reproduce"
         trfr = ""
         trpt = "reproduzir" />
     <verb
@@ -1503,7 +1503,7 @@
         co   = "3"
         de   = ""
         no   = ""
-        tren = "to lodge"
+        tren = "lodge"
         trfr = ""
         trpt = "alojar-se" />
     <!--
