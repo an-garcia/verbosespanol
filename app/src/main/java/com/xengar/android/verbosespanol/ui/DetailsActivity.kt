@@ -34,6 +34,8 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.android.colorpicker.ColorPickerPalette
+import com.android.colorpicker.ColorPickerSwatch
 import com.github.amlcurran.showcaseview.ShowcaseView
 import com.github.amlcurran.showcaseview.targets.ViewTarget
 import com.xengar.android.verbosespanol.R
@@ -333,7 +335,7 @@ class DetailsActivity
 
         when (id) {
             R.id.action_change_color -> {
-                //changeColorDialog()
+                changeColorDialog()
                 return true
             }
 
@@ -493,7 +495,7 @@ class DetailsActivity
 
     /**
      * Changes the color
-     *//*
+     */
     private fun changeColorDialog() {
         val colors = intArrayOf(
                 ContextCompat.getColor(applicationContext, R.color.colorBlack),
@@ -535,7 +537,7 @@ class DetailsActivity
                 .setView(colorPickerPalette)
                 .create()
         alert.show()
-    }*/
+    }
 
     /**
      * Save the color to database.

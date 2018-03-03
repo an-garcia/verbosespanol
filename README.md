@@ -77,7 +77,7 @@ Color Picker Module
     android {
 
         compileSdkVersion 26
-        buildToolsVersion "26.0.1"
+        buildToolsVersion "26.0.3"
 
         sourceSets.main {
             manifest.srcFile 'AndroidManifest.xml'
