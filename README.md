@@ -31,6 +31,7 @@ Most used verbs lists:
 - https://quizlet.com/117397241/los-25-verbos-mas-usados-en-espanol-parte-4-20-verbos-flash-cards/
 - https://www.quia.com/jg/514331list.html
 - https://quizlet.com/504750/100-verbos-mas-usados-en-espanol-flash-cards/
+- http://www.practicaespanol.com/wp-content/uploads/Verbos-espa%C3%B1oles-m%C3%A1s-frecuentes.pdf
 - https://quizlet.com/6282091/lista-completa-de-verbos-500-esp-4-flash-cards/
 - https://www.quia.com/jg/514331list.html
 
@@ -92,7 +93,7 @@ Color Picker Module
    ```
    cd verbosespanol/colorpicker
    git add -A
-   git commit -m "Import colorpicker module into English Verbs project"
+   git commit -m "Import colorpicker module into Verbs project"
    ```
 
 ## License
