@@ -118,7 +118,7 @@
     <string name="next">Next</string>
     <string name="got_it">Got it</string>
     <string name="conjugations">Conjugations</string>
-    <string name="conjugations_description">Conjugations for different temps.</string>
+    <string name="conjugations_description">Conjugations for different tenses.</string>
     <string name="volume_description">Text to speech uses the current media player volume.</string>
     <string name="demo">demo</string>
     <string name="verbs_text_help">Verb details include: conjugations, pronunciation, translation, definition and examples.</string>

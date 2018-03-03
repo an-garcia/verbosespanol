@@ -186,8 +186,8 @@ class HelpActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.id) {
             R.id.header_verbs -> {
-                // amar
-                //ActivityUtils.launchDetailsActivity(applicationContext, 1, true)
+                // TODO: Use a better verb
+                ActivityUtils.launchDetailsActivity(applicationContext, 1, 1, "amar" ,true)
                 //ActivityUtils.firebaseAnalyticsLogEventSelectContent(mFirebaseAnalytics!!,
                 //        "Contextual help", "buy", TYPE_CONTEXT_HELP)
             }
