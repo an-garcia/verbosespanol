@@ -109,7 +109,7 @@
         trpt = "ir" />
     <verb
         id   = "6"
-        ta   = ""
+        ta   = "1"
         in   = "hablar"
         s1   = "El ministro hablará mañana en el Parlamento."
         s2   = "El prisionero dice que no hablará si no es en presencia de su abogado."
@@ -184,7 +184,7 @@
         trpt = "colocar" />
     <verb
         id   = "11"
-        ta   = ""
+        ta   = "2"
         in   = "deber"
         s1   = "La empresa debe 15 millones de dólares."
         s2   = "Le debía a mi abuelo un gran favor."
@@ -214,7 +214,7 @@
         trpt = "poder" />
     <verb
         id   = "13"
-        ta   = ""
+        ta   = "52"
         in   = "salir"
         s1   = "¿A qué hora sale el tren?"
         s2   = "Los sábados por la noche solemos salir."
@@ -229,7 +229,7 @@
         trpt = "sair" />
     <verb
         id   = "14"
-        ta   = ""
+        ta   = "1"
         in   = "entrar"
         s1   = "En el precio de la entrada al parque entra el regalo de una camiseta conmemorativa."
         s2   = "Las tropas inglesas de Wellington, tras vencer la resistencia francesa en la batalla de Majadahonda el 22 de julio, entraron en la capital."
@@ -259,7 +259,7 @@
         trpt = "escrever" />
     <verb
         id   = "16"
-        ta   = ""
+        ta   = "1"
         in   = "llamar"
         s1   = "Lo llamaremos Luis."
         s2   = "Pedro viaja mucho porque le llama la aventura."
@@ -289,7 +289,7 @@
         trpt = "dançar" />
     <verb
         id   = "18"
-        ta   = ""
+        ta   = "1"
         in   = "ordenar"
         s1   = "Dile a los niños que ordenen su habitación."
         s2   = "Ordenar los esfuerzos a tal fin."
@@ -304,7 +304,7 @@
         trpt = "ordenar" />
     <verb
         id   = "19"
-        ta   = ""
+        ta   = "1"
         in   = "visitar"
         s1   = "Fuimos a visitar las ruinas del Templo Mayor, que están al lado de la catedral."
         s2   = "El médico visitaba pacientes en el hospital municipal."
@@ -319,7 +319,7 @@
         trpt = "visitar" />
     <verb
         id   = "20"
-        ta   = ""
+        ta   = "1"
         in   = "viajar"
         s1   = "Viajaremos a Suiza en el mes de julio."
         s2   = "Los cohetes viajan a gran velocidad."
@@ -364,7 +364,7 @@
         trpt = "encontrar" />
     <verb
         id   = "23"
-        ta   = ""
+        ta   = "1"
         in   = "celebrar"
         s1   = "Celebran la Pascua."
         s2   = "La crítica celebró su primera obra."
@@ -379,7 +379,7 @@
         trpt = "celebrar" />
     <verb
         id   = "24"
-        ta   = ""
+        ta   = "1"
         in   = "regalar"
         s1   = "Jose me regaló este collar por mi cumpleaños."
         s2   = "Regaló al público con su mejor actuación."
@@ -394,7 +394,7 @@
         trpt = "regalar" />
     <verb
         id   = "25"
-        ta   = ""
+        ta   = "1"
         in   = "arreglar"
         s1   = "No te será fácil arreglar las cosas cuando las has complicado tanto."
         s2   = "Arregla a los niños, que los voy a llevar al parque."
@@ -412,7 +412,7 @@
     <!--
     <verb
         id   = "26"
-        ta   = ""
+        ta   = "1"
         in   = "trabajar"
         s1   = ""
         s2   = ""
@@ -427,7 +427,7 @@
         trpt = "trabalhar" />
     <verb
         id   = "27"
-        ta   = ""
+        ta   = "1"
         in   = "estudiar"
         s1   = ""
         s2   = ""
@@ -442,7 +442,7 @@
         trpt = "estudar" />
     <verb
         id   = "28"
-        ta   = ""
+        ta   = "1"
         in   = "formar"
         s1   = ""
         s2   = ""
@@ -457,7 +457,7 @@
         trpt = "formar" />
     <verb
         id   = "29"
-        ta   = ""
+        ta   = "2"
         in   = "aprender"
         s1   = ""
         s2   = ""
@@ -472,7 +472,7 @@
         trpt = "aprender" />
     <verb
         id   = "30"
-        ta   = ""
+        ta   = "1"
         in   = "crear"
         s1   = ""
         s2   = ""
@@ -487,7 +487,7 @@
         trpt = "criar" />
     <verb
         id   = "31"
-        ta   = ""
+        ta   = "1"
         in   = "filmar"
         s1   = ""
         s2   = ""
@@ -517,7 +517,7 @@
         trpt = "investigar, pesquisar" />
     <verb
         id   = "33"
-        ta   = ""
+        ta   = "1"
         in   = "preparar"
         s1   = ""
         s2   = ""
@@ -532,7 +532,7 @@
         trpt = "preparar" />
     <verb
         id   = "34"
-        ta   = ""
+        ta   = "1"
         in   = "cocinar"
         s1   = ""
         s2   = ""
@@ -547,7 +547,7 @@
         trpt = "cozinhar" />
     <verb
         id   = "35"
-        ta   = ""
+        ta   = "1"
         in   = "cenar"
         s1   = ""
         s2   = ""
@@ -562,7 +562,7 @@
         trpt = "jantar" />
     <verb
         id   = "36"
-        ta   = ""
+        ta   = "1"
         in   = "desayunar"
         s1   = ""
         s2   = ""
@@ -607,7 +607,7 @@
         trpt = "merendar" />
     <verb
         id   = "39"
-        ta   = ""
+        ta   = "2"
         in   = "beber"
         s1   = ""
         s2   = ""
@@ -637,7 +637,7 @@
         trpt = "voar" />
     <verb
         id   = "41"
-        ta   = ""
+        ta   = "1"
         in   = "pasear"
         s1   = ""
         s2   = ""
@@ -667,7 +667,7 @@
         trpt = "caminhar" />
     <verb
         id   = "43"
-        ta   = ""
+        ta   = "1"
         in   = "marchar"
         s1   = ""
         s2   = ""
@@ -682,7 +682,7 @@
         trpt = "marchar" />
     <verb
         id   = "44"
-        ta   = ""
+        ta   = "2"
         in   = "correr"
         s1   = ""
         s2   = ""
@@ -712,7 +712,7 @@
         trpt = "ver" />
     <verb
         id   = "46"
-        ta   = ""
+        ta   = "1"
         in   = "observar"
         s1   = ""
         s2   = ""
@@ -727,7 +727,7 @@
         trpt = "observar" />
     <verb
         id   = "47"
-        ta   = ""
+        ta   = "1"
         in   = "mirar"
         s1   = ""
         s2   = ""
@@ -772,7 +772,7 @@
         trpt = "comunicar-se" />
     <verb
         id   = "50"
-        ta   = ""
+        ta   = "1"
         in   = "grabar"
         s1   = ""
         s2   = ""
@@ -805,7 +805,7 @@
         trpt = "dormir" />
     <verb
         id   = "52"
-        ta   = ""
+        ta   = "16"
         in   = "despertar"
         s1   = ""
         s2   = ""
@@ -850,7 +850,7 @@
         trpt = "sentar-se" />
     <verb
         id   = "55"
-        ta   = ""
+        ta   = "3"
         in   = "unir"
         s1   = ""
         s2   = ""
@@ -880,7 +880,7 @@
         trpt = "seduzir" />
     <verb
         id   = "57"
-        ta   = ""
+        ta   = "1"
         in   = "saltar"
         s1   = ""
         s2   = ""
@@ -895,7 +895,7 @@
         trpt = "saltar" />
     <verb
         id   = "58"
-        ta   = ""
+        ta   = "1"
         in   = "cantar"
         s1   = ""
         s2   = ""
@@ -925,7 +925,7 @@
         trpt = "provar" />
     <verb
         id   = "60"
-        ta   = ""
+        ta   = "1"
         in   = "gustar"
         s1   = ""
         s2   = ""
@@ -955,7 +955,7 @@
         trpt = "ler" />
     <verb
         id   = "62"
-        ta   = ""
+        ta   = "1"
         in   = "escuchar"
         s1   = ""
         s2   = ""
@@ -970,7 +970,7 @@
         trpt = "escutar" />
     <verb
         id   = "63"
-        ta   = ""
+        ta   = "1"
         in   = "nadar"
         s1   = ""
         s2   = ""
@@ -985,7 +985,7 @@
         trpt = "nadar" />
     <verb
         id   = "64"
-        ta   = ""
+        ta   = "1"
         in   = "limpiar"
         s1   = ""
         s2   = ""
@@ -1015,7 +1015,7 @@
         trpt = "praticar" />
     <verb
         id   = "66"
-        ta   = ""
+        ta   = "1"
         in   = "levantarse"
         s1   = ""
         s2   = ""
@@ -1030,7 +1030,7 @@
         trpt = "levantar-se" />
     <verb
         id   = "67"
-        ta   = ""
+        ta   = "1"
         in   = "girar"
         s1   = ""
         s2   = ""
@@ -1060,7 +1060,7 @@
         trpt = "vestir" />
     <verb
         id   = "69"
-        ta   = ""
+        ta   = "3"
         in   = "vivir"
         s1   = ""
         s2   = ""
@@ -1150,7 +1150,7 @@
         trpt = "ferir" />
     <verb
         id   = "75"
-        ta   = ""
+        ta   = "6"
         in   = "apaciguar"
         s1   = ""
         s2   = ""
@@ -1165,7 +1165,7 @@
         trpt = "apaziguar" />
     <verb
         id   = "76"
-        ta   = ""
+        ta   = "1"
         in   = "firmar"
         s1   = ""
         s2   = ""
@@ -1180,7 +1180,7 @@
         trpt = "firmar" />
     <verb
         id   = "77"
-        ta   = ""
+        ta   = "1"
         in   = "emborracharse"
         s1   = ""
         s2   = ""
@@ -1210,7 +1210,7 @@
         trpt = "acolher" />
     <verb
         id   = "79"
-        ta   = ""
+        ta   = "3"
         in   = "admitir"
         s1   = ""
         s2   = ""
@@ -1225,7 +1225,7 @@
         trpt = "admitir" />
     <verb
         id   = "80"
-        ta   = ""
+        ta   = "1"
         in   = "solicitar"
         s1   = ""
         s2   = ""
@@ -1240,7 +1240,7 @@
         trpt = "solicitar" />
     <verb
         id   = "81"
-        ta   = ""
+        ta   = "1"
         in   = "reservar"
         s1   = ""
         s2   = ""
@@ -1255,7 +1255,7 @@
         trpt = "reservar" />
     <verb
         id   = "82"
-        ta   = ""
+        ta   = "1"
         in   = "comprar"
         s1   = ""
         s2   = ""
@@ -1270,7 +1270,7 @@
         trpt = "comprar" />
     <verb
         id   = "83"
-        ta   = ""
+        ta   = "1"
         in   = "ganar"
         s1   = ""
         s2   = ""
@@ -1285,7 +1285,7 @@
         trpt = "ganhar" />
     <verb
         id   = "84"
-        ta   = ""
+        ta   = "3"
         in   = "compartir"
         s1   = ""
         s2   = ""
@@ -1300,7 +1300,7 @@
         trpt = "compartir" />
     <verb
         id   = "85"
-        ta   = ""
+        ta   = "1"
         in   = "salvar"
         s1   = ""
         s2   = ""
@@ -1315,7 +1315,7 @@
         trpt = "salvar" />
     <verb
         id   = "86"
-        ta   = ""
+        ta   = "1"
         in   = "ayudar"
         s1   = ""
         s2   = ""
@@ -1330,7 +1330,7 @@
         trpt = "ajudar" />
     <verb
         id   = "87"
-        ta   = ""
+        ta   = "1"
         in   = "guardar"
         s1   = ""
         s2   = ""
@@ -1345,7 +1345,7 @@
         trpt = "guardar" />
     <verb
         id   = "88"
-        ta   = ""
+        ta   = "1"
         in   = "reafirmar"
         s1   = ""
         s2   = ""
@@ -1360,7 +1360,7 @@
         trpt = "reafirmar" />
     <verb
         id   = "89"
-        ta   = ""
+        ta   = "53"
         in   = "asentir"
         s1   = ""
         s2   = ""
@@ -1390,7 +1390,7 @@
         trpt = "negar" />
     <verb
         id   = "91"
-        ta   = ""
+        ta   = "3"
         in   = "subir"
         s1   = ""
         s2   = ""
@@ -1405,7 +1405,7 @@
         trpt = "subir" />
     <verb
         id   = "92"
-        ta   = ""
+        ta   = "1"
         in   = "bajar"
         s1   = ""
         s2   = ""
@@ -1420,7 +1420,7 @@
         trpt = "baixar, decer" />
     <verb
         id   = "93"
-        ta   = ""
+        ta   = "1"
         in   = "estrenar"
         s1   = ""
         s2   = ""
@@ -1435,7 +1435,7 @@
         trpt = "estrear" />
     <verb
         id   = "94"
-        ta   = ""
+        ta   = "1"
         in   = "manchar"
         s1   = ""
         s2   = ""
@@ -1450,7 +1450,7 @@
         trpt = "manchar" />
     <verb
         id   = "95"
-        ta   = ""
+        ta   = "1"
         in   = "mojar"
         s1   = ""
         s2   = ""
@@ -1480,7 +1480,7 @@
         trpt = "secar" />
     <verb
         id   = "97"
-        ta   = ""
+        ta   = "24"
         in   = "reproducir"
         s1   = ""
         s2   = ""
@@ -1495,7 +1495,7 @@
         trpt = "reproduzir" />
     <verb
         id   = "98"
-        ta   = ""
+        ta   = "1"
         in   = "alojarse"
         s1   = ""
         s2   = ""
