@@ -23,7 +23,8 @@ References
 - http://dle.rae.es/?id=aBpHmn0
 - https://es.oxforddictionaries.com/definicion/bailar
 - http://www.wordreference.com/conj/EsVerbs.aspx?v=trabajar
-- http://conjugador.reverso.net/conjugacion-espanol-verbo-cantar.html
+- http://conjugador.reverso.net/conjugacion-espanol-verbo-cantar.html  <- verb model
+- https://www.elconjugador.com/conjugacion/verbo/temer.html
 
 Most used verbs lists:
 
