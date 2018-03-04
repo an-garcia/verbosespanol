@@ -34,7 +34,7 @@
     <!-- TOP 25 -->
     <verb
         id   = "1"
-        ta   = ""
+        ta   = "54"
         in   = "ser"
         s1   = "Este jardín es de mi padre."
         s2   = "La carta es para el jefe."
@@ -49,7 +49,7 @@
         trpt = "ser" />
     <verb
         id   = "2"
-        ta   = ""
+        ta   = "34"
         in   = "estar"
         s1   = "Recuerdo cuando el kilo de papas estaba a dos centavos."
         s2   = "La felicidad no está en el dinero."
@@ -64,7 +64,7 @@
         trpt = "estar" />
     <verb
         id   = "3"
-        ta   = ""
+        ta   = "28"
         in   = "decir"
         s1   = "Digo que es verdad."
         s2   = "A mi hermano le dicen Paco."
@@ -79,7 +79,7 @@
         trpt = "dizer" />
     <verb
         id   = "4"
-        ta   = ""
+        ta   = "60"
         in   = "venir"
         s1   = "Tras el invierno viene la primavera."
         s2   = "La carretera que viene de Cali está en obras."
@@ -94,7 +94,7 @@
         trpt = "vir" />
     <verb
         id   = "5"
-        ta   = ""
+        ta   = "37"
         in   = "ir"
         s1   = "Las cortinas van muy bien con el verde de la pared."
         s2   = "¿De qué va la novela que estás leyendo?"
@@ -124,7 +124,7 @@
         trpt = "falar" />
     <verb
         id   = "7"
-        ta   = ""
+        ta   = "57"
         in   = "tener"
         s1   = "Enseguida vuelvo; tenga su cambio, por favor."
         s2   = "María Luisa tiene quince años."
@@ -139,7 +139,7 @@
         trpt = "ter" />
     <verb
         id   = "8"
-        ta   = ""
+        ta   = "36"
         in   = "hacer"
         s1   = "Hace que trabaja pero no mueve un dedo."
         s2   = "Nueve y cuatro hacen trece."
@@ -154,7 +154,7 @@
         trpt = "fazer" />
     <verb
         id   = "9"
-        ta   = ""
+        ta   = "35"
         in   = "haber"
         s1   = "Cuando él llegó, yo ya me había vestido."
         s2   = "El martes habrá una fiesta."
@@ -169,7 +169,7 @@
         trpt = "haber" />
     <verb
         id   = "10"
-        ta   = ""
+        ta   = "47"
         in   = "poner"
         s1   = "Jose va a poner un restaurante."
         s2   = "El profesor puso en el pizarrón un esquema para resumir lo dicho."
@@ -199,7 +199,7 @@
         trpt = "dever" />
     <verb
         id   = "12"
-        ta   = ""
+        ta   = "46"
         in   = "poder"
         s1   = "Puedes volver cuando quieras."
         s2   = "Podrías haberte esforzado un poco más."
@@ -274,7 +274,7 @@
         trpt = "chamar" />
     <verb
         id   = "17"
-        ta   = ""
+        ta   = "8"
         in   = "bailar"
         s1   = "Bailar un vals."
         s2   = "No me canso de ver cómo baila el trompo."
@@ -652,7 +652,7 @@
         trpt = "passear" />
     <verb
         id   = "42"
-        ta   = ""
+        ta   = "19"
         in   = "andar"
         s1   = ""
         s2   = ""
@@ -697,7 +697,7 @@
         trpt = "correr" />
     <verb
         id   = "45"
-        ta   = ""
+        ta   = "61"
         in   = "ver"
         s1   = ""
         s2   = ""
@@ -790,7 +790,7 @@
     <!--
     <verb
         id   = "51"
-        ta   = ""
+        ta   = "30"
         in   = "dormir"
         s1   = ""
         s2   = ""
@@ -940,7 +940,7 @@
         trpt = "gostar" />
     <verb
         id   = "61"
-        ta   = ""
+        ta   = "39"
         in   = "leer"
         s1   = ""
         s2   = ""
@@ -1105,7 +1105,7 @@
         trpt = "entregar" />
     <verb
         id   = "72"
-        ta   = ""
+        ta   = "5"
         in   = "enviar"
         s1   = ""
         s2   = ""

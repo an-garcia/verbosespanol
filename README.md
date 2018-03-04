@@ -38,6 +38,7 @@ Most used verbs lists:
 - http://www.practicaespanol.com/wp-content/uploads/Verbos-espa%C3%B1oles-m%C3%A1s-frecuentes.pdf
 - https://quizlet.com/6282091/lista-completa-de-verbos-500-esp-4-flash-cards/
 - https://www.quia.com/jg/514331list.html
+- http://conjugador.reverso.net/index-espanol-751-1000.html
 
 Verbs to check
 --------------
