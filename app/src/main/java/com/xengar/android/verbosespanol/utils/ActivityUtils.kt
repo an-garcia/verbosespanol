@@ -865,6 +865,7 @@ object ActivityUtils {
         imageName = replaceOccurrences(imageName, "û", "u")
         imageName = replaceOccurrences(imageName, "ù", "u")
         imageName = replaceOccurrences(imageName, "ü", "u")
+        imageName = replaceOccurrences(imageName, "ñ", "n")
         return imageName
     }
 

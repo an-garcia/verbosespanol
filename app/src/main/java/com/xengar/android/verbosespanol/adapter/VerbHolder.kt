@@ -142,7 +142,8 @@ class VerbHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListen
             sample3!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
 
             // Try to put the verb image
-            val imageName = VERB + ActivityUtils.generateImageName(verb.infinitive)
+            //val imageName = VERB + ActivityUtils.generateImageName(verb.infinitive)
+            val imageName = VERB + "ensenar"
             val imageId = context.resources.getIdentifier(imageName, DRAWABLE,
                     context.packageName)
             if (imageId != 0) {

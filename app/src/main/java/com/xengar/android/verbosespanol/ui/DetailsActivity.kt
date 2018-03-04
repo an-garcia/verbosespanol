@@ -705,8 +705,9 @@ class DetailsActivity
 
         // Try to put the verb image
         val imageVerb = findViewById<ImageView>(R.id.verb_image)
-        val imageId = resources.getIdentifier(
-                VERB + removeAccents(verb.infinitive), DRAWABLE, packageName)
+        /*val imageId = resources.getIdentifier(
+                VERB + removeAccents(verb.infinitive), DRAWABLE, packageName) */
+        val imageId = resources.getIdentifier(VERB + "ensenar", DRAWABLE, packageName)
         if (imageId != 0) {
             ActivityUtils.setImage(applicationContext, imageVerb, imageId)
         }
