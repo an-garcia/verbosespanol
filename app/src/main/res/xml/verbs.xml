@@ -409,6 +409,7 @@
         trpt = "reparar" />
 
     <!-- TOP 50 -->
+    <!--
     <verb
         id   = "26"
         ta   = ""
@@ -783,9 +784,10 @@
         no   = ""
         tren = "record"
         trfr = ""
-        trpt = "gravar" />
+        trpt = "gravar" /> -->
 
     <!-- TOP 100 -->
+    <!--
     <verb
         id   = "51"
         ta   = ""
@@ -1505,7 +1507,7 @@
         no   = ""
         tren = "lodge"
         trfr = ""
-        trpt = "alojar-se" />
+        trpt = "alojar-se" /> -->
     <!--
     <verb
         id   = "99"
@@ -1537,7 +1539,5 @@
         tren = ""
         trfr = ""
         trpt = "" /> -->
-
-
 
 </verbs>
