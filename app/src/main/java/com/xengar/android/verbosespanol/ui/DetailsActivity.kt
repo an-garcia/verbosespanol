@@ -182,110 +182,137 @@ class DetailsActivity
         findViewById<View>(R.id.play_sample1).setOnClickListener(this)
         findViewById<View>(R.id.play_sample2).setOnClickListener(this)
         findViewById<View>(R.id.play_sample3).setOnClickListener(this)
-        /*
 
-        findViewById<View>(R.id.play_indicative_present_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_present_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_present_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_present_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_present_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_present_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_compose_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_compose_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_compose_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_compose_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_compose_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_compose_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_imperfait_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_imperfait_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_imperfait_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_imperfait_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_imperfait_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_imperfait_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_plus_que_parfait_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_plus_que_parfait_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_plus_que_parfait_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_plus_que_parfait_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_plus_que_parfait_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_plus_que_parfait_ils).setOnClickListener(this)
+        findViewById<View>(R.id.infinitivo_simple).setOnClickListener(this)
+        findViewById<View>(R.id.infinitivo_compuesto).setOnClickListener(this)
+        findViewById<View>(R.id.participio).setOnClickListener(this)
+        findViewById<View>(R.id.gerundio_simple).setOnClickListener(this)
+        findViewById<View>(R.id.gerundio_compuesto).setOnClickListener(this)
 
-        findViewById<View>(R.id.play_indicative_passe_simple_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_simple_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_simple_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_simple_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_simple_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_simple_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_anterieur_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_anterieur_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_anterieur_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_anterieur_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_anterieur_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_passe_anterieur_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_simple_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_simple_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_simple_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_simple_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_simple_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_simple_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_anterieur_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_anterieur_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_anterieur_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_anterieur_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_anterieur_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_indicative_futur_anterieur_ils).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_presente_tu).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_presente_el).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_presente_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_presente_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_presente_ellos).setOnClickListener(this)
 
-        findViewById<View>(R.id.play_conditionnel_present_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_present_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_present_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_present_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_present_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_present_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_passe_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_passe_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_passe_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_passe_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_passe_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_conditionnel_passe_ils).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_negativo_tu).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_negativo_el).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_negativo_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_negativo_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.imperativo_negativo_ellos).setOnClickListener(this)
 
-        findViewById<View>(R.id.play_subjonctif_present_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_present_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_present_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_present_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_present_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_present_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_passe_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_passe_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_passe_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_passe_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_passe_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_passe_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_imperfait_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_imperfait_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_imperfait_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_imperfait_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_imperfait_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_imperfait_ils).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_plus_que_parfait_je).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_plus_que_parfait_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_plus_que_parfait_il).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_plus_que_parfait_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_plus_que_parfait_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_subjonctif_plus_que_parfait_ils).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_presente_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_presente_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_presente_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_presente_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_presente_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_presente_ellos).setOnClickListener(this)
 
-        findViewById<View>(R.id.play_imperatif_present_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_imperatif_present_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_imperatif_present_vous).setOnClickListener(this)
-        findViewById<View>(R.id.play_imperatif_passe_tu).setOnClickListener(this)
-        findViewById<View>(R.id.play_imperatif_passe_nous).setOnClickListener(this)
-        findViewById<View>(R.id.play_imperatif_passe_vous).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_ellos).setOnClickListener(this)
 
-        findViewById<View>(R.id.play_infinitive_present).setOnClickListener(this)
-        findViewById<View>(R.id.play_infinitive_passe).setOnClickListener(this)
-        findViewById<View>(R.id.play_participe_present).setOnClickListener(this)
-        findViewById<View>(R.id.play_participe_passe1).setOnClickListener(this)
-        findViewById<View>(R.id.play_participe_passe2).setOnClickListener(this)
-        findViewById<View>(R.id.play_gerondif_present).setOnClickListener(this)
-        findViewById<View>(R.id.play_gerondif_passe).setOnClickListener(this) */
+        findViewById<View>(R.id.indicativo_preterito_imperfecto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_imperfecto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_imperfecto_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_imperfecto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_imperfecto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_imperfecto_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_preterito_perfecto_simple_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_simple_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_simple_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_simple_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_simple_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_perfecto_simple_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_preterito_anterior_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_anterior_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_anterior_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_anterior_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_anterior_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_preterito_anterior_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_futuro_simple_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_simple_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_simple_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_simple_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_simple_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_simple_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_futuro_compuesto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_compuesto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_compuesto_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_compuesto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_compuesto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_futuro_compuesto_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_condicional_simple_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_simple_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_simple_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_simple_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_simple_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_simple_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.indicativo_condicional_compuesto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_compuesto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_compuesto_el).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_compuesto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_compuesto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.indicativo_condicional_compuesto_ellos).setOnClickListener(this)
+
+
+        findViewById<View>(R.id.subjuntivo_presente_yo).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_presente_tu).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_presente_el).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_presente_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_presente_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_presente_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_el).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.subjuntivo_preterito_imperfecto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_imperfecto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_imperfecto_el).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_imperfecto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_imperfecto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_imperfecto_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_el).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.subjuntivo_futuro_simple_yo).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_simple_tu).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_simple_el).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_simple_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_simple_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_simple_ellos).setOnClickListener(this)
+
+        findViewById<View>(R.id.subjuntivo_futuro_compuesto_yo).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_compuesto_tu).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_compuesto_el).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_compuesto_nosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_compuesto_vosotros).setOnClickListener(this)
+        findViewById<View>(R.id.subjuntivo_futuro_compuesto_ellos).setOnClickListener(this)
     }
 
     /** Called when leaving the activity  */
@@ -357,133 +384,150 @@ class DetailsActivity
      */
     private fun createShareText():String {
         var text = ""
-        if (verb != null)
+        if (verb != null && conjugation != null)
         {
-            text = ("Verb: " + verb!!.infinitive
+            text = ("Verb: " + verb?.infinitive
                     + "\n" + getString(R.string.group) + ": " + verb!!.group
                     + "\n\n" + getString(R.string.definition) + ":\n" + verb!!.definition
                     + "\n\n" + getString(R.string.examples) + ":\n" + verb!!.sample1
                     + "\n" + verb!!.sample2
                     + "\n" + verb!!.sample3
                     + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.presente) + ":"
-                    /*+ "\n" + conjugation!!.indicatifPresentJe
-                    + "\n" + conjugation!!.indicatifPresentTu
-                    + "\n" + conjugation!!.indicatifPresentIl
-                    + "\n" + conjugation!!.indicatifPresentNous
-                    + "\n" + conjugation!!.indicatifPresentVous
-                    + "\n" + conjugation!!.indicatifPresentIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.passe_compose) + ":"
-                    + "\n" + conjugation!!.indicatifPasseComposeJe
-                    + "\n" + conjugation!!.indicatifPasseComposeTu
-                    + "\n" + conjugation!!.indicatifPasseComposeIl
-                    + "\n" + conjugation!!.indicatifPasseComposeNous
-                    + "\n" + conjugation!!.indicatifPasseComposeVous
-                    + "\n" + conjugation!!.indicatifPasseComposeIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.imperfait) + ":"
-                    + "\n" + conjugation!!.indicatifImperfaitJe
-                    + "\n" + conjugation!!.indicatifImperfaitTu
-                    + "\n" + conjugation!!.indicatifImperfaitIl
-                    + "\n" + conjugation!!.indicatifImperfaitNous
-                    + "\n" + conjugation!!.indicatifImperfaitVous
-                    + "\n" + conjugation!!.indicatifImperfaitIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.plus_que_parfait) + ":"
-                    + "\n" + conjugation!!.indicatifPlusQueParfaitJe
-                    + "\n" + conjugation!!.indicatifPlusQueParfaitTu
-                    + "\n" + conjugation!!.indicatifPlusQueParfaitIl
-                    + "\n" + conjugation!!.indicatifPlusQueParfaitNous
-                    + "\n" + conjugation!!.indicatifPlusQueParfaitVous
-                    + "\n" + conjugation!!.indicatifPlusQueParfaitIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.passe_simple) + ":"
-                    + "\n" + conjugation!!.indicatifPasseSimpleJe
-                    + "\n" + conjugation!!.indicatifPasseSimpleTu
-                    + "\n" + conjugation!!.indicatifPasseSimpleIl
-                    + "\n" + conjugation!!.indicatifPasseSimpleNous
-                    + "\n" + conjugation!!.indicatifPasseSimpleVous
-                    + "\n" + conjugation!!.indicatifPasseSimpleIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.passe_anterieur) + ":"
-                    + "\n" + conjugation!!.indicatifPasseAnterieurJe
-                    + "\n" + conjugation!!.indicatifPasseAnterieurTu
-                    + "\n" + conjugation!!.indicatifPasseAnterieurIl
-                    + "\n" + conjugation!!.indicatifPasseAnterieurNous
-                    + "\n" + conjugation!!.indicatifPasseAnterieurVous
-                    + "\n" + conjugation!!.indicatifPasseAnterieurIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.futur_simple) + ":"
-                    + "\n" + conjugation!!.indicatifFuturSimpleJe
-                    + "\n" + conjugation!!.indicatifFuturSimpleTu
-                    + "\n" + conjugation!!.indicatifFuturSimpleIl
-                    + "\n" + conjugation!!.indicatifFuturSimpleNous
-                    + "\n" + conjugation!!.indicatifFuturSimpleVous
-                    + "\n" + conjugation!!.indicatifFuturSimpleIls
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.futur_anterieur) + ":"
-                    + "\n" + conjugation!!.indicatifFuturAnterieurJe
-                    + "\n" + conjugation!!.indicatifFuturAnterieurTu
-                    + "\n" + conjugation!!.indicatifFuturAnterieurIl
-                    + "\n" + conjugation!!.indicatifFuturAnterieurNous
-                    + "\n" + conjugation!!.indicatifFuturAnterieurVous
-                    + "\n" + conjugation!!.indicatifFuturAnterieurIls
-                    + "\n\n" + getString(R.string.conditionnel) + " " + getString(R.string.present) + ":"
-                    + "\n" + conjugation!!.conditionnelPresentJe
-                    + "\n" + conjugation!!.conditionnelPresentTu
-                    + "\n" + conjugation!!.conditionnelPresentIl
-                    + "\n" + conjugation!!.conditionnelPresentNous
-                    + "\n" + conjugation!!.conditionnelPresentVous
-                    + "\n" + conjugation!!.conditionnelPresentIls
-                    + "\n\n" + getString(R.string.conditionnel) + " " + getString(R.string.passe) + ":"
-                    + "\n" + conjugation!!.conditionnelPasseJe
-                    + "\n" + conjugation!!.conditionnelPasseTu
-                    + "\n" + conjugation!!.conditionnelPasseIl
-                    + "\n" + conjugation!!.conditionnelPasseNous
-                    + "\n" + conjugation!!.conditionnelPasseVous
-                    + "\n" + conjugation!!.conditionnelPasseIls
-                    + "\n\n" + getString(R.string.subjonctif) + " " + getString(R.string.present) + ":"
-                    + "\n" + conjugation!!.subjonctifPresentJe
-                    + "\n" + conjugation!!.subjonctifPresentTu
-                    + "\n" + conjugation!!.subjonctifPresentIl
-                    + "\n" + conjugation!!.subjonctifPresentNous
-                    + "\n" + conjugation!!.subjonctifPresentVous
-                    + "\n" + conjugation!!.subjonctifPresentIls
-                    + "\n\n" + getString(R.string.subjonctif) + " " + getString(R.string.passe) + ":"
-                    + "\n" + conjugation!!.subjonctifPasseJe
-                    + "\n" + conjugation!!.subjonctifPasseTu
-                    + "\n" + conjugation!!.subjonctifPasseIl
-                    + "\n" + conjugation!!.subjonctifPasseNous
-                    + "\n" + conjugation!!.subjonctifPasseVous
-                    + "\n" + conjugation!!.subjonctifPasseIls
-                    + "\n\n" + getString(R.string.subjonctif) + " " + getString(R.string.imperfait) + ":"
-                    + "\n" + conjugation!!.subjonctifImperfaitJe
-                    + "\n" + conjugation!!.subjonctifImperfaitTu
-                    + "\n" + conjugation!!.subjonctifImperfaitIl
-                    + "\n" + conjugation!!.subjonctifImperfaitNous
-                    + "\n" + conjugation!!.subjonctifImperfaitVous
-                    + "\n" + conjugation!!.subjonctifImperfaitIls
-                    + "\n\n" + getString(R.string.subjonctif) + " " + getString(R.string.plus_que_parfait) + ":"
-                    + "\n" + conjugation!!.subjonctifPlusQueParfaitJe
-                    + "\n" + conjugation!!.subjonctifPlusQueParfaitTu
-                    + "\n" + conjugation!!.subjonctifPlusQueParfaitIl
-                    + "\n" + conjugation!!.subjonctifPlusQueParfaitNous
-                    + "\n" + conjugation!!.subjonctifPlusQueParfaitVous
-                    + "\n" + conjugation!!.subjonctifPlusQueParfaitIls
-                    + "\n\n" + getString(R.string.imperatif) + " " + getString(R.string.present) + ":"
-                    + "\n" + conjugation!!.imperatifPresentTu
-                    + "\n" + conjugation!!.imperatifPresentNous
-                    + "\n" + conjugation!!.imperatifPresentVous
-                    + "\n\n" + getString(R.string.imperatif) + " " + getString(R.string.passe) + ":"
-                    + "\n" + conjugation!!.imperatifPasseTu
-                    + "\n" + conjugation!!.imperatifPasseNous
-                    + "\n" + conjugation!!.imperatifPasseVous
-                    + "\n\n" + getString(R.string.infinitive) + " " + getString(R.string.present) + ":"
-                    + "\n" + conjugation!!.infinitivePresent
-                    + "\n\n" + getString(R.string.infinitive) + " " + getString(R.string.passe) + ":"
-                    + "\n" + conjugation!!.infinitivePasse
-                    + "\n\n" + getString(R.string.participe) + " " + getString(R.string.present) + ":"
-                    + "\n" + conjugation!!.participePresent
-                    + "\n\n" + getString(R.string.participe) + " " + getString(R.string.passe) + ":"
-                    + "\n" + conjugation!!.participePasse1
-                    + "\n" + conjugation!!.participePasse2
-                    + "\n\n" + getString(R.string.gerondif) + " " + getString(R.string.present) + ":"
-                    + "\n" + conjugation!!.gerondifPresent
-                    + "\n\n" + getString(R.string.gerondif) + " " + getString(R.string.passe) + ":"
-                    + "\n" + conjugation!!.gerondifPasse*/ )
+                    + "\n" + conjugation!!.indicativoPresenteYo
+                    + "\n" + conjugation!!.indicativoPresenteTu
+                    + "\n" + conjugation!!.indicativoPresenteEl
+                    + "\n" + conjugation!!.indicativoPresenteN
+                    + "\n" + conjugation!!.indicativoPresenteV
+                    + "\n" + conjugation!!.indicativoPresenteEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.preterito_perfecto_compuesto) + ":"
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoCompuestoYo
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoCompuestoTu
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoCompuestoEl
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoCompuestoN
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoCompuestoV
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoCompuestoEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.preterito_imperfecto) + ":"
+                    + "\n" + conjugation!!.indicativoPreteritoImperfectoYo
+                    + "\n" + conjugation!!.indicativoPreteritoImperfectoTu
+                    + "\n" + conjugation!!.indicativoPreteritoImperfectoEl
+                    + "\n" + conjugation!!.indicativoPreteritoImperfectoN
+                    + "\n" + conjugation!!.indicativoPreteritoImperfectoV
+                    + "\n" + conjugation!!.indicativoPreteritoImperfectoEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.preterito_pluscuamperfecto) + ":"
+                    + "\n" + conjugation!!.indicativoPreteritoPluscuamperfectoYo
+                    + "\n" + conjugation!!.indicativoPreteritoPluscuamperfectoTu
+                    + "\n" + conjugation!!.indicativoPreteritoPluscuamperfectoEl
+                    + "\n" + conjugation!!.indicativoPreteritoPluscuamperfectoN
+                    + "\n" + conjugation!!.indicativoPreteritoPluscuamperfectoV
+                    + "\n" + conjugation!!.indicativoPreteritoPluscuamperfectoEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.preterito_perfecto_simple) + ":"
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoSimpleYo
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoSimpleTu
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoSimpleEl
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoSimpleN
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoSimpleV
+                    + "\n" + conjugation!!.indicativoPreteritoPerfectoSimpleEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.preterito_anterior) + ":"
+                    + "\n" + conjugation!!.indicativoPreteritoAnteriorYo
+                    + "\n" + conjugation!!.indicativoPreteritoAnteriorTu
+                    + "\n" + conjugation!!.indicativoPreteritoAnteriorEl
+                    + "\n" + conjugation!!.indicativoPreteritoAnteriorN
+                    + "\n" + conjugation!!.indicativoPreteritoAnteriorV
+                    + "\n" + conjugation!!.indicativoPreteritoAnteriorEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.futuro_simple) + ":"
+                    + "\n" + conjugation!!.indicativoFuturoSimpleYo
+                    + "\n" + conjugation!!.indicativoFuturoSimpleTu
+                    + "\n" + conjugation!!.indicativoFuturoSimpleEl
+                    + "\n" + conjugation!!.indicativoFuturoSimpleN
+                    + "\n" + conjugation!!.indicativoFuturoSimpleV
+                    + "\n" + conjugation!!.indicativoFuturoSimpleEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.futuro_compuesto) + ":"
+                    + "\n" + conjugation!!.indicativoFuturoCompuestoYo
+                    + "\n" + conjugation!!.indicativoFuturoCompuestoTu
+                    + "\n" + conjugation!!.indicativoFuturoCompuestoEl
+                    + "\n" + conjugation!!.indicativoFuturoCompuestoN
+                    + "\n" + conjugation!!.indicativoFuturoCompuestoV
+                    + "\n" + conjugation!!.indicativoFuturoCompuestoEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.condicional_simple) + ":"
+                    + "\n" + conjugation!!.indicativoCondicionalSimpleYo
+                    + "\n" + conjugation!!.indicativoCondicionalSimpleTu
+                    + "\n" + conjugation!!.indicativoCondicionalSimpleEl
+                    + "\n" + conjugation!!.indicativoCondicionalSimpleN
+                    + "\n" + conjugation!!.indicativoCondicionalSimpleV
+                    + "\n" + conjugation!!.indicativoCondicionalSimpleEll
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.condicional_compuesto) + ":"
+                    + "\n" + conjugation!!.indicativoCondicionalCompuestoYo
+                    + "\n" + conjugation!!.indicativoCondicionalCompuestoTu
+                    + "\n" + conjugation!!.indicativoCondicionalCompuestoEl
+                    + "\n" + conjugation!!.indicativoCondicionalCompuestoN
+                    + "\n" + conjugation!!.indicativoCondicionalCompuestoV
+                    + "\n" + conjugation!!.indicativoCondicionalCompuestoEll
+
+                    + "\n\n" + getString(R.string.subjuntivo) + " " + getString(R.string.presente) + ":"
+                    + "\n" + conjugation!!.subjuntivoPresenteYo
+                    + "\n" + conjugation!!.subjuntivoPresenteTu
+                    + "\n" + conjugation!!.subjuntivoPresenteEl
+                    + "\n" + conjugation!!.subjuntivoPresenteN
+                    + "\n" + conjugation!!.subjuntivoPresenteV
+                    + "\n" + conjugation!!.subjuntivoPresenteEll
+                    + "\n\n" + getString(R.string.subjuntivo) + " " + getString(R.string.preterito_perfecto_compuesto) + ":"
+                    + "\n" + conjugation!!.subjuntivoPreteritoPerfectoCompuestoYo
+                    + "\n" + conjugation!!.subjuntivoPreteritoPerfectoCompuestoTu
+                    + "\n" + conjugation!!.subjuntivoPreteritoPerfectoCompuestoEl
+                    + "\n" + conjugation!!.subjuntivoPreteritoPerfectoCompuestoN
+                    + "\n" + conjugation!!.subjuntivoPreteritoPerfectoCompuestoV
+                    + "\n" + conjugation!!.subjuntivoPreteritoPerfectoCompuestoEll
+                    + "\n\n" + getString(R.string.subjuntivo) + " " + getString(R.string.preterito_imperfecto) + ":"
+                    + "\n" + conjugation!!.subjuntivoPreteritoImperfectoYo
+                    + "\n" + conjugation!!.subjuntivoPreteritoImperfectoTu
+                    + "\n" + conjugation!!.subjuntivoPreteritoImperfectoEl
+                    + "\n" + conjugation!!.subjuntivoPreteritoImperfectoN
+                    + "\n" + conjugation!!.subjuntivoPreteritoImperfectoV
+                    + "\n" + conjugation!!.subjuntivoPreteritoImperfectoEll
+                    + "\n\n" + getString(R.string.subjuntivo) + " " + getString(R.string.preterito_pluscuamperfecto) + ":"
+                    + "\n" + conjugation!!.subjuntivoPreteritoPluscuamperfectoYo
+                    + "\n" + conjugation!!.subjuntivoPreteritoPluscuamperfectoTu
+                    + "\n" + conjugation!!.subjuntivoPreteritoPluscuamperfectoEl
+                    + "\n" + conjugation!!.subjuntivoPreteritoPluscuamperfectoN
+                    + "\n" + conjugation!!.subjuntivoPreteritoPluscuamperfectoV
+                    + "\n" + conjugation!!.subjuntivoPreteritoPluscuamperfectoEll
+                    + "\n\n" + getString(R.string.subjuntivo) + " " + getString(R.string.futuro_simple) + ":"
+                    + "\n" + conjugation!!.subjuntivoFuturoSimpleYo
+                    + "\n" + conjugation!!.subjuntivoFuturoSimpleTu
+                    + "\n" + conjugation!!.subjuntivoFuturoSimpleEl
+                    + "\n" + conjugation!!.subjuntivoFuturoSimpleN
+                    + "\n" + conjugation!!.subjuntivoFuturoSimpleV
+                    + "\n" + conjugation!!.subjuntivoFuturoSimpleEll
+                    + "\n\n" + getString(R.string.subjuntivo) + " " + getString(R.string.futuro_compuesto) + ":"
+                    + "\n" + conjugation!!.subjuntivoFuturoCompuestoYo
+                    + "\n" + conjugation!!.subjuntivoFuturoCompuestoTu
+                    + "\n" + conjugation!!.subjuntivoFuturoCompuestoEl
+                    + "\n" + conjugation!!.subjuntivoFuturoCompuestoN
+                    + "\n" + conjugation!!.subjuntivoFuturoCompuestoV
+                    + "\n" + conjugation!!.subjuntivoFuturoCompuestoEll
+
+                    + "\n\n" + getString(R.string.imperativo) + " " + getString(R.string.presente) + ":"
+                    + "\n" + conjugation!!.imperativoTu
+                    + "\n" + conjugation!!.imperativoEl
+                    + "\n" + conjugation!!.imperativoN
+                    + "\n" + conjugation!!.imperativoV
+                    + "\n" + conjugation!!.imperativoEll
+                    + "\n\n" + getString(R.string.imperativo) + " " + getString(R.string.negativo) + ":"
+                    + "\n" + conjugation!!.imperativoNegTu
+                    + "\n" + conjugation!!.imperativoNegEl
+                    + "\n" + conjugation!!.imperativoNegN
+                    + "\n" + conjugation!!.imperativoNegV
+                    + "\n" + conjugation!!.imperativoNegEll
+                    + "\n\n" + getString(R.string.infinitive) + " " + getString(R.string.simple) + ":"
+                    + "\n" + conjugation!!.infinitivoSimple
+                    + "\n\n" + getString(R.string.infinitive) + " " + getString(R.string.compuesto) + ":"
+                    + "\n" + conjugation!!.infinitivoCompuesto
+                    + "\n\n" + getString(R.string.participio) + ":"
+                    + "\n" + conjugation!!.participio
+                    + "\n\n" + getString(R.string.gerundio) + " " + getString(R.string.simple) + ":"
+                    + "\n" + conjugation!!.gerundioSimple
+                    + "\n\n" + getString(R.string.gerundio) + " " + getString(R.string.compuesto) + ":"
+                    + "\n" + conjugation!!.gerundioCompuesto )
         }
         return text
     }
@@ -638,7 +682,7 @@ class DetailsActivity
             CONJUGATION_LOADER -> if (cursor.moveToFirst()) {
                 conjugation = ActivityUtils.conjugationFromCursor(cursor)
                 processConjugation(conjugation!!)
-                fillConjugationDetails(conjugation!!)
+                //fillConjugationDetails(conjugation!!)
             }
 
             VERB_LOADER -> {
@@ -735,222 +779,278 @@ class DetailsActivity
      */
     private fun fillConjugationDetails(c: Conjugation) {
         val fontSize = Integer.parseInt(ActivityUtils.getPreferenceFontSize(applicationContext))
-        changeTextFontInConjugation(fontSize)
+        changeTextFontInConjugation(fontSize.toFloat())
 
-        /*
-        (findViewById<View>(R.id.infinitive_present) as TextView).text = c.infinitivePresent
-        (findViewById<View>(R.id.infinitive_passe) as TextView).text = c.infinitivePasse
-        (findViewById<View>(R.id.participe_present) as TextView).text = c.participePresent
-        (findViewById<View>(R.id.participe_passe1) as TextView).text = c.participePasse1
-        (findViewById<View>(R.id.participe_passe2) as TextView).text = c.participePasse2
-        (findViewById<View>(R.id.gerondif_present) as TextView).text = c.gerondifPresent
-        (findViewById<View>(R.id.gerondif_passe) as TextView).text = c.gerondifPasse
+        (findViewById<View>(R.id.infinitivo_simple) as TextView).text = c.infinitivoSimple
+        (findViewById<View>(R.id.infinitivo_compuesto) as TextView).text = c.infinitivoCompuesto
+        (findViewById<View>(R.id.participio) as TextView).text = c.participio
+        (findViewById<View>(R.id.gerundio_simple) as TextView).text = c.gerundioSimple
+        (findViewById<View>(R.id.gerundio_compuesto) as TextView).text = c.gerundioCompuesto
 
-        (findViewById<View>(R.id.imperatif_present_tu) as TextView).text = c.imperatifPresentTu
-        (findViewById<View>(R.id.imperatif_present_nous) as TextView).text = c.imperatifPresentNous
-        (findViewById<View>(R.id.imperatif_present_vous) as TextView).text = c.imperatifPresentVous
-        (findViewById<View>(R.id.imperatif_passe_tu) as TextView).text = c.imperatifPasseTu
-        (findViewById<View>(R.id.imperatif_passe_nous) as TextView).text = c.imperatifPasseNous
-        (findViewById<View>(R.id.imperatif_passe_vous) as TextView).text = c.imperatifPasseVous
+        (findViewById<View>(R.id.imperativo_presente_tu) as TextView).text = c.imperativoTu
+        (findViewById<View>(R.id.imperativo_presente_el) as TextView).text = c.imperativoEl
+        (findViewById<View>(R.id.imperativo_presente_nosotros) as TextView).text = c.imperativoN
+        (findViewById<View>(R.id.imperativo_presente_vosotros) as TextView).text = c.imperativoV
+        (findViewById<View>(R.id.imperativo_presente_ellos) as TextView).text = c.imperativoEll
 
-        (findViewById<View>(R.id.indicative_present_je) as TextView).text = c.indicatifPresentJe
-        (findViewById<View>(R.id.indicative_present_tu) as TextView).text = c.indicatifPresentTu
-        (findViewById<View>(R.id.indicative_present_il) as TextView).text = c.indicatifPresentIl
-        (findViewById<View>(R.id.indicative_present_nous) as TextView).text = c.indicatifPresentNous
-        (findViewById<View>(R.id.indicative_present_vous) as TextView).text = c.indicatifPresentVous
-        (findViewById<View>(R.id.indicative_present_ils) as TextView).text = c.indicatifPresentIls
-        (findViewById<View>(R.id.indicative_passe_compose_je) as TextView).text = c.indicatifPasseComposeJe
-        (findViewById<View>(R.id.indicative_passe_compose_tu) as TextView).text = c.indicatifPasseComposeTu
-        (findViewById<View>(R.id.indicative_passe_compose_il) as TextView).text = c.indicatifPasseComposeIl
-        (findViewById<View>(R.id.indicative_passe_compose_nous) as TextView).text = c.indicatifPasseComposeNous
-        (findViewById<View>(R.id.indicative_passe_compose_vous) as TextView).text = c.indicatifPasseComposeVous
-        (findViewById<View>(R.id.indicative_passe_compose_ils) as TextView).text = c.indicatifPasseComposeIls
-        (findViewById<View>(R.id.indicative_imperfait_je) as TextView).text = c.indicatifImperfaitJe
-        (findViewById<View>(R.id.indicative_imperfait_tu) as TextView).text = c.indicatifImperfaitTu
-        (findViewById<View>(R.id.indicative_imperfait_il) as TextView).text = c.indicatifImperfaitIl
-        (findViewById<View>(R.id.indicative_imperfait_nous) as TextView).text = c.indicatifImperfaitNous
-        (findViewById<View>(R.id.indicative_imperfait_vous) as TextView).text = c.indicatifImperfaitVous
-        (findViewById<View>(R.id.indicative_imperfait_ils) as TextView).text = c.indicatifImperfaitIls
-        (findViewById<View>(R.id.indicative_plus_que_parfait_je) as TextView).text = c.indicatifPlusQueParfaitJe
-        (findViewById<View>(R.id.indicative_plus_que_parfait_tu) as TextView).text = c.indicatifPlusQueParfaitTu
-        (findViewById<View>(R.id.indicative_plus_que_parfait_il) as TextView).text = c.indicatifPlusQueParfaitIl
-        (findViewById<View>(R.id.indicative_plus_que_parfait_nous) as TextView).text = c.indicatifPlusQueParfaitNous
-        (findViewById<View>(R.id.indicative_plus_que_parfait_vous) as TextView).text = c.indicatifPlusQueParfaitVous
-        (findViewById<View>(R.id.indicative_plus_que_parfait_ils) as TextView).text = c.indicatifPlusQueParfaitIls
-        (findViewById<View>(R.id.indicative_passe_simple_je) as TextView).text = c.indicatifPasseSimpleJe
-        (findViewById<View>(R.id.indicative_passe_simple_tu) as TextView).text = c.indicatifPasseSimpleTu
-        (findViewById<View>(R.id.indicative_passe_simple_il) as TextView).text = c.indicatifPasseSimpleIl
-        (findViewById<View>(R.id.indicative_passe_simple_nous) as TextView).text = c.indicatifPasseSimpleNous
-        (findViewById<View>(R.id.indicative_passe_simple_vous) as TextView).text = c.indicatifPasseSimpleVous
-        (findViewById<View>(R.id.indicative_passe_simple_ils) as TextView).text = c.indicatifPasseSimpleIls
-        (findViewById<View>(R.id.indicative_passe_anterieur_je) as TextView).text = c.indicatifPasseAnterieurJe
-        (findViewById<View>(R.id.indicative_passe_anterieur_tu) as TextView).text = c.indicatifPasseAnterieurTu
-        (findViewById<View>(R.id.indicative_passe_anterieur_il) as TextView).text = c.indicatifPasseAnterieurIl
-        (findViewById<View>(R.id.indicative_passe_anterieur_nous) as TextView).text = c.indicatifPasseAnterieurNous
-        (findViewById<View>(R.id.indicative_passe_anterieur_vous) as TextView).text = c.indicatifPasseAnterieurVous
-        (findViewById<View>(R.id.indicative_passe_anterieur_ils) as TextView).text = c.indicatifPasseAnterieurIls
-        (findViewById<View>(R.id.indicative_futur_simple_je) as TextView).text = c.indicatifFuturSimpleJe
-        (findViewById<View>(R.id.indicative_futur_simple_tu) as TextView).text = c.indicatifFuturSimpleTu
-        (findViewById<View>(R.id.indicative_futur_simple_il) as TextView).text = c.indicatifFuturSimpleIl
-        (findViewById<View>(R.id.indicative_futur_simple_nous) as TextView).text = c.indicatifFuturSimpleNous
-        (findViewById<View>(R.id.indicative_futur_simple_vous) as TextView).text = c.indicatifFuturSimpleVous
-        (findViewById<View>(R.id.indicative_futur_simple_ils) as TextView).text = c.indicatifFuturSimpleIls
-        (findViewById<View>(R.id.indicative_futur_anterieur_je) as TextView).text = c.indicatifFuturAnterieurJe
-        (findViewById<View>(R.id.indicative_futur_anterieur_tu) as TextView).text = c.indicatifFuturAnterieurTu
-        (findViewById<View>(R.id.indicative_futur_anterieur_il) as TextView).text = c.indicatifFuturAnterieurIl
-        (findViewById<View>(R.id.indicative_futur_anterieur_nous) as TextView).text = c.indicatifFuturAnterieurNous
-        (findViewById<View>(R.id.indicative_futur_anterieur_vous) as TextView).text = c.indicatifFuturAnterieurVous
-        (findViewById<View>(R.id.indicative_futur_anterieur_ils) as TextView).text = c.indicatifFuturAnterieurIls
+        (findViewById<View>(R.id.imperativo_negativo_tu) as TextView).text = c.imperativoNegTu
+        (findViewById<View>(R.id.imperativo_negativo_el) as TextView).text = c.imperativoNegEl
+        (findViewById<View>(R.id.imperativo_negativo_nosotros) as TextView).text = c.imperativoNegN
+        (findViewById<View>(R.id.imperativo_negativo_vosotros) as TextView).text = c.imperativoNegV
+        (findViewById<View>(R.id.imperativo_negativo_ellos) as TextView).text = c.imperativoNegEll
 
-        (findViewById<View>(R.id.conditionnel_present_je) as TextView).text = c.conditionnelPresentJe
-        (findViewById<View>(R.id.conditionnel_present_tu) as TextView).text = c.conditionnelPresentTu
-        (findViewById<View>(R.id.conditionnel_present_il) as TextView).text = c.conditionnelPresentIl
-        (findViewById<View>(R.id.conditionnel_present_nous) as TextView).text = c.conditionnelPresentNous
-        (findViewById<View>(R.id.conditionnel_present_vous) as TextView).text = c.conditionnelPresentVous
-        (findViewById<View>(R.id.conditionnel_present_ils) as TextView).text = c.conditionnelPresentIls
-        (findViewById<View>(R.id.conditionnel_passe_je) as TextView).text = c.conditionnelPasseJe
-        (findViewById<View>(R.id.conditionnel_passe_tu) as TextView).text = c.conditionnelPasseTu
-        (findViewById<View>(R.id.conditionnel_passe_il) as TextView).text = c.conditionnelPasseIl
-        (findViewById<View>(R.id.conditionnel_passe_nous) as TextView).text = c.conditionnelPasseNous
-        (findViewById<View>(R.id.conditionnel_passe_vous) as TextView).text = c.conditionnelPasseVous
-        (findViewById<View>(R.id.conditionnel_passe_ils) as TextView).text = c.conditionnelPasseIls
+        (findViewById<View>(R.id.indicativo_presente_yo) as TextView).text = c.indicativoPresenteYo
+        (findViewById<View>(R.id.indicativo_presente_tu) as TextView).text = c.indicativoPresenteTu
+        (findViewById<View>(R.id.indicativo_presente_el) as TextView).text = c.indicativoPresenteEl
+        (findViewById<View>(R.id.indicativo_presente_nosotros) as TextView).text = c.indicativoPresenteN
+        (findViewById<View>(R.id.indicativo_presente_vosotros) as TextView).text = c.indicativoPresenteV
+        (findViewById<View>(R.id.indicativo_presente_ellos) as TextView).text = c.indicativoPresenteEll
 
-        (findViewById<View>(R.id.subjonctif_present_je) as TextView).text = c.subjonctifPresentJe
-        (findViewById<View>(R.id.subjonctif_present_tu) as TextView).text = c.subjonctifPresentTu
-        (findViewById<View>(R.id.subjonctif_present_il) as TextView).text = c.subjonctifPresentIl
-        (findViewById<View>(R.id.subjonctif_present_nous) as TextView).text = c.subjonctifPresentNous
-        (findViewById<View>(R.id.subjonctif_present_vous) as TextView).text = c.subjonctifPresentVous
-        (findViewById<View>(R.id.subjonctif_present_ils) as TextView).text = c.subjonctifPresentIls
-        (findViewById<View>(R.id.subjonctif_passe_je) as TextView).text = c.subjonctifPasseJe
-        (findViewById<View>(R.id.subjonctif_passe_tu) as TextView).text = c.subjonctifPasseTu
-        (findViewById<View>(R.id.subjonctif_passe_il) as TextView).text = c.subjonctifPasseIl
-        (findViewById<View>(R.id.subjonctif_passe_nous) as TextView).text = c.subjonctifPasseNous
-        (findViewById<View>(R.id.subjonctif_passe_vous) as TextView).text = c.subjonctifPasseVous
-        (findViewById<View>(R.id.subjonctif_passe_ils) as TextView).text = c.subjonctifPasseIls
-        (findViewById<View>(R.id.subjonctif_imperfait_je) as TextView).text = c.subjonctifImperfaitJe
-        (findViewById<View>(R.id.subjonctif_imperfait_tu) as TextView).text = c.subjonctifImperfaitTu
-        (findViewById<View>(R.id.subjonctif_imperfait_il) as TextView).text = c.subjonctifImperfaitIl
-        (findViewById<View>(R.id.subjonctif_imperfait_nous) as TextView).text = c.subjonctifImperfaitNous
-        (findViewById<View>(R.id.subjonctif_imperfait_vous) as TextView).text = c.subjonctifImperfaitVous
-        (findViewById<View>(R.id.subjonctif_imperfait_ils) as TextView).text = c.subjonctifImperfaitIls
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_je) as TextView).text = c.subjonctifPlusQueParfaitJe
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_tu) as TextView).text = c.subjonctifPlusQueParfaitTu
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_il) as TextView).text = c.subjonctifPlusQueParfaitIl
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_nous) as TextView).text = c.subjonctifPlusQueParfaitNous
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_vous) as TextView).text = c.subjonctifPlusQueParfaitVous
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_ils) as TextView).text = c.subjonctifPlusQueParfaitIls*/
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_yo) as TextView).text = c.indicativoPreteritoPerfectoCompuestoYo
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_tu) as TextView).text = c.indicativoPreteritoPerfectoCompuestoTu
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_el) as TextView).text = c.indicativoPreteritoPerfectoCompuestoEl
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_nosotros) as TextView).text = c.indicativoPreteritoPerfectoCompuestoN
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_vosotros) as TextView).text = c.indicativoPreteritoPerfectoCompuestoV
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_ellos) as TextView).text = c.indicativoPreteritoPerfectoCompuestoEll
+
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_yo) as TextView).text = c.indicativoPreteritoImperfectoYo
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_tu) as TextView).text = c.indicativoPreteritoImperfectoTu
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_el) as TextView).text = c.indicativoPreteritoImperfectoEl
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_nosotros) as TextView).text = c.indicativoPreteritoImperfectoN
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_vosotros) as TextView).text = c.indicativoPreteritoImperfectoV
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_ellos) as TextView).text = c.indicativoPreteritoImperfectoEll
+
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_yo) as TextView).text = c.indicativoPreteritoPluscuamperfectoYo
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_tu) as TextView).text = c.indicativoPreteritoPluscuamperfectoTu
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_el) as TextView).text = c.indicativoPreteritoPluscuamperfectoEl
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_nosotros) as TextView).text = c.indicativoPreteritoPluscuamperfectoN
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_vosotros) as TextView).text = c.indicativoPreteritoPluscuamperfectoV
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_ellos) as TextView).text = c.indicativoPreteritoPluscuamperfectoEll
+
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_yo) as TextView).text = c.indicativoPreteritoPerfectoSimpleYo
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_tu) as TextView).text = c.indicativoPreteritoPerfectoSimpleTu
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_el) as TextView).text = c.indicativoPreteritoPerfectoSimpleEl
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_nosotros) as TextView).text = c.indicativoPreteritoPerfectoSimpleN
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_vosotros) as TextView).text = c.indicativoPreteritoPerfectoSimpleV
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_ellos) as TextView).text = c.indicativoPreteritoPerfectoSimpleEll
+
+        (findViewById<View>(R.id.indicativo_preterito_anterior_yo) as TextView).text = c.indicativoPreteritoAnteriorYo
+        (findViewById<View>(R.id.indicativo_preterito_anterior_tu) as TextView).text = c.indicativoPreteritoAnteriorTu
+        (findViewById<View>(R.id.indicativo_preterito_anterior_el) as TextView).text = c.indicativoPreteritoAnteriorEl
+        (findViewById<View>(R.id.indicativo_preterito_anterior_nosotros) as TextView).text = c.indicativoPreteritoAnteriorN
+        (findViewById<View>(R.id.indicativo_preterito_anterior_vosotros) as TextView).text = c.indicativoPreteritoAnteriorV
+        (findViewById<View>(R.id.indicativo_preterito_anterior_ellos) as TextView).text = c.indicativoPreteritoAnteriorEll
+
+        (findViewById<View>(R.id.indicativo_futuro_simple_yo) as TextView).text = c.indicativoFuturoSimpleYo
+        (findViewById<View>(R.id.indicativo_futuro_simple_tu) as TextView).text = c.indicativoFuturoSimpleTu
+        (findViewById<View>(R.id.indicativo_futuro_simple_el) as TextView).text = c.indicativoFuturoSimpleEl
+        (findViewById<View>(R.id.indicativo_futuro_simple_nosotros) as TextView).text = c.indicativoFuturoSimpleN
+        (findViewById<View>(R.id.indicativo_futuro_simple_vosotros) as TextView).text = c.indicativoFuturoSimpleV
+        (findViewById<View>(R.id.indicativo_futuro_simple_ellos) as TextView).text = c.indicativoFuturoSimpleEll
+
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_yo) as TextView).text = c.indicativoFuturoCompuestoYo
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_tu) as TextView).text = c.indicativoFuturoCompuestoTu
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_el) as TextView).text = c.indicativoFuturoCompuestoEl
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_nosotros) as TextView).text = c.indicativoFuturoCompuestoN
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_vosotros) as TextView).text = c.indicativoFuturoCompuestoV
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_ellos) as TextView).text = c.indicativoFuturoCompuestoEll
+
+        (findViewById<View>(R.id.indicativo_condicional_simple_yo) as TextView).text = c.indicativoCondicionalSimpleYo
+        (findViewById<View>(R.id.indicativo_condicional_simple_tu) as TextView).text = c.indicativoCondicionalSimpleTu
+        (findViewById<View>(R.id.indicativo_condicional_simple_el) as TextView).text = c.indicativoCondicionalSimpleEl
+        (findViewById<View>(R.id.indicativo_condicional_simple_nosotros) as TextView).text = c.indicativoCondicionalSimpleN
+        (findViewById<View>(R.id.indicativo_condicional_simple_vosotros) as TextView).text = c.indicativoCondicionalSimpleV
+        (findViewById<View>(R.id.indicativo_condicional_simple_ellos) as TextView).text = c.indicativoCondicionalSimpleEll
+
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_yo) as TextView).text = c.indicativoCondicionalCompuestoYo
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_tu) as TextView).text = c.indicativoCondicionalCompuestoTu
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_el) as TextView).text = c.indicativoCondicionalCompuestoEl
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_nosotros) as TextView).text = c.indicativoCondicionalCompuestoN
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_vosotros) as TextView).text = c.indicativoCondicionalCompuestoV
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_ellos) as TextView).text = c.indicativoCondicionalCompuestoEll
+
+
+        (findViewById<View>(R.id.subjuntivo_presente_yo) as TextView).text = c.subjuntivoPresenteYo
+        (findViewById<View>(R.id.subjuntivo_presente_tu) as TextView).text = c.subjuntivoPresenteTu
+        (findViewById<View>(R.id.subjuntivo_presente_el) as TextView).text = c.subjuntivoPresenteEl
+        (findViewById<View>(R.id.subjuntivo_presente_nosotros) as TextView).text = c.subjuntivoPresenteN
+        (findViewById<View>(R.id.subjuntivo_presente_vosotros) as TextView).text = c.subjuntivoPresenteV
+        (findViewById<View>(R.id.subjuntivo_presente_ellos) as TextView).text = c.subjuntivoPresenteEll
+
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_yo) as TextView).text = c.subjuntivoPreteritoPerfectoCompuestoYo
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_tu) as TextView).text = c.subjuntivoPreteritoPerfectoCompuestoTu
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_el) as TextView).text = c.subjuntivoPreteritoPerfectoCompuestoEl
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_nosotros) as TextView).text = c.subjuntivoPreteritoPerfectoCompuestoN
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_vosotros) as TextView).text = c.subjuntivoPreteritoPerfectoCompuestoV
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_ellos) as TextView).text = c.subjuntivoPreteritoPerfectoCompuestoEll
+
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_yo) as TextView).text = c.subjuntivoPreteritoImperfectoYo
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_tu) as TextView).text = c.subjuntivoPreteritoImperfectoTu
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_el) as TextView).text = c.subjuntivoPreteritoImperfectoEl
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_nosotros) as TextView).text = c.subjuntivoPreteritoImperfectoN
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_vosotros) as TextView).text = c.subjuntivoPreteritoImperfectoV
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_ellos) as TextView).text = c.subjuntivoPreteritoImperfectoEll
+
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_yo) as TextView).text = c.subjuntivoPreteritoPluscuamperfectoYo
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_tu) as TextView).text = c.subjuntivoPreteritoPluscuamperfectoTu
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_el) as TextView).text = c.subjuntivoPreteritoPluscuamperfectoEl
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_nosotros) as TextView).text = c.subjuntivoPreteritoPluscuamperfectoN
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_vosotros) as TextView).text = c.subjuntivoPreteritoPluscuamperfectoV
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_ellos) as TextView).text = c.subjuntivoPreteritoPluscuamperfectoEll
+
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_yo) as TextView).text = c.subjuntivoFuturoSimpleYo
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_tu) as TextView).text = c.subjuntivoFuturoSimpleTu
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_el) as TextView).text = c.subjuntivoFuturoSimpleEl
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_nosotros) as TextView).text = c.subjuntivoFuturoSimpleN
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_vosotros) as TextView).text = c.subjuntivoFuturoSimpleV
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_ellos) as TextView).text = c.subjuntivoFuturoSimpleEll
+
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_yo) as TextView).text = c.subjuntivoFuturoCompuestoYo
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_tu) as TextView).text = c.subjuntivoFuturoCompuestoTu
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_el) as TextView).text = c.subjuntivoFuturoCompuestoEl
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_nosotros) as TextView).text = c.subjuntivoFuturoCompuestoN
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_vosotros) as TextView).text = c.subjuntivoFuturoCompuestoV
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_ellos) as TextView).text = c.subjuntivoFuturoCompuestoEll
     }
 
 
     /**
      * Changes text font size.
-     * @param fontSize int
+     * @param fontSize float
      */
-    private fun changeTextFontInConjugation(fontSize: Int) {
+    private fun changeTextFontInConjugation(fontSize: Float) {
         val unit = TypedValue.COMPLEX_UNIT_SP
-        /*
-        (findViewById<View>(R.id.indicative_present_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_present_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_present_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_present_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_present_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_present_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_compose_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_compose_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_compose_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_compose_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_compose_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_compose_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_imperfait_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_imperfait_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_imperfait_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_imperfait_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_imperfait_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_imperfait_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_plus_que_parfait_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_plus_que_parfait_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_plus_que_parfait_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_plus_que_parfait_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_plus_que_parfait_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_plus_que_parfait_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_simple_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_simple_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_simple_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_simple_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_simple_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_simple_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_anterieur_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_anterieur_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_anterieur_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_anterieur_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_anterieur_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_passe_anterieur_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_simple_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_simple_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_simple_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_simple_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_simple_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_simple_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_anterieur_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_anterieur_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_anterieur_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_anterieur_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_anterieur_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.indicative_futur_anterieur_ils) as TextView).setTextSize(unit, fontSize.toFloat())
 
-        (findViewById<View>(R.id.conditionnel_present_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_present_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_present_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_present_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_present_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_present_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_passe_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_passe_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_passe_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_passe_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_passe_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.conditionnel_passe_ils) as TextView).setTextSize(unit, fontSize.toFloat())
+        (findViewById<View>(R.id.infinitivo_simple) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.infinitivo_compuesto) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.participio) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.gerundio_simple) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.gerundio_compuesto) as TextView).setTextSize(unit, fontSize)
 
-        (findViewById<View>(R.id.subjonctif_present_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_present_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_present_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_present_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_present_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_present_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_passe_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_passe_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_passe_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_passe_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_passe_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_passe_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_imperfait_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_imperfait_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_imperfait_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_imperfait_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_imperfait_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_imperfait_ils) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_je) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_il) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.subjonctif_plus_que_parfait_ils) as TextView).setTextSize(unit, fontSize.toFloat())
+        (findViewById<View>(R.id.imperativo_presente_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_presente_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_presente_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_presente_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_presente_ellos) as TextView).setTextSize(unit, fontSize)
 
-        (findViewById<View>(R.id.imperatif_present_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.imperatif_present_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.imperatif_present_vous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.imperatif_passe_tu) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.imperatif_passe_nous) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.imperatif_passe_vous) as TextView).setTextSize(unit, fontSize.toFloat())
+        (findViewById<View>(R.id.imperativo_negativo_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_negativo_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_negativo_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_negativo_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.imperativo_negativo_ellos) as TextView).setTextSize(unit, fontSize)
 
-        (findViewById<View>(R.id.infinitive_present) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.infinitive_passe) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.participe_present) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.participe_passe1) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.participe_passe2) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.gerondif_present) as TextView).setTextSize(unit, fontSize.toFloat())
-        (findViewById<View>(R.id.gerondif_passe) as TextView).setTextSize(unit, fontSize.toFloat())
-        */
+        (findViewById<View>(R.id.indicativo_presente_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_presente_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_presente_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_presente_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_presente_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_presente_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_compuesto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_imperfecto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_pluscuamperfecto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_perfecto_simple_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_preterito_anterior_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_anterior_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_anterior_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_anterior_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_anterior_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_preterito_anterior_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_futuro_simple_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_simple_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_simple_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_simple_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_simple_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_simple_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_futuro_compuesto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_condicional_simple_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_simple_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_simple_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_simple_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_simple_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_simple_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.indicativo_condicional_compuesto_ellos) as TextView).setTextSize(unit, fontSize)
+
+
+        (findViewById<View>(R.id.subjuntivo_presente_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_presente_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_presente_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_presente_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_presente_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_presente_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_perfecto_compuesto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_imperfecto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_preterito_pluscuamperfecto_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_simple_ellos) as TextView).setTextSize(unit, fontSize)
+
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_yo) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_tu) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_el) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_nosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_vosotros) as TextView).setTextSize(unit, fontSize)
+        (findViewById<View>(R.id.subjuntivo_futuro_compuesto_ellos) as TextView).setTextSize(unit, fontSize)
     }
 
     /**
@@ -964,334 +1064,246 @@ class DetailsActivity
     override fun onClick(view: View) {
         // Play the sounds
         when (view.id) {
-            R.id.play_infinitive -> if (verb != null) {
-                ActivityUtils.speak(applicationContext, tts!!, verb!!.infinitive)
+            R.id.play_infinitive -> {
+                ActivityUtils.speak(applicationContext, tts, verb?.infinitive)
                 Toast.makeText(applicationContext, verb!!.infinitive, Toast.LENGTH_SHORT).show()
             }
 
-            R.id.play_definition -> if (verb != null) {
-                ActivityUtils.speak(applicationContext, tts!!, verb!!.definition)
-            }
+            R.id.play_definition -> ActivityUtils.speak(applicationContext, tts, verb?.definition)
+            R.id.play_sample1 -> ActivityUtils.speak(applicationContext, tts, verb?.sample1)
+            R.id.play_sample2 -> ActivityUtils.speak(applicationContext, tts, verb?.sample2)
+            R.id.play_sample3 -> ActivityUtils.speak(applicationContext, tts, verb?.sample3)
 
-            R.id.play_sample1 -> if (verb != null) {
-                ActivityUtils.speak(applicationContext, tts!!, verb!!.sample1)
-            }
+            R.id.imperativo_presente_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoTu)
+            R.id.imperativo_presente_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoEl)
+            R.id.imperativo_presente_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoN)
+            R.id.imperativo_presente_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoV)
+            R.id.imperativo_presente_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoEll)
 
-            R.id.play_sample2 -> if (verb != null) {
-                ActivityUtils.speak(applicationContext, tts!!, verb!!.sample2)
-            }
+            R.id.imperativo_negativo_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoNegTu)
+            R.id.imperativo_negativo_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoNegEl)
+            R.id.imperativo_negativo_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoNegN)
+            R.id.imperativo_negativo_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoNegV)
+            R.id.imperativo_negativo_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoEll)
 
-            R.id.play_sample3 -> if (verb != null) {
-                ActivityUtils.speak(applicationContext, tts!!, verb!!.sample3)
-            }
+            R.id.play_indicativo_presente_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteYo)
+            R.id.play_indicativo_presente_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteTu)
+            R.id.play_indicativo_presente_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteEl)
+            R.id.play_indicativo_presente_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteN)
+            R.id.play_indicativo_presente_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteV)
+            R.id.play_indicativo_presente_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteEll)
 
-            /*
-            R.id.play_indicative_present_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPresentJe)
-            }
-            R.id.play_indicative_present_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPresentTu)
-            }
-            R.id.play_indicative_present_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPresentIl)
-            }
-            R.id.play_indicative_present_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPresentNous)
-            }
-            R.id.play_indicative_present_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPresentVous)
-            }
-            R.id.play_indicative_present_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPresentIls)
-            }
+            R.id.indicativo_preterito_perfecto_compuesto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoCompuestoYo)
+            R.id.indicativo_preterito_perfecto_compuesto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoCompuestoTu)
+            R.id.indicativo_preterito_perfecto_compuesto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoCompuestoEl)
+            R.id.indicativo_preterito_perfecto_compuesto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoCompuestoN)
+            R.id.indicativo_preterito_perfecto_compuesto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoCompuestoV)
+            R.id.indicativo_preterito_perfecto_compuesto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoCompuestoEll)
 
-            R.id.play_indicative_passe_compose_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseComposeJe)
-            }
-            R.id.play_indicative_passe_compose_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseComposeTu)
-            }
-            R.id.play_indicative_passe_compose_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseComposeIl)
-            }
-            R.id.play_indicative_passe_compose_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseComposeNous)
-            }
-            R.id.play_indicative_passe_compose_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseComposeVous)
-            }
-            R.id.play_indicative_passe_compose_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseComposeIls)
-            }
+            R.id.indicativo_preterito_imperfecto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoImperfectoYo)
+            R.id.indicativo_preterito_imperfecto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoImperfectoTu)
+            R.id.indicativo_preterito_imperfecto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoImperfectoEl)
+            R.id.indicativo_preterito_imperfecto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoImperfectoN)
+            R.id.indicativo_preterito_imperfecto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoImperfectoV)
+            R.id.indicativo_preterito_imperfecto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoImperfectoEll)
 
-            R.id.play_indicative_imperfait_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifImperfaitJe)
-            }
-            R.id.play_indicative_imperfait_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifImperfaitTu)
-            }
-            R.id.play_indicative_imperfait_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifImperfaitIl)
-            }
-            R.id.play_indicative_imperfait_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifImperfaitNous)
-            }
-            R.id.play_indicative_imperfait_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifImperfaitVous)
-            }
-            R.id.play_indicative_imperfait_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifImperfaitIls)
-            }
+            R.id.indicativo_preterito_pluscuamperfecto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPluscuamperfectoYo)
+            R.id.indicativo_preterito_pluscuamperfecto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPluscuamperfectoTu)
+            R.id.indicativo_preterito_pluscuamperfecto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPluscuamperfectoEl)
+            R.id.indicativo_preterito_pluscuamperfecto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPluscuamperfectoN)
+            R.id.indicativo_preterito_pluscuamperfecto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPluscuamperfectoV)
+            R.id.indicativo_preterito_pluscuamperfecto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPluscuamperfectoEll)
 
-            R.id.play_indicative_plus_que_parfait_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPlusQueParfaitJe)
-            }
-            R.id.play_indicative_plus_que_parfait_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPlusQueParfaitTu)
-            }
-            R.id.play_indicative_plus_que_parfait_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPlusQueParfaitIl)
-            }
-            R.id.play_indicative_plus_que_parfait_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPlusQueParfaitNous)
-            }
-            R.id.play_indicative_plus_que_parfait_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPlusQueParfaitVous)
-            }
-            R.id.play_indicative_plus_que_parfait_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPlusQueParfaitIls)
-            }
+            R.id.indicativo_preterito_perfecto_simple_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoSimpleYo)
+            R.id.indicativo_preterito_perfecto_simple_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoSimpleTu)
+            R.id.indicativo_preterito_perfecto_simple_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoSimpleEl)
+            R.id.indicativo_preterito_perfecto_simple_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoSimpleN)
+            R.id.indicativo_preterito_perfecto_simple_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoSimpleV)
+            R.id.indicativo_preterito_perfecto_simple_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoPerfectoSimpleEll)
 
-            R.id.play_indicative_passe_simple_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseSimpleJe)
-            }
-            R.id.play_indicative_passe_simple_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseSimpleTu)
-            }
-            R.id.play_indicative_passe_simple_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseSimpleIl)
-            }
-            R.id.play_indicative_passe_simple_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseSimpleNous)
-            }
-            R.id.play_indicative_passe_simple_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseSimpleVous)
-            }
-            R.id.play_indicative_passe_simple_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseSimpleIls)
-            }
+            R.id.indicativo_preterito_anterior_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoAnteriorYo)
+            R.id.indicativo_preterito_anterior_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoAnteriorTu)
+            R.id.indicativo_preterito_anterior_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoAnteriorEl)
+            R.id.indicativo_preterito_anterior_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoAnteriorN)
+            R.id.indicativo_preterito_anterior_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoAnteriorV)
+            R.id.indicativo_preterito_anterior_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPreteritoAnteriorEll)
 
-            R.id.play_indicative_passe_anterieur_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseAnterieurJe)
-            }
-            R.id.play_indicative_passe_anterieur_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseAnterieurTu)
-            }
-            R.id.play_indicative_passe_anterieur_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseAnterieurIl)
-            }
-            R.id.play_indicative_passe_anterieur_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseAnterieurNous)
-            }
-            R.id.play_indicative_passe_anterieur_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseAnterieurVous)
-            }
-            R.id.play_indicative_passe_anterieur_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifPasseAnterieurIls)
-            }
+            R.id.indicativo_futuro_simple_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoSimpleYo)
+            R.id.indicativo_futuro_simple_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoSimpleTu)
+            R.id.indicativo_futuro_simple_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoSimpleEl)
+            R.id.indicativo_futuro_simple_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoSimpleN)
+            R.id.indicativo_futuro_simple_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoSimpleV)
+            R.id.indicativo_futuro_simple_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoSimpleEll)
 
-            R.id.play_indicative_futur_simple_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturSimpleJe)
-            }
-            R.id.play_indicative_futur_simple_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturSimpleTu)
-            }
-            R.id.play_indicative_futur_simple_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturSimpleIl)
-            }
-            R.id.play_indicative_futur_simple_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturSimpleNous)
-            }
-            R.id.play_indicative_futur_simple_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturSimpleVous)
-            }
-            R.id.play_indicative_futur_simple_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturSimpleIls)
-            }
+            R.id.indicativo_futuro_compuesto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoCompuestoYo)
+            R.id.indicativo_futuro_compuesto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoCompuestoTu)
+            R.id.indicativo_futuro_compuesto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoCompuestoEl)
+            R.id.indicativo_futuro_compuesto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoCompuestoN)
+            R.id.indicativo_futuro_compuesto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoCompuestoV)
+            R.id.indicativo_futuro_compuesto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoFuturoCompuestoEll)
 
-            R.id.play_indicative_futur_anterieur_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturAnterieurJe)
-            }
-            R.id.play_indicative_futur_anterieur_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturAnterieurTu)
-            }
-            R.id.play_indicative_futur_anterieur_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturAnterieurIl)
-            }
-            R.id.play_indicative_futur_anterieur_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturAnterieurNous)
-            }
-            R.id.play_indicative_futur_anterieur_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturAnterieurVous)
-            }
-            R.id.play_indicative_futur_anterieur_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.indicatifFuturAnterieurIls)
-            }
+            R.id.indicativo_condicional_simple_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalSimpleYo)
+            R.id.indicativo_condicional_simple_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalSimpleTu)
+            R.id.indicativo_condicional_simple_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalSimpleEl)
+            R.id.indicativo_condicional_simple_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalSimpleN)
+            R.id.indicativo_condicional_simple_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalSimpleV)
+            R.id.indicativo_condicional_simple_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalSimpleEll)
 
-            R.id.play_conditionnel_present_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPresentJe)
-            }
-            R.id.play_conditionnel_present_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPresentTu)
-            }
-            R.id.play_conditionnel_present_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPresentIl)
-            }
-            R.id.play_conditionnel_present_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPresentNous)
-            }
-            R.id.play_conditionnel_present_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPresentVous)
-            }
-            R.id.play_conditionnel_present_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPresentIls)
-            }
+            R.id.indicativo_condicional_compuesto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalCompuestoYo)
+            R.id.indicativo_condicional_compuesto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalCompuestoTu)
+            R.id.indicativo_condicional_compuesto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalCompuestoEl)
+            R.id.indicativo_condicional_compuesto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalCompuestoN)
+            R.id.indicativo_condicional_compuesto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalCompuestoV)
+            R.id.indicativo_condicional_compuesto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoCondicionalCompuestoEll)
 
-            R.id.play_conditionnel_passe_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPasseJe)
-            }
-            R.id.play_conditionnel_passe_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPasseTu)
-            }
-            R.id.play_conditionnel_passe_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPasseIl)
-            }
-            R.id.play_conditionnel_passe_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPasseNous)
-            }
-            R.id.play_conditionnel_passe_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPasseVous)
-            }
-            R.id.play_conditionnel_passe_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.conditionnelPasseIls)
-            }
 
-            R.id.play_subjonctif_present_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPresentJe)
-            }
-            R.id.play_subjonctif_present_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPresentTu)
-            }
-            R.id.play_subjonctif_present_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPresentIl)
-            }
-            R.id.play_subjonctif_present_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPresentNous)
-            }
-            R.id.play_subjonctif_present_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPresentVous)
-            }
-            R.id.play_subjonctif_present_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPresentIls)
-            }
+            R.id.subjuntivo_presente_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPresenteYo)
+            R.id.subjuntivo_presente_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPresenteTu)
+            R.id.subjuntivo_presente_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPresenteEl)
+            R.id.subjuntivo_presente_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPresenteN)
+            R.id.subjuntivo_presente_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPresenteV)
+            R.id.subjuntivo_presente_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPresenteEll)
 
-            R.id.play_subjonctif_passe_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPasseJe)
-            }
-            R.id.play_subjonctif_passe_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPasseTu)
-            }
-            R.id.play_subjonctif_passe_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPasseIl)
-            }
-            R.id.play_subjonctif_passe_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPasseNous)
-            }
-            R.id.play_subjonctif_passe_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPasseVous)
-            }
-            R.id.play_subjonctif_passe_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPasseIls)
-            }
+            R.id.subjuntivo_preterito_perfecto_compuesto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPerfectoCompuestoYo)
+            R.id.subjuntivo_preterito_perfecto_compuesto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPerfectoCompuestoTu)
+            R.id.subjuntivo_preterito_perfecto_compuesto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPerfectoCompuestoEl)
+            R.id.subjuntivo_preterito_perfecto_compuesto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPerfectoCompuestoN)
+            R.id.subjuntivo_preterito_perfecto_compuesto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPerfectoCompuestoV)
+            R.id.subjuntivo_preterito_perfecto_compuesto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPerfectoCompuestoEll)
 
-            R.id.play_subjonctif_imperfait_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifImperfaitJe)
-            }
-            R.id.play_subjonctif_imperfait_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifImperfaitTu)
-            }
-            R.id.play_subjonctif_imperfait_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifImperfaitIl)
-            }
-            R.id.play_subjonctif_imperfait_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifImperfaitNous)
-            }
-            R.id.play_subjonctif_imperfait_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifImperfaitVous)
-            }
-            R.id.play_subjonctif_imperfait_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifImperfaitIls)
-            }
+            R.id.subjuntivo_preterito_imperfecto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoImperfectoYo)
+            R.id.subjuntivo_preterito_imperfecto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoImperfectoTu)
+            R.id.subjuntivo_preterito_imperfecto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoImperfectoEl)
+            R.id.subjuntivo_preterito_imperfecto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoImperfectoN)
+            R.id.subjuntivo_preterito_imperfecto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoImperfectoV)
+            R.id.subjuntivo_preterito_imperfecto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoImperfectoEll)
 
-            R.id.play_subjonctif_plus_que_parfait_je -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPlusQueParfaitJe)
-            }
-            R.id.play_subjonctif_plus_que_parfait_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPlusQueParfaitTu)
-            }
-            R.id.play_subjonctif_plus_que_parfait_il -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPlusQueParfaitIl)
-            }
-            R.id.play_subjonctif_plus_que_parfait_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPlusQueParfaitNous)
-            }
-            R.id.play_subjonctif_plus_que_parfait_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPlusQueParfaitVous)
-            }
-            R.id.play_subjonctif_plus_que_parfait_ils -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.subjonctifPlusQueParfaitIls)
-            }
+            R.id.subjuntivo_preterito_pluscuamperfecto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPluscuamperfectoYo)
+            R.id.subjuntivo_preterito_pluscuamperfecto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPluscuamperfectoTu)
+            R.id.subjuntivo_preterito_pluscuamperfecto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPluscuamperfectoEl)
+            R.id.subjuntivo_preterito_pluscuamperfecto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPluscuamperfectoN)
+            R.id.subjuntivo_preterito_pluscuamperfecto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPluscuamperfectoV)
+            R.id.subjuntivo_preterito_pluscuamperfecto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoPreteritoPluscuamperfectoEll)
 
-            R.id.play_imperatif_present_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.imperatifPresentTu)
-            }
-            R.id.play_imperatif_present_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.imperatifPresentNous)
-            }
-            R.id.play_imperatif_present_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.imperatifPresentVous)
-            }
-            R.id.play_imperatif_passe_tu -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.imperatifPasseTu)
-            }
-            R.id.play_imperatif_passe_nous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.imperatifPasseNous)
-            }
-            R.id.play_imperatif_passe_vous -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.imperatifPasseVous)
-            }
+            R.id.subjuntivo_futuro_simple_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoSimpleYo)
+            R.id.subjuntivo_futuro_simple_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoSimpleTu)
+            R.id.subjuntivo_futuro_simple_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoSimpleEl)
+            R.id.subjuntivo_futuro_simple_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoSimpleN)
+            R.id.subjuntivo_futuro_simple_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoSimpleV)
+            R.id.subjuntivo_futuro_simple_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoSimpleEll)
 
-            R.id.play_infinitive_present -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.infinitivePresent)
-            }
-            R.id.play_infinitive_passe -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.infinitivePasse)
-            }
-            R.id.play_participe_present -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.participePresent)
-            }
-            R.id.play_participe_passe1 -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.participePasse1)
-            }
-            R.id.play_participe_passe2 -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.participePasse2)
-            }
-            R.id.play_gerondif_present -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.gerondifPresent)
-            }
-            R.id.play_gerondif_passe -> if (conjugation != null) {
-                ActivityUtils.speak(applicationContext, tts!!, conjugation!!.gerondifPasse)
-            }*/
+            R.id.subjuntivo_futuro_compuesto_yo ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoCompuestoYo)
+            R.id.subjuntivo_futuro_compuesto_tu ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoCompuestoTu)
+            R.id.subjuntivo_futuro_compuesto_el ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoCompuestoEl)
+            R.id.subjuntivo_futuro_compuesto_nosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoCompuestoN)
+            R.id.subjuntivo_futuro_compuesto_vosotros ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoCompuestoV)
+            R.id.subjuntivo_futuro_compuesto_ellos ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.subjuntivoFuturoCompuestoEll)
 
             else -> onClickDemo()
         }

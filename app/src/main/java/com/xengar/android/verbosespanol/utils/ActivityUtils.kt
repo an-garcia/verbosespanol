@@ -500,7 +500,11 @@ object ActivityUtils {
      * Text we want to speak.
      * @param text String
      */
-    fun speak(context: Context, tts: TextToSpeech, text: String) {
+    fun speak(context: Context, tts: TextToSpeech?, text: String?) {
+        if (text == null || tts == null) {
+            return
+        }
+
         // Use the current media player volume
         val am = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val volume = am.getStreamVolume(AudioManager.STREAM_MUSIC)
