@@ -63,18 +63,15 @@ object Constants {
     val DISPLAY_COMMON_TYPE = "display_common_type"
     val NOTIFICATION_VERB_ID = "notification_verb_id"
     val PREF_VERSION_CODE_KEY = "version_code"
-    val PREF_NO_ALARM_MANAGER_SINCE_API_26 = "no_alarm_manager_since_api_26"
 
     // Pronoms personnels
-    val JEA = "j'"
-    val JE = "je "
-    val TU = "tu "
-    val IL = "il "
-    val NOUS = "nous "
-    val VOUS = "vous "
-    val ILS = "ils "
+    val YO = "yo "
+    val TU = "tú "
+    val EL = "él "
+    val NOSOTROS = "nosotros "
+    val VOSOTROS = "vosotros "
+    val ELLOS = "ellos "
     val QUE = "que "
-    val QUEA = "qu'"
 
     // Pronoms reflexive
     val MEA = "m'"
