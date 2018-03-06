@@ -49,15 +49,9 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.utils.ActivityUtils
 import com.xengar.android.verbosespanol.utils.Constants.CONJUGATION_ID
 import com.xengar.android.verbosespanol.utils.Constants.DEMO_MODE
-import com.xengar.android.verbosespanol.utils.Constants.DETAILS_ACTIVITY
 import com.xengar.android.verbosespanol.utils.Constants.DRAWABLE
 import com.xengar.android.verbosespanol.utils.Constants.LOG
-import com.xengar.android.verbosespanol.utils.Constants.PAGE_VERB_DETAILS
-import com.xengar.android.verbosespanol.utils.Constants.TYPE_ADD_FAV
-import com.xengar.android.verbosespanol.utils.Constants.TYPE_DEL_FAV
-import com.xengar.android.verbosespanol.utils.Constants.TYPE_PAGE
 import com.xengar.android.verbosespanol.utils.Constants.VERB
-import com.xengar.android.verbosespanol.utils.Constants.VERBS
 import com.xengar.android.verbosespanol.utils.Constants.VERB_ID
 import com.xengar.android.verbosespanol.utils.Constants.VERB_NAME
 
@@ -188,6 +182,7 @@ class DetailsActivity
         findViewById<View>(R.id.play_sample1).setOnClickListener(this)
         findViewById<View>(R.id.play_sample2).setOnClickListener(this)
         findViewById<View>(R.id.play_sample3).setOnClickListener(this)
+        /*
 
         findViewById<View>(R.id.play_indicative_present_je).setOnClickListener(this)
         findViewById<View>(R.id.play_indicative_present_tu).setOnClickListener(this)
@@ -290,7 +285,7 @@ class DetailsActivity
         findViewById<View>(R.id.play_participe_passe1).setOnClickListener(this)
         findViewById<View>(R.id.play_participe_passe2).setOnClickListener(this)
         findViewById<View>(R.id.play_gerondif_present).setOnClickListener(this)
-        findViewById<View>(R.id.play_gerondif_passe).setOnClickListener(this)
+        findViewById<View>(R.id.play_gerondif_passe).setOnClickListener(this) */
     }
 
     /** Called when leaving the activity  */
@@ -370,7 +365,7 @@ class DetailsActivity
                     + "\n\n" + getString(R.string.examples) + ":\n" + verb!!.sample1
                     + "\n" + verb!!.sample2
                     + "\n" + verb!!.sample3
-                    + "\n\n" + getString(R.string.indicatif) + " " + getString(R.string.present) + ":"
+                    + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.presente) + ":"
                     /*+ "\n" + conjugation!!.indicatifPresentJe
                     + "\n" + conjugation!!.indicatifPresentTu
                     + "\n" + conjugation!!.indicatifPresentIl
@@ -860,6 +855,7 @@ class DetailsActivity
      */
     private fun changeTextFontInConjugation(fontSize: Int) {
         val unit = TypedValue.COMPLEX_UNIT_SP
+        /*
         (findViewById<View>(R.id.indicative_present_je) as TextView).setTextSize(unit, fontSize.toFloat())
         (findViewById<View>(R.id.indicative_present_tu) as TextView).setTextSize(unit, fontSize.toFloat())
         (findViewById<View>(R.id.indicative_present_il) as TextView).setTextSize(unit, fontSize.toFloat())
@@ -961,6 +957,7 @@ class DetailsActivity
         (findViewById<View>(R.id.participe_passe2) as TextView).setTextSize(unit, fontSize.toFloat())
         (findViewById<View>(R.id.gerondif_present) as TextView).setTextSize(unit, fontSize.toFloat())
         (findViewById<View>(R.id.gerondif_passe) as TextView).setTextSize(unit, fontSize.toFloat())
+        */
     }
 
     /**
@@ -1345,9 +1342,9 @@ class DetailsActivity
             }
 
             3 -> {
-                scrollView!!.requestChildFocus(findViewById(R.id.indicative_present_ils), findViewById(R.id.indicative_present_ils))
-                scrollView!!.requestChildFocus(findViewById(R.id.indicative_present_je), findViewById(R.id.indicative_present_je))
-                showcaseView!!.setShowcase(ViewTarget(findViewById(R.id.indicative_present_je)), true)
+                scrollView!!.requestChildFocus(findViewById(R.id.indicativo_presente_ellos), findViewById(R.id.indicativo_presente_ellos))
+                scrollView!!.requestChildFocus(findViewById(R.id.indicativo_presente_yo), findViewById(R.id.indicativo_presente_yo))
+                showcaseView!!.setShowcase(ViewTarget(findViewById(R.id.indicativo_presente_yo)), true)
                 showcaseView!!.setContentTitle(getString(R.string.conjugations))
                 showcaseView!!.setContentText(getString(R.string.conjugations_description))
             }

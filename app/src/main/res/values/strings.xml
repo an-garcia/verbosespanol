@@ -58,23 +58,26 @@
     <string name="favorites_add_message">Add to Favorites</string>
     <string name="favorites_del_message">Remove from Favorites</string>
 
-    <!-- Verb Conjugation Titles in French -->
-    <string name="infinitif" translatable="false">Infinitif</string>
-    <string name="participe" translatable="false">Participe</string>
-    <string name="gerondif" translatable="false">Gérondif</string>
-    <string name="imperatif" translatable="false">Impératif</string>
-    <string name="indicatif" translatable="false">Indicatif</string>
-    <string name="conditionnel" translatable="false">Conditionnel</string>
-    <string name="subjonctif" translatable="false">Subjonctif</string>
-    <string name="present" translatable="false">Présent</string>
-    <string name="passe" translatable="false">Passé</string>
-    <string name="passe_compose" translatable="false">Passé composé</string>
-    <string name="imperfait" translatable="false">Imparfait</string>
-    <string name="plus_que_parfait" translatable="false">Plus-que-parfait</string>
-    <string name="passe_simple" translatable="false">Passé simple</string>
-    <string name="passe_anterieur" translatable="false">Passé antérieur</string>
-    <string name="futur_simple" translatable="false">Futur simple</string>
-    <string name="futur_anterieur" translatable="false">Futur antérieur</string>
+    <!-- Verb Conjugation Titles in Spanish -->
+    <string name="infinitivo" translatable="false">Infinitivo</string>
+    <string name="participio" translatable="false">Participio</string>
+    <string name="gerundio" translatable="false">Gerundio</string>
+    <string name="imperativo" translatable="false">Imperativo</string>
+    <string name="indicativo" translatable="false">Indicativo</string>
+    <string name="subjuntivo" translatable="false">Subjuntivo</string>
+    <string name="presente" translatable="false">Presente</string>
+    <string name="simple" translatable="false">Simple</string>
+    <string name="compuesto" translatable="false">Compuesto</string>
+    <string name="negativo" translatable="false">Negativo</string>
+    <string name="preterito_perfecto_compuesto" translatable="false">Pretérito Perfecto Compuesto</string>
+    <string name="preterito_imperfecto" translatable="false">Pretérito Imperfecto</string>
+    <string name="preterito_pluscuamperfecto" translatable="false">Pretérito Pluscuamperfecto</string>
+    <string name="preterito_perfecto_simple" translatable="false">Pretérito Perfecto simple</string>
+    <string name="preterito_anterior" translatable="false">Pretérito Anterior</string>
+    <string name="futuro_simple" translatable="false">Futuro Simple</string>
+    <string name="futuro_compuesto" translatable="false">Futuro Compuesto</string>
+    <string name="condicional_simple" translatable="false">Condicional Simple</string>
+    <string name="condicional_compuesto" translatable="false">Condicional Compuesto</string>
 
     <!-- error messages -->
     <string name="database_error">Cannot connect to the Database.</string>
