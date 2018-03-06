@@ -718,20 +718,13 @@ class DetailsActivity
      */
     private fun removeAccents(verbName:String):String {
         var name = verbName
-        name = name.replace('â', 'a')
-        name = name.replace('à', 'a')
-        name = name.replace('ë', 'e')
+        name = name.replace('á', 'a')
         name = name.replace('é', 'e')
-        name = name.replace('ê', 'e')
-        name = name.replace('è', 'e')
-        name = name.replace('î', 'i')
-        name = name.replace('ï', 'i')
-        name = name.replace('ô', 'o')
-        name = name.replace('û', 'u')
-        name = name.replace('ù', 'u')
+        name = name.replace('í', 'i')
+        name = name.replace('ó', 'o')
+        name = name.replace('ú', 'u')
         name = name.replace('ü', 'u')
-        name = name.replace('ç', 'c')
-        name = name.replace("'", "")
+        name = name.replace('ñ', 'n')
         return name
     }
 
