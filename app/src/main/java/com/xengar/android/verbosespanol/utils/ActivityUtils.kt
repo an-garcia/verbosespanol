@@ -197,7 +197,6 @@ import com.xengar.android.verbosespanol.utils.Constants.NONE
 import com.xengar.android.verbosespanol.utils.Constants.PORTUGUESE
 import com.xengar.android.verbosespanol.utils.Constants.FRENCH
 import com.xengar.android.verbosespanol.utils.Constants.LOG
-import com.xengar.android.verbosespanol.utils.Constants.PREF_NO_ALARM_MANAGER_SINCE_API_26
 import com.xengar.android.verbosespanol.utils.Constants.PREF_VERSION_CODE_KEY
 import com.xengar.android.verbosespanol.utils.Constants.SHARED_PREF_NAME
 import com.xengar.android.verbosespanol.utils.Constants.TYPE_START_NOTIFICATIONS
@@ -1053,23 +1052,6 @@ object ActivityUtils {
         saveLongToPreferences(context, PREF_VERSION_CODE_KEY, currentVersionCode.toLong())
     }
 
-    /**
-     * Check that we don't use AlarmManager since API 26+ (Oreo).
-     * @param context Context
-     *//*
-    fun checkNoAlarmManagerSinceAPI26(context: Context) {
-        // This is a hack!
-        // JobScheduler works since 21+ (Lollipop).
-        // We need to use JobScheduler since API 26+ (Oreo) because it's not safe to use AlarmManager.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val prefs = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
-            val alarm : Boolean = prefs.getBoolean(PREF_NO_ALARM_MANAGER_SINCE_API_26, false)
-            if (!alarm) {
-                cancelAlarm(context)
-                saveBooleanToPreferences(context, PREF_NO_ALARM_MANAGER_SINCE_API_26, true)
-            }
-        }
-    }*/
 
     /**
      * Initializes and show the AdMob banner.
