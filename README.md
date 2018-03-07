@@ -22,7 +22,7 @@ References
 - http://www.rae.es/diccionario-panhispanico-de-dudas/apendices/modelos-de-conjugacion-verbal
 - http://dle.rae.es/?id=aBpHmn0
 - https://es.oxforddictionaries.com/definicion/bailar
-- http://www.wordreference.com/conj/EsVerbs.aspx?v=trabajar
+- http://www.wordreference.com/conj/EsVerbs.aspx?v=trabajar <- verb model
 - http://conjugador.reverso.net/conjugacion-espanol-verbo-cantar.html  <- verb model
 - https://www.elconjugador.com/conjugacion/verbo/temer.html
 
