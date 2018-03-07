@@ -62,7 +62,6 @@ import com.xengar.android.verbosespanol.utils.Constants.VERB_NAME
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_CONJUGATION_NUMBER
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CONTENT_FAVORITE_VERBS_URI
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CONTENT_VERBS_URI
-import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.GROUP_ALL
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.OTHER
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COMMON
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_ID
@@ -345,7 +344,7 @@ class NotificationService : IntentService(NotificationService::class.java.name) 
                 return Verb(cursor.getLong(cursor.getColumnIndex(COLUMN_ID)),
                         cursor.getInt(cursor.getColumnIndex(COLUMN_CONJUGATION_NUMBER)),
                         cursor.getString(cursor.getColumnIndex(COLUMN_INFINITIVE)) ?: "",
-                        "", "", "", "", OTHER, GROUP_ALL,
+                        "", "", "", "", OTHER, 0,
                         0, 0, "", "", "", "")
             }
         } else {

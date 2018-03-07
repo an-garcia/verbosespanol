@@ -29,6 +29,7 @@ import com.xengar.android.verbosespanol.R
 import com.xengar.android.verbosespanol.utils.ActivityUtils
 import com.xengar.android.verbosespanol.utils.ActivityUtils.checkFirstRun
 import com.xengar.android.verbosespanol.utils.Constants.ALPHABET
+import com.xengar.android.verbosespanol.utils.Constants.BOTH
 import com.xengar.android.verbosespanol.utils.Constants.CARD
 import com.xengar.android.verbosespanol.utils.Constants.COLOR
 import com.xengar.android.verbosespanol.utils.Constants.COMMON_TYPE
@@ -37,11 +38,7 @@ import com.xengar.android.verbosespanol.utils.Constants.DISPLAY_COMMON_TYPE
 import com.xengar.android.verbosespanol.utils.Constants.DISPLAY_SORT_TYPE
 import com.xengar.android.verbosespanol.utils.Constants.DISPLAY_VERB_TYPE
 import com.xengar.android.verbosespanol.utils.Constants.FAVORITES
-import com.xengar.android.verbosespanol.utils.Constants.GROUP
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_1
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_2
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_3
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_ALL
+import com.xengar.android.verbosespanol.utils.Constants.IRREGULAR
 import com.xengar.android.verbosespanol.utils.Constants.ITEM_TYPE
 import com.xengar.android.verbosespanol.utils.Constants.LAST_ACTIVITY
 import com.xengar.android.verbosespanol.utils.Constants.LIST
@@ -54,10 +51,11 @@ import com.xengar.android.verbosespanol.utils.Constants.MOST_COMMON_ALL
 import com.xengar.android.verbosespanol.utils.Constants.PAGE_CARDS
 import com.xengar.android.verbosespanol.utils.Constants.PAGE_FAVORITES
 import com.xengar.android.verbosespanol.utils.Constants.PAGE_VERBS
+import com.xengar.android.verbosespanol.utils.Constants.REGULAR
 import com.xengar.android.verbosespanol.utils.Constants.SHARED_PREF_NAME
 import com.xengar.android.verbosespanol.utils.Constants.SORT_TYPE
 import com.xengar.android.verbosespanol.utils.Constants.TYPE_PAGE
-import com.xengar.android.verbosespanol.utils.Constants.VERB_GROUP
+import com.xengar.android.verbosespanol.utils.Constants.VERB_TYPE
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -70,11 +68,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private var cardsFragment: UniversalFragment? = null
     private var favoritesFragment: UniversalFragment? = null
 
-    private val VERB_GROUPS = arrayOf(GROUP_1, GROUP_2, GROUP_3, GROUP_ALL)
-    private val verbSelection = intArrayOf(3)
-    private val verbGroup = arrayOf(VERB_GROUPS[verbSelection[0]]) // current verb group list in screen
+    private val VERB_TYPES = arrayOf(REGULAR, IRREGULAR, BOTH)
+    private val verbSelection = intArrayOf(2)
+    private val verbType = arrayOf(VERB_TYPES[verbSelection[0]]) // current verb type list in screen
 
-    private val SORT_TYPES = arrayOf(ALPHABET, COLOR, GROUP)
+    private val SORT_TYPES = arrayOf(ALPHABET, COLOR, REGULAR)
     private val sortSelection = intArrayOf(0)
     private val sortType = arrayOf(SORT_TYPES[sortSelection[0]]) // current sort type list in screen
 
@@ -111,9 +109,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             page = currentPage
         }
         // read verb Type
-        verbGroup[0] = prefs.getString(DISPLAY_VERB_TYPE, GROUP_ALL)
-        for (i in VERB_GROUPS.indices) {
-            if (verbGroup[0].contentEquals(VERB_GROUPS[i])) {
+        verbType[0] = prefs.getString(DISPLAY_VERB_TYPE, BOTH)
+        for (i in VERB_TYPES.indices) {
+            if (verbType[0].contentEquals(VERB_TYPES[i])) {
                 verbSelection[0] = i
                 break
             }
@@ -156,8 +154,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         })
 
-        verbsFragment = createUniversalFragment(verbGroup[0], LIST, sortType[0], commonType[0])
-        cardsFragment = createUniversalFragment(verbGroup[0], CARD, sortType[0], commonType[0])
+        verbsFragment = createUniversalFragment(verbType[0], LIST, sortType[0], commonType[0])
+        cardsFragment = createUniversalFragment(verbType[0], CARD, sortType[0], commonType[0])
         favoritesFragment = createUniversalFragment(FAVORITES,
                 ActivityUtils.getPreferenceFavoritesMode(applicationContext), sortType[0],
                 MOST_COMMON_ALL)
@@ -205,8 +203,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_change_group -> {
-                changeVerbGroup()
+            R.id.action_change_type -> {
+                changeVerbType()
                 return true
             }
 
@@ -231,17 +229,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     /**
      * Creates a Fragment.
-     * @param verbGroup Type of verbs to display GROUP_1, GROUP_2, GROUP_3, ALL_GROUPS
+     * @param verbsType Type of verbs to display REGULAR, IRREGULAR, BOTH
      * @param itemType Display mode LIST, CARD
      * @param sortType Alphabet, groups
      * @param commonType Display Top 25, Top 50, Top 100, Top 300, Top 500
      * @return fragment
      */
-    private fun createUniversalFragment(verbGroup: String, itemType: String,
+    private fun createUniversalFragment(verbsType: String, itemType: String,
                                         sortType: String, commonType: String): UniversalFragment {
         val fragment = UniversalFragment()
         val bundle = Bundle()
-        bundle.putString(VERB_GROUP, verbGroup)
+        bundle.putString(VERB_TYPE, verbsType)
         bundle.putString(ITEM_TYPE, itemType)
         bundle.putString(SORT_TYPE, sortType)
         bundle.putString(COMMON_TYPE, commonType)
@@ -250,10 +248,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     /**
-     * Changes the list according to the selected group (1er, 2nd, 3rd, all).
+     * Changes the type of verb (Regular, Irregular, both).
      */
-    private fun changeVerbGroup() {
-        val options = arrayOf<CharSequence>(getString(R.string.group1), getString(R.string.group2), getString(R.string.group3), getString(R.string.all))
+    private fun changeVerbType() {
+        val options = arrayOf<CharSequence>(getString(R.string.regular), getString(R.string.irregular), getString(R.string.all))
 
         val builder = AlertDialog.Builder(this, R.style.MyAlertDialogStyle)
         builder.setTitle(getString(R.string.select_show_verbs))
@@ -261,14 +259,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         ) { dialog, item ->
             // save the selected verb type
             verbSelection[0] = item
-            verbGroup[0] = VERB_GROUPS[item]
+            verbType[0] = VERB_TYPES[item]
         }
         builder.setPositiveButton(android.R.string.ok) { dialog, id ->
             // Change the selection.
-            when (verbGroup[0]) {
-                GROUP_1, GROUP_2, GROUP_3, GROUP_ALL -> {
+            when (verbType[0]) {
+                REGULAR, IRREGULAR, BOTH -> {
                     ActivityUtils.saveStringToPreferences(
-                            applicationContext, DISPLAY_VERB_TYPE, verbGroup[0])
+                            applicationContext, DISPLAY_VERB_TYPE, verbType[0])
                     changeFragmentsDisplay()
                 }
 
@@ -283,7 +281,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
      * Changes the sort order.
      */
     private fun sortVerbs() {
-        val options = arrayOf<CharSequence>(getString(R.string.alphabet), getString(R.string.color), getString(R.string.group))
+        val options = arrayOf<CharSequence>(getString(R.string.alphabet), getString(R.string.color), getString(R.string.type))
 
         val builder = AlertDialog.Builder(this, R.style.MyAlertDialogStyle)
         builder.setTitle(getString(R.string.select_type_of_sort))
@@ -296,7 +294,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         builder.setPositiveButton(android.R.string.ok) { dialog, id ->
             // Change the selection.
             when (sortType[0]) {
-                ALPHABET, COLOR, GROUP -> {
+                ALPHABET, COLOR, REGULAR -> {
                     ActivityUtils.saveStringToPreferences(
                             applicationContext, DISPLAY_SORT_TYPE, sortType[0])
                     changeFragmentsDisplay()
@@ -313,18 +311,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
      * Creates if needed a new fragment with the new display configurations.
      */
     private fun changeFragmentsDisplay() {
-        if (!verbsFragment!!.verbGroup.contentEquals(verbGroup[0])
+        if (!verbsFragment!!.verbsType.contentEquals(verbType[0])
                 || !verbsFragment!!.sortType.contentEquals(sortType[0])
                 || !verbsFragment!!.commonType.contentEquals(commonType[0])) {
-            verbsFragment = createUniversalFragment(verbGroup[0], LIST, sortType[0], commonType[0])
+            verbsFragment = createUniversalFragment(verbType[0], LIST, sortType[0], commonType[0])
             if (page.contentEquals(PAGE_VERBS)) {
                 launchFragment(PAGE_VERBS)
             }
         }
-        if (!cardsFragment!!.verbGroup.contentEquals(verbGroup[0])
+        if (!cardsFragment!!.verbsType.contentEquals(verbType[0])
                 || !cardsFragment!!.sortType.contentEquals(sortType[0])
                 || !cardsFragment!!.commonType.contentEquals(commonType[0])) {
-            cardsFragment = createUniversalFragment(verbGroup[0], CARD, sortType[0], commonType[0])
+            cardsFragment = createUniversalFragment(verbType[0], CARD, sortType[0], commonType[0])
             if (page.contentEquals(PAGE_CARDS)) {
                 launchFragment(PAGE_CARDS)
             }

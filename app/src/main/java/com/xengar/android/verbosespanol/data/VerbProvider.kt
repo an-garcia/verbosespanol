@@ -33,9 +33,9 @@ import com.xengar.android.verbosespanol.data.VerbContract.PATH_VERBS
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COLOR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COMMON
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_DEFINITION
-import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GROUP
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_ID
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INFINITIVE
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_REGULAR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SCORE
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CONJUGATION_TBL
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CONTENT_ITEM_TYPE_CONJUGATION
@@ -295,8 +295,8 @@ class VerbProvider : ContentProvider() {
         }
     }
 
-    private fun checkGroup(regular: Int?, message: String) {
-        if (regular == null || !VerbEntry.isValidGroup(regular)) {
+    private fun checkRegular(regular: Int?, message: String) {
+        if (regular == null || !VerbEntry.isValidRegular(regular)) {
             throw IllegalArgumentException(message)
         }
     }
@@ -344,9 +344,9 @@ class VerbProvider : ContentProvider() {
     }
 
     /** If the key is there, checks that is valid  */
-    private fun checkGroup(values: ContentValues?, key: String, message: String) {
+    private fun checkRegular(values: ContentValues?, key: String, message: String) {
         if (values!!.containsKey(key)) {
-            checkGroup(values.getAsInteger(key), message)
+            checkRegular(values.getAsInteger(key), message)
         }
     }
 
@@ -368,7 +368,7 @@ class VerbProvider : ContentProvider() {
         checkNotNullKeyString(values, COLUMN_INFINITIVE, "Verb requires infinitive")
         checkCommonUsage(values, COLUMN_COMMON,
                 "Verb requires valid common usage (top 50, top 100)")
-        checkGroup(values, COLUMN_GROUP, "Verb requires valid group value (1, 2, 3)")
+        checkRegular(values, COLUMN_REGULAR, "Verb requires valid group value (1, 2, 3)")
         checkNotNullKeyString(values, COLUMN_DEFINITION, "Verb requires a definition")
         /*checkNotNullKeyString(values, COLUMN_SAMPLE_1, "Verb requires sample 1");
         checkNotNullKeyString(values, COLUMN_SAMPLE_2, "Verb requires sample 2");

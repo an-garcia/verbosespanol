@@ -52,7 +52,6 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_DEFINITION
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GERUNDIO_COMPUESTO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GERUNDIO_SIMPLE
-import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GROUP
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_ID
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_EL
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_ELLOS
@@ -130,6 +129,7 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_NOTES
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_PARTICIPIO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_RADICALS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_REGULAR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_1
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_2
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_3
@@ -523,7 +523,7 @@ object ActivityUtils {
      */
     fun allVerbColumns(): Array<String> {
         return arrayOf(COLUMN_ID, COLUMN_CONJUGATION_NUMBER, COLUMN_INFINITIVE, COLUMN_DEFINITION,
-                COLUMN_SAMPLE_1, COLUMN_SAMPLE_2, COLUMN_SAMPLE_3, COLUMN_COMMON, COLUMN_GROUP,
+                COLUMN_SAMPLE_1, COLUMN_SAMPLE_2, COLUMN_SAMPLE_3, COLUMN_COMMON, COLUMN_REGULAR,
                 COLUMN_COLOR, COLUMN_SCORE, COLUMN_NOTES,
                 COLUMN_TRANSLATION_EN, COLUMN_TRANSLATION_FR, COLUMN_TRANSLATION_PT)
     }
@@ -680,7 +680,7 @@ object ActivityUtils {
                 cursor.getString(cursor.getColumnIndex(COLUMN_SAMPLE_2)) ?: "",
                 cursor.getString(cursor.getColumnIndex(COLUMN_SAMPLE_3)) ?: "",
                 cursor.getInt(cursor.getColumnIndex(COLUMN_COMMON)),
-                cursor.getInt(cursor.getColumnIndex(COLUMN_GROUP)),
+                cursor.getInt(cursor.getColumnIndex(COLUMN_REGULAR)),
                 cursor.getInt(cursor.getColumnIndex(COLUMN_COLOR)),
                 cursor.getInt(cursor.getColumnIndex(COLUMN_SCORE)),
                 cursor.getString(cursor.getColumnIndex(COLUMN_NOTES)) ?: "",

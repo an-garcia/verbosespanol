@@ -81,7 +81,7 @@ class DetailsActivity
     private var conjugation: Conjugation? = null
     private var tts: TextToSpeech? = null
     private var infinitive: TextView? = null
-    private var group: TextView? = null
+    private var regular: TextView? = null
     private var definition: TextView? = null
     private var translation: TextView? = null
     private var sample1: TextView? = null
@@ -126,7 +126,7 @@ class DetailsActivity
 
         //Text
         infinitive = findViewById(R.id.infinitive)
-        group = findViewById(R.id.groupe)
+        regular = findViewById(R.id.regular)
         definition = findViewById(R.id.definition)
         translation = findViewById(R.id.translation)
         sample1 = findViewById(R.id.sample1)
@@ -387,7 +387,6 @@ class DetailsActivity
         if (verb != null && conjugation != null)
         {
             text = ("Verb: " + verb?.infinitive
-                    + "\n" + getString(R.string.group) + ": " + verb!!.group
                     + "\n\n" + getString(R.string.definition) + ":\n" + verb!!.definition
                     + "\n\n" + getString(R.string.examples) + ":\n" + verb!!.sample1
                     + "\n" + verb!!.sample2
@@ -720,10 +719,9 @@ class DetailsActivity
     private fun fillVerbDetails(verb:Verb) {
         // Update the views on the screen with the values from the database
         infinitive!!.text = verb.infinitive
-        when (verb.group) {
-            1 -> group!!.text = getString(R.string.group1)
-            2 -> group!!.text = getString(R.string.group2)
-            3 -> group!!.text = getString(R.string.group3)
+        when (verb.regular) {
+            0 -> regular!!.text = getString(R.string.regular)
+            1 -> regular!!.text = getString(R.string.irregular)
         }
 
         definition!!.text = verb.definition
@@ -732,7 +730,7 @@ class DetailsActivity
         sample3!!.text = verb.sample3
 
         val fontSize = Integer.parseInt(ActivityUtils.getPreferenceFontSize(applicationContext))
-        (findViewById<View>(R.id.groupe) as TextView).setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
+        (findViewById<View>(R.id.regular) as TextView).setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
         (findViewById<View>(R.id.definition_title) as TextView).setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
         (findViewById<View>(R.id.examples_title) as TextView).setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
         definition!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
@@ -1332,8 +1330,8 @@ class DetailsActivity
         if (!demo) return
         when (counter) {
             0 -> {
-                showcaseView!!.setShowcase(ViewTarget(findViewById(R.id.groupe)), true)
-                showcaseView!!.setContentText(getString(R.string.group))
+                showcaseView!!.setShowcase(ViewTarget(findViewById(R.id.regular)), true)
+                showcaseView!!.setContentText(getString(R.string.regular))
             }
 
             1 -> {

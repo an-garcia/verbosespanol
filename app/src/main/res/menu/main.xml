@@ -31,8 +31,8 @@
         app:showAsAction="always">
         <menu>
             <item
-                android:id="@+id/action_change_group"
-                android:title="@string/group"
+                android:id="@+id/action_change_type"
+                android:title="@string/type"
                 android:icon="@drawable/ic_type_white_24dp"
                 android:orderInCategory="100"
                 app:showAsAction="never" />

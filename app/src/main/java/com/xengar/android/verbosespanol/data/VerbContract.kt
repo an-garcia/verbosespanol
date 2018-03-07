@@ -98,23 +98,20 @@ object VerbContract {
             @JvmField val S_TOP_500 = "" + TOP_500
             @JvmField val S_TOP_1000 = "" + TOP_1000
 
+            /** Regular verbs end in 'ar', 'er', 'ir'. - Type: INTEGER  */
+            @JvmField val COLUMN_REGULAR = "REGULAR"
+
             fun isValidCommonUsage(usage: Int): Boolean {
                 return (usage == TOP_25 || usage == TOP_50 || usage == TOP_100 || usage == TOP_300
                         || usage == TOP_500 || usage == TOP_1000 || usage == OTHER)
             }
 
-            /** Group verbs (1st, 2nd, 3rd, all). - Type: INTEGER  */
-            @JvmField val COLUMN_GROUP = "GROUPE"
+            /** Possible values for regular verbs.  */
+            @JvmField val REGULAR = 0
+            @JvmField val IRREGULAR = 1
 
-            /** Possible values for verb groups.  */
-            @JvmField val GROUP_1 = 1
-            @JvmField val GROUP_2 = 2
-            @JvmField val GROUP_3 = 3
-            @JvmField val GROUP_ALL = 0
-
-            fun isValidGroup(value: Int): Boolean {
-                return value == GROUP_1 || value == GROUP_2
-                        || value == GROUP_3 || value == GROUP_ALL
+            fun isValidRegular(value: Int): Boolean {
+                return value == REGULAR || value == IRREGULAR
             }
 
             /** Definition of the verb. - Type: TEXT  */

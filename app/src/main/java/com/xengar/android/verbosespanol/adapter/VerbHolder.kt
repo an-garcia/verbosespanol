@@ -44,7 +44,7 @@ class VerbHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListen
     private val definition: TextView
     private var tts: TextToSpeech? = null
     private var verb: Verb? = null
-    private var group: TextView? = null
+    private var regular: TextView? = null
     private var definitionTitle: TextView? = null
     private var sample1: TextView? = null
     private var sample2: TextView? = null
@@ -61,7 +61,7 @@ class VerbHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListen
 
         // Card items
         definitionTitle = view.findViewById(R.id.definition_title)
-        group = view.findViewById(R.id.groupe)
+        regular = view.findViewById(R.id.regular)
         imageVerb = view.findViewById(R.id.verb_image)
         sample1 = view.findViewById(R.id.sample1)
         sample2 = view.findViewById(R.id.sample2)
@@ -127,12 +127,11 @@ class VerbHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListen
         }
 
         if (layoutType.contentEquals(CARD)) {
-            when (verb.group) {
-                1 -> group!!.text = context.resources.getString(R.string.group1)
-                2 -> group!!.text = context.resources.getString(R.string.group2)
-                3 -> group!!.text = context.resources.getString(R.string.group3)
+            when (verb.regular) {
+                0 -> regular!!.text = context.resources.getString(R.string.regular)
+                1 -> regular!!.text = context.resources.getString(R.string.irregular)
             }
-            group!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
+            regular!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
 
             sample1!!.text = verb.sample1
             sample2!!.text = verb.sample2
@@ -165,25 +164,14 @@ class VerbHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListen
         // Play the sounds
         when (view.id) {
             R.id.play_infinitive -> if (verb != null) {
-                ActivityUtils.speak(context, tts!!, verb!!.infinitive)
+                ActivityUtils.speak(context, tts, verb?.infinitive)
                 Toast.makeText(context, verb!!.infinitive, Toast.LENGTH_SHORT).show()
             }
 
-            R.id.play_definition -> if (verb != null) {
-                ActivityUtils.speak(context, tts!!, verb!!.definition)
-            }
-
-            R.id.play_sample1 -> if (verb != null) {
-                ActivityUtils.speak(context, tts!!, verb!!.sample1)
-            }
-
-            R.id.play_sample2 -> if (verb != null) {
-                ActivityUtils.speak(context, tts!!, verb!!.sample2)
-            }
-
-            R.id.play_sample3 -> if (verb != null) {
-                ActivityUtils.speak(context, tts!!, verb!!.sample3)
-            }
+            R.id.play_definition -> ActivityUtils.speak(context, tts, verb?.definition)
+            R.id.play_sample1 -> ActivityUtils.speak(context, tts!!, verb?.sample1)
+            R.id.play_sample2 -> ActivityUtils.speak(context, tts, verb?.sample2)
+            R.id.play_sample3 -> ActivityUtils.speak(context, tts, verb?.sample3)
 
             else -> if (verb != null) {
                 ActivityUtils.launchDetailsActivity(context, verb!!.id,

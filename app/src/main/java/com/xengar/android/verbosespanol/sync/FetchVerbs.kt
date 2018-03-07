@@ -31,8 +31,8 @@ import fr.castorflex.android.circularprogressbar.CircularProgressBar
 
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COLOR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_COMMON
-import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GROUP
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_INFINITIVE
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_REGULAR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CONTENT_FAVORITE_VERBS_URI
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CONTENT_VERBS_URI
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.S_TOP_100
@@ -44,11 +44,9 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.S_
 import com.xengar.android.verbosespanol.utils.Constants.ALPHABET
 import com.xengar.android.verbosespanol.utils.Constants.COLOR
 import com.xengar.android.verbosespanol.utils.Constants.FAVORITES
-import com.xengar.android.verbosespanol.utils.Constants.GROUP
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_1
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_2
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_3
-import com.xengar.android.verbosespanol.utils.Constants.GROUP_ALL
+import com.xengar.android.verbosespanol.utils.Constants.REGULAR
+import com.xengar.android.verbosespanol.utils.Constants.BOTH
+import com.xengar.android.verbosespanol.utils.Constants.IRREGULAR
 import com.xengar.android.verbosespanol.utils.Constants.LOG
 import com.xengar.android.verbosespanol.utils.Constants.MOST_COMMON_100
 import com.xengar.android.verbosespanol.utils.Constants.MOST_COMMON_1000
@@ -62,7 +60,7 @@ import com.xengar.android.verbosespanol.utils.Constants.MOST_COMMON_ALL
  * FetchVerbs from the database.
  */
 class FetchVerbs// Constructor
-(private val group: String, // Verb group (1st group, 2nd group, 3rd group, all)
+(private val type: String, // Verb type (regular, irregular, both)
  private val sort: String, // Sort order (alphabet, color, groups)
  private val common: String, // Common (Top50, Top100, Top25, all)
  private val adapter: VerbAdapter,
@@ -79,7 +77,7 @@ class FetchVerbs// Constructor
         val sortOrder: String = when (sort) {
             ALPHABET -> COLUMN_INFINITIVE + " ASC"
             COLOR -> "$COLUMN_COLOR DESC, $COLUMN_INFINITIVE ASC"
-            GROUP -> "$COLUMN_GROUP ASC, $COLUMN_INFINITIVE ASC"
+            REGULAR -> "$COLUMN_REGULAR ASC, $COLUMN_INFINITIVE ASC"
             else -> COLUMN_INFINITIVE + " ASC"
         }
 
@@ -137,19 +135,18 @@ class FetchVerbs// Constructor
         }
 
         val cursor: Cursor?
-        when (group) {
-            GROUP_1, GROUP_2, GROUP_3 -> {
+        when (type) {
+            REGULAR, IRREGULAR -> {
                 where = if (where == null) {
-                    COLUMN_GROUP + " = ?"
+                    COLUMN_REGULAR + " = ?"
                 } else {
-                    "($where) AND $COLUMN_GROUP = ?"
+                    "($where) AND $COLUMN_REGULAR = ?"
                 }
-                // group substring should match group numbers (1,2,3)
-                listArgs.add(group.substring(0, 1))
+                listArgs.add(if (type.contentEquals(REGULAR)) "0" else "1")
                 val whereArgs = if (listArgs.size > 0) listArgs.toTypedArray() else null
                 cursor = contentResolver.query(CONTENT_VERBS_URI, columns, where, whereArgs, sortOrder)
             }
-            GROUP_ALL -> {
+            BOTH -> {
                 val whereArgs = if (listArgs.size > 0) listArgs.toTypedArray() else null
                 cursor = contentResolver.query(CONTENT_VERBS_URI, columns, where, whereArgs, sortOrder)
             }

@@ -15,8 +15,8 @@
  */
 package com.xengar.android.verbosespanol.data
 
-import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.GROUP_ALL
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.OTHER
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.REGULAR
 
 /**
  * Data that is contained for a verb item in the list mode in the main list.
@@ -25,7 +25,7 @@ class Verb
 /*** Constructor  */
 (id: Long, conjugation: Int, infinitive: String, definition: String,
  sample1: String, sample2: String, sample3: String,
- common: Int, group: Int, color: Int, score: Int, notes: String,
+ common: Int, regular: Int, color: Int, score: Int, notes: String,
  translationEN: String, translationFR: String, translationPT: String) {
 
     /* Getters and Setters */
@@ -37,7 +37,7 @@ class Verb
     var sample2 = ""
     var sample3 = ""
     var common = OTHER
-    var group = GROUP_ALL
+    var regular = REGULAR
     var color = 0
     var score = 0
     var notes = ""
@@ -54,7 +54,7 @@ class Verb
         this.sample2 = sample2
         this.sample3 = sample3
         this.common = common
-        this.group = group
+        this.regular = regular
         this.color = color
         this.score = score
         this.notes = notes

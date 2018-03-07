@@ -37,7 +37,6 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_DEFINITION
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GERUNDIO_COMPUESTO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GERUNDIO_SIMPLE
-import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_GROUP
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_ID
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_EL
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_IMPERATIVO_ELLOS
@@ -115,6 +114,7 @@ import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.CO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_NOTES
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_PARTICIPIO
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_RADICALS
+import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_REGULAR
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_1
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_2
 import com.xengar.android.verbosespanol.data.VerbContract.VerbEntry.Companion.COLUMN_SAMPLE_3
@@ -268,7 +268,7 @@ class VerbDBHelper
                 + COLUMN_SAMPLE_2 + " TEXT, "
                 + COLUMN_SAMPLE_3 + " TEXT, "
                 + COLUMN_COMMON + " INTEGER NOT NULL DEFAULT 0, "
-                + COLUMN_GROUP + " INTEGER NOT NULL DEFAULT 0, "
+                + COLUMN_REGULAR + " INTEGER NOT NULL DEFAULT 0, "
                 + COLUMN_COLOR + " INTEGER NOT NULL DEFAULT 0, "
                 + COLUMN_SCORE + " INTEGER NOT NULL DEFAULT 0, "
                 + COLUMN_DEFINITION + " TEXT NOT NULL, "
@@ -497,7 +497,7 @@ class VerbDBHelper
                         values.put(COLUMN_SAMPLE_2, parser.getAttributeValue(null, "s2"))
                         values.put(COLUMN_SAMPLE_3, parser.getAttributeValue(null, "s3"))
                         values.put(COLUMN_COMMON, parser.getAttributeValue(null, "co"))
-                        values.put(COLUMN_GROUP, parser.getAttributeValue(null, "gr"))
+                        values.put(COLUMN_REGULAR, parser.getAttributeValue(null, "re"))
                         values.put(COLUMN_COLOR, DEFAULT_COLOR)
                         values.put(COLUMN_SCORE, DEFAULT_SCORE)
                         values.put(COLUMN_DEFINITION, parser.getAttributeValue(null, "de"))

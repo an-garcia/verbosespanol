@@ -22,7 +22,6 @@
         s1 = sample1
         s2 = sample2
         s3 = sample3
-        gr = group (1=1st group, 2=2nd group, 3=3rd group, 4=all groups)
         re = regular (0=regular, 1=irregular)
         co = common (1=TOP_25, 2=TOP_50, 3=TOP_100, 4=TOP_250, 5=TOP_500, 6=TOP_1000, 99=OTHER)
         de = definition
@@ -39,7 +38,6 @@
         s1   = "Este jardín es de mi padre."
         s2   = "La carta es para el jefe."
         s3   = "¿Cuánto es el periódico? Son 75 centavos."
-        gr   = ""
         re   = "1"
         co   = "1"
         de   = "Ocurrir o tener lugar [un hecho]. Existir, tener realidad. Servir o estar destinado para algo en concreto. Valer una determinada cantidad de dinero. Dar determinado resultado en una operación matemática. Se emplea para indicar una hora, una fecha u otra expresión temporal."
