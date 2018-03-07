@@ -50,10 +50,17 @@ import com.xengar.android.verbosespanol.utils.ActivityUtils
 import com.xengar.android.verbosespanol.utils.Constants.CONJUGATION_ID
 import com.xengar.android.verbosespanol.utils.Constants.DEMO_MODE
 import com.xengar.android.verbosespanol.utils.Constants.DRAWABLE
+import com.xengar.android.verbosespanol.utils.Constants.EL
+import com.xengar.android.verbosespanol.utils.Constants.ELLOS
 import com.xengar.android.verbosespanol.utils.Constants.LOG
+import com.xengar.android.verbosespanol.utils.Constants.NOSOTROS
+import com.xengar.android.verbosespanol.utils.Constants.QUE
+import com.xengar.android.verbosespanol.utils.Constants.TU
 import com.xengar.android.verbosespanol.utils.Constants.VERB
 import com.xengar.android.verbosespanol.utils.Constants.VERB_ID
 import com.xengar.android.verbosespanol.utils.Constants.VERB_NAME
+import com.xengar.android.verbosespanol.utils.Constants.VOSOTROS
+import com.xengar.android.verbosespanol.utils.Constants.YO
 
 import kotlinx.android.synthetic.main.activity_details.*
 import java.util.*
@@ -388,9 +395,9 @@ class DetailsActivity
         {
             text = ("Verb: " + verb?.infinitive
                     + "\n\n" + getString(R.string.definition) + ":\n" + verb!!.definition
-                    + "\n\n" + getString(R.string.examples) + ":\n" + verb!!.sample1
-                    + "\n" + verb!!.sample2
-                    + "\n" + verb!!.sample3
+                    + "\n\n" + getString(R.string.examples) + ":\n1. " + verb!!.sample1
+                    + "\n2. " + verb!!.sample2
+                    + "\n3. " + verb!!.sample3
                     + "\n\n" + getString(R.string.indicativo) + " " + getString(R.string.presente) + ":"
                     + "\n" + conjugation!!.indicativoPresenteYo
                     + "\n" + conjugation!!.indicativoPresenteTu
@@ -585,7 +592,7 @@ class DetailsActivity
         val values = ContentValues()
         values.put(COLUMN_COLOR, "" + color)
         val rowsAffected = contentResolver.update(CONTENT_VERBS_URI, values,
-                COLUMN_ID + " = ?", arrayOf(java.lang.Long.toString(verbID)))
+                "$COLUMN_ID = ?", arrayOf(java.lang.Long.toString(verbID)))
 
         // Show a toast message depending on whether or not the update was successful.
         if (rowsAffected == 0) {
@@ -604,7 +611,7 @@ class DetailsActivity
         fabDel = findViewById(R.id.fab_minus)
 
         val cursor = contentResolver.query(CONTENT_FAVORITES_URI, arrayOf(COLUMN_ID), //select
-                COLUMN_ID + " = ?", // where
+                "$COLUMN_ID = ?", // where
                 arrayOf(java.lang.Long.toString(verbID)), null)//whereArgs
         if (cursor != null && cursor.count != 0) {
             fabDel!!.visibility = View.VISIBLE
@@ -656,13 +663,13 @@ class DetailsActivity
         when (id) {
             CONJUGATION_LOADER -> cursorLoader = CursorLoader(this, CONTENT_CONJUGATIONS_URI,
                     ActivityUtils.allConjugationColumns(), // Columns in the resulting Cursor
-                    COLUMN_ID + " = ?", // selection clause
+                    "$COLUMN_ID = ?", // selection clause
                     arrayOf(java.lang.Long.toString(conjugationID)), null)// selection arguments
         // Default sort order
 
             VERB_LOADER -> cursorLoader = CursorLoader(this, // Parent activity context
                     CONTENT_VERBS_URI, ActivityUtils.allVerbColumns(), // Columns in the resulting Cursor
-                    COLUMN_ID + " = ?", // selection clause
+                    "$COLUMN_ID = ?", // selection clause
                     arrayOf(java.lang.Long.toString(verbID)), null)// selection arguments
         // Default sort order
             else -> {}
@@ -681,7 +688,7 @@ class DetailsActivity
             CONJUGATION_LOADER -> if (cursor.moveToFirst()) {
                 conjugation = ActivityUtils.conjugationFromCursor(cursor)
                 processConjugation(conjugation!!)
-                //fillConjugationDetails(conjugation!!)
+                fillConjugationDetails(conjugation!!)
             }
 
             VERB_LOADER -> {
@@ -705,7 +712,11 @@ class DetailsActivity
      * @param c Conjugation
      */
     private fun processConjugation(c:Conjugation) {
-
+        if (!c.infinitivoSimple.isEmpty() && !c.infinitivoSimple.contentEquals(verbName)) {
+            // if we need, conjugate the verb model.
+            // TODO:
+        }
+        addPronoms(c)
     }
 
     override fun onLoaderReset(loader: Loader<Cursor>) {
@@ -1306,6 +1317,369 @@ class DetailsActivity
             else -> onClickDemo()
         }
     }
+
+
+    /**
+     * Ads the pronoms.
+     * @param c Conjugation
+     */
+    private fun addPronoms(c:Conjugation) {
+        // TODO: Show pronoms in different color
+        addPronomsIndicativoPresente(c)
+        addPronomsIndicativoPreteritoPerfectoCompuesto(c)
+        addPronomsIndicativoPreteritoImperfecto(c)
+        addPronomsIndicativoPreteritoPluscuamperfecto(c)
+        addPronomsIndicativoPreteritoPerfectoSimple(c)
+        addPronomsIndicativoPreteritoAnterior(c)
+        addPronomsIndicativoFuturoSimple(c)
+        addPronomsIndicativoFuturoCompuesto(c)
+        addPronomsIndicativoCondicionalSimple(c)
+        addPronomsIndicativoCondicionalCompuesto(c)
+
+        addPronomsSubjuntivoPresente(c)
+        addPronomsSubjuntivoPreteritoPerfectoCompuesto(c)
+        addPronomsSubjuntivoPreteritoImperfecto(c)
+        addPronomsSubjuntivoPreteritoPluscuamperfecto(c)
+        addPronomsSubjuntivoFuturoSimple(c)
+        addPronomsSubjuntivoFuturoCompuesto(c)
+    }
+
+    private fun addPronomsIndicativoPresente(c: Conjugation) {
+        if (!c.indicativoPresenteYo.contentEquals("-")) {
+            c.indicativoPresenteYo = YO + c.indicativoPresenteYo
+        }
+        if (!c.indicativoPresenteTu.contentEquals("-")) {
+            c.indicativoPresenteTu = TU + c.indicativoPresenteTu
+        }
+        if (!c.indicativoPresenteEl.contentEquals("-")) {
+            c.indicativoPresenteEl = EL + c.indicativoPresenteEl
+        }
+        if (!c.indicativoPresenteN.contentEquals("-")) {
+            c.indicativoPresenteN = NOSOTROS + c.indicativoPresenteN
+        }
+        if (!c.indicativoPresenteV.contentEquals("-")) {
+            c.indicativoPresenteV = VOSOTROS + c.indicativoPresenteV
+        }
+        if (!c.indicativoPresenteEll.contentEquals("-")) {
+            c.indicativoPresenteEll = ELLOS + c.indicativoPresenteEll
+        }
+    }
+
+    private fun addPronomsIndicativoPreteritoPerfectoCompuesto(c: Conjugation) {
+        if (!c.indicativoPreteritoPerfectoCompuestoYo.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoCompuestoYo = YO + c.indicativoPreteritoPerfectoCompuestoYo
+        }
+        if (!c.indicativoPreteritoPerfectoCompuestoTu.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoCompuestoTu = TU + c.indicativoPreteritoPerfectoCompuestoTu
+        }
+        if (!c.indicativoPreteritoPerfectoCompuestoEl.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoCompuestoEl = EL + c.indicativoPreteritoPerfectoCompuestoEl
+        }
+        if (!c.indicativoPreteritoPerfectoCompuestoN.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoCompuestoN = NOSOTROS + c.indicativoPreteritoPerfectoCompuestoN
+        }
+        if (!c.indicativoPreteritoPerfectoCompuestoV.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoCompuestoV = VOSOTROS + c.indicativoPreteritoPerfectoCompuestoV
+        }
+        if (!c.indicativoPreteritoPerfectoCompuestoEll.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoCompuestoEll = ELLOS + c.indicativoPreteritoPerfectoCompuestoEll
+        }
+    }
+
+    private fun addPronomsIndicativoPreteritoImperfecto(c: Conjugation) {
+        if (!c.indicativoPreteritoImperfectoYo.contentEquals("-")) {
+            c.indicativoPreteritoImperfectoYo = YO + c.indicativoPreteritoImperfectoYo
+        }
+        if (!c.indicativoPreteritoImperfectoTu.contentEquals("-")) {
+            c.indicativoPreteritoImperfectoTu = TU + c.indicativoPreteritoImperfectoTu
+        }
+        if (!c.indicativoPreteritoImperfectoEl.contentEquals("-")) {
+            c.indicativoPreteritoImperfectoEl = EL + c.indicativoPreteritoImperfectoEl
+        }
+        if (!c.indicativoPreteritoImperfectoN.contentEquals("-")) {
+            c.indicativoPreteritoImperfectoN = NOSOTROS + c.indicativoPreteritoImperfectoN
+        }
+        if (!c.indicativoPreteritoImperfectoV.contentEquals("-")) {
+            c.indicativoPreteritoImperfectoV = VOSOTROS + c.indicativoPreteritoImperfectoV
+        }
+        if (!c.indicativoPreteritoImperfectoEll.contentEquals("-")) {
+            c.indicativoPreteritoImperfectoEll = ELLOS + c.indicativoPreteritoImperfectoEll
+        }
+    }
+
+    private fun addPronomsIndicativoPreteritoPluscuamperfecto(c: Conjugation) {
+        if (!c.indicativoPreteritoPluscuamperfectoYo.contentEquals("-")) {
+            c.indicativoPreteritoPluscuamperfectoYo = YO + c.indicativoPreteritoPluscuamperfectoYo
+        }
+        if (!c.indicativoPreteritoPluscuamperfectoTu.contentEquals("-")) {
+            c.indicativoPreteritoPluscuamperfectoTu = TU + c.indicativoPreteritoPluscuamperfectoTu
+        }
+        if (!c.indicativoPreteritoPluscuamperfectoEl.contentEquals("-")) {
+            c.indicativoPreteritoPluscuamperfectoEl = EL + c.indicativoPreteritoPluscuamperfectoEl
+        }
+        if (!c.indicativoPreteritoPluscuamperfectoN.contentEquals("-")) {
+            c.indicativoPreteritoPluscuamperfectoN = NOSOTROS + c.indicativoPreteritoPluscuamperfectoN
+        }
+        if (!c.indicativoPreteritoPluscuamperfectoV.contentEquals("-")) {
+            c.indicativoPreteritoPluscuamperfectoV = VOSOTROS + c.indicativoPreteritoPluscuamperfectoV
+        }
+        if (!c.indicativoPreteritoPluscuamperfectoEll.contentEquals("-")) {
+            c.indicativoPreteritoPluscuamperfectoEll = ELLOS + c.indicativoPreteritoPluscuamperfectoEll
+        }
+    }
+
+    private fun addPronomsIndicativoPreteritoPerfectoSimple(c: Conjugation) {
+        if (!c.indicativoPreteritoPerfectoSimpleYo.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoSimpleYo = YO + c.indicativoPreteritoPerfectoSimpleYo
+        }
+        if (!c.indicativoPreteritoPerfectoSimpleTu.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoSimpleTu = TU + c.indicativoPreteritoPerfectoSimpleTu
+        }
+        if (!c.indicativoPreteritoPerfectoSimpleEl.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoSimpleEl = EL + c.indicativoPreteritoPerfectoSimpleEl
+        }
+        if (!c.indicativoPreteritoPerfectoSimpleN.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoSimpleN = NOSOTROS + c.indicativoPreteritoPerfectoSimpleN
+        }
+        if (!c.indicativoPreteritoPerfectoSimpleV.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoSimpleV = VOSOTROS + c.indicativoPreteritoPerfectoSimpleV
+        }
+        if (!c.indicativoPreteritoPerfectoSimpleEll.contentEquals("-")) {
+            c.indicativoPreteritoPerfectoSimpleEll = ELLOS + c.indicativoPreteritoPerfectoSimpleEll
+        }
+    }
+
+    private fun addPronomsIndicativoPreteritoAnterior(c: Conjugation) {
+        if (!c.indicativoPreteritoAnteriorYo.contentEquals("-")) {
+            c.indicativoPreteritoAnteriorYo = YO + c.indicativoPreteritoAnteriorYo
+        }
+        if (!c.indicativoPreteritoAnteriorTu.contentEquals("-")) {
+            c.indicativoPreteritoAnteriorTu = TU + c.indicativoPreteritoAnteriorTu
+        }
+        if (!c.indicativoPreteritoAnteriorEl.contentEquals("-")) {
+            c.indicativoPreteritoAnteriorEl = EL + c.indicativoPreteritoAnteriorEl
+        }
+        if (!c.indicativoPreteritoAnteriorN.contentEquals("-")) {
+            c.indicativoPreteritoAnteriorN = NOSOTROS + c.indicativoPreteritoAnteriorN
+        }
+        if (!c.indicativoPreteritoAnteriorV.contentEquals("-")) {
+            c.indicativoPreteritoAnteriorV = VOSOTROS + c.indicativoPreteritoAnteriorV
+        }
+        if (!c.indicativoPreteritoAnteriorEll.contentEquals("-")) {
+            c.indicativoPreteritoAnteriorEll = ELLOS + c.indicativoPreteritoAnteriorEll
+        }
+    }
+
+    private fun addPronomsIndicativoFuturoSimple(c: Conjugation) {
+        if (!c.indicativoFuturoSimpleYo.contentEquals("-")) {
+            c.indicativoFuturoSimpleYo = YO + c.indicativoFuturoSimpleYo
+        }
+        if (!c.indicativoFuturoSimpleTu.contentEquals("-")) {
+            c.indicativoFuturoSimpleTu = TU + c.indicativoFuturoSimpleTu
+        }
+        if (!c.indicativoFuturoSimpleEl.contentEquals("-")) {
+            c.indicativoFuturoSimpleEl = EL + c.indicativoFuturoSimpleEl
+        }
+        if (!c.indicativoFuturoSimpleN.contentEquals("-")) {
+            c.indicativoFuturoSimpleN = NOSOTROS + c.indicativoFuturoSimpleN
+        }
+        if (!c.indicativoFuturoSimpleV.contentEquals("-")) {
+            c.indicativoFuturoSimpleV = VOSOTROS + c.indicativoFuturoSimpleV
+        }
+        if (!c.indicativoFuturoSimpleEll.contentEquals("-")) {
+            c.indicativoFuturoSimpleEll = ELLOS + c.indicativoFuturoSimpleEll
+        }
+    }
+
+    private fun addPronomsIndicativoFuturoCompuesto(c: Conjugation) {
+        if (!c.indicativoFuturoCompuestoYo.contentEquals("-")) {
+            c.indicativoFuturoCompuestoYo = YO + c.indicativoFuturoCompuestoYo
+        }
+        if (!c.indicativoFuturoCompuestoTu.contentEquals("-")) {
+            c.indicativoFuturoCompuestoTu = TU + c.indicativoFuturoCompuestoTu
+        }
+        if (!c.indicativoFuturoCompuestoEl.contentEquals("-")) {
+            c.indicativoFuturoCompuestoEl = EL + c.indicativoFuturoCompuestoEl
+        }
+        if (!c.indicativoFuturoCompuestoN.contentEquals("-")) {
+            c.indicativoFuturoCompuestoN = NOSOTROS + c.indicativoFuturoCompuestoN
+        }
+        if (!c.indicativoFuturoCompuestoV.contentEquals("-")) {
+            c.indicativoFuturoCompuestoV = VOSOTROS + c.indicativoFuturoCompuestoV
+        }
+        if (!c.indicativoFuturoCompuestoEll.contentEquals("-")) {
+            c.indicativoFuturoCompuestoEll = ELLOS + c.indicativoFuturoCompuestoEll
+        }
+    }
+
+    private fun addPronomsIndicativoCondicionalSimple(c: Conjugation) {
+        if (!c.indicativoCondicionalSimpleYo.contentEquals("-")) {
+            c.indicativoCondicionalSimpleYo = YO + c.indicativoCondicionalSimpleYo
+        }
+        if (!c.indicativoCondicionalSimpleTu.contentEquals("-")) {
+            c.indicativoCondicionalSimpleTu = TU + c.indicativoCondicionalSimpleTu
+        }
+        if (!c.indicativoCondicionalSimpleEl.contentEquals("-")) {
+            c.indicativoCondicionalSimpleEl = EL + c.indicativoCondicionalSimpleEl
+        }
+        if (!c.indicativoCondicionalSimpleN.contentEquals("-")) {
+            c.indicativoCondicionalSimpleN = NOSOTROS + c.indicativoCondicionalSimpleN
+        }
+        if (!c.indicativoCondicionalSimpleV.contentEquals("-")) {
+            c.indicativoCondicionalSimpleV = VOSOTROS + c.indicativoCondicionalSimpleV
+        }
+        if (!c.indicativoCondicionalSimpleEll.contentEquals("-")) {
+            c.indicativoCondicionalSimpleEll = ELLOS + c.indicativoCondicionalSimpleEll
+        }
+    }
+
+    private fun addPronomsIndicativoCondicionalCompuesto(c: Conjugation) {
+        if (!c.indicativoCondicionalCompuestoYo.contentEquals("-")) {
+            c.indicativoCondicionalCompuestoYo = YO + c.indicativoCondicionalCompuestoYo
+        }
+        if (!c.indicativoCondicionalCompuestoTu.contentEquals("-")) {
+            c.indicativoCondicionalCompuestoTu = TU + c.indicativoCondicionalCompuestoTu
+        }
+        if (!c.indicativoCondicionalCompuestoEl.contentEquals("-")) {
+            c.indicativoCondicionalCompuestoEl = EL + c.indicativoCondicionalCompuestoEl
+        }
+        if (!c.indicativoCondicionalCompuestoN.contentEquals("-")) {
+            c.indicativoCondicionalCompuestoN = NOSOTROS + c.indicativoCondicionalCompuestoN
+        }
+        if (!c.indicativoCondicionalCompuestoV.contentEquals("-")) {
+            c.indicativoCondicionalCompuestoV = VOSOTROS + c.indicativoCondicionalCompuestoV
+        }
+        if (!c.indicativoCondicionalCompuestoEll.contentEquals("-")) {
+            c.indicativoCondicionalCompuestoEll = ELLOS + c.indicativoCondicionalCompuestoEll
+        }
+    }
+
+    private fun addPronomsSubjuntivoPresente(c: Conjugation) {
+        if (!c.subjuntivoPresenteYo.contentEquals("-")) {
+            c.subjuntivoPresenteYo = QUE + YO + c.subjuntivoPresenteYo
+        }
+        if (!c.subjuntivoPresenteTu.contentEquals("-")) {
+            c.subjuntivoPresenteTu = QUE + TU + c.subjuntivoPresenteTu
+        }
+        if (!c.subjuntivoPresenteEl.contentEquals("-")) {
+            c.subjuntivoPresenteEl = QUE + EL + c.subjuntivoPresenteEl
+        }
+        if (!c.subjuntivoPresenteN.contentEquals("-")) {
+            c.subjuntivoPresenteN = QUE + NOSOTROS + c.subjuntivoPresenteN
+        }
+        if (!c.subjuntivoPresenteV.contentEquals("-")) {
+            c.subjuntivoPresenteV = QUE + VOSOTROS + c.subjuntivoPresenteV
+        }
+        if (!c.subjuntivoPresenteEll.contentEquals("-")) {
+            c.subjuntivoPresenteEll = QUE + ELLOS + c.subjuntivoPresenteEll
+        }
+    }
+
+    private fun addPronomsSubjuntivoPreteritoPerfectoCompuesto(c: Conjugation) {
+        if (!c.subjuntivoPreteritoPerfectoCompuestoYo.contentEquals("-")) {
+            c.subjuntivoPreteritoPerfectoCompuestoYo = QUE + YO + c.subjuntivoPreteritoPerfectoCompuestoYo
+        }
+        if (!c.subjuntivoPreteritoPerfectoCompuestoTu.contentEquals("-")) {
+            c.subjuntivoPreteritoPerfectoCompuestoTu = QUE + TU + c.subjuntivoPreteritoPerfectoCompuestoTu
+        }
+        if (!c.subjuntivoPreteritoPerfectoCompuestoEl.contentEquals("-")) {
+            c.subjuntivoPreteritoPerfectoCompuestoEl = QUE + EL + c.subjuntivoPreteritoPerfectoCompuestoEl
+        }
+        if (!c.subjuntivoPreteritoPerfectoCompuestoN.contentEquals("-")) {
+            c.subjuntivoPreteritoPerfectoCompuestoN = QUE + NOSOTROS + c.subjuntivoPreteritoPerfectoCompuestoN
+        }
+        if (!c.subjuntivoPreteritoPerfectoCompuestoV.contentEquals("-")) {
+            c.subjuntivoPreteritoPerfectoCompuestoV = QUE + VOSOTROS + c.subjuntivoPreteritoPerfectoCompuestoV
+        }
+        if (!c.subjuntivoPreteritoPerfectoCompuestoEll.contentEquals("-")) {
+            c.subjuntivoPreteritoPerfectoCompuestoEll = QUE + ELLOS + c.subjuntivoPreteritoPerfectoCompuestoEll
+        }
+    }
+
+    private fun addPronomsSubjuntivoPreteritoImperfecto(c: Conjugation) {
+        if (!c.subjuntivoPreteritoImperfectoYo.contentEquals("-")) {
+            c.subjuntivoPreteritoImperfectoYo = QUE + YO + c.subjuntivoPreteritoImperfectoYo
+        }
+        if (!c.subjuntivoPreteritoImperfectoTu.contentEquals("-")) {
+            c.subjuntivoPreteritoImperfectoTu = QUE + TU + c.subjuntivoPreteritoImperfectoTu
+        }
+        if (!c.subjuntivoPreteritoImperfectoEl.contentEquals("-")) {
+            c.subjuntivoPreteritoImperfectoEl = QUE + EL + c.subjuntivoPreteritoImperfectoEl
+        }
+        if (!c.subjuntivoPreteritoImperfectoN.contentEquals("-")) {
+            c.subjuntivoPreteritoImperfectoN = QUE + NOSOTROS + c.subjuntivoPreteritoImperfectoN
+        }
+        if (!c.subjuntivoPreteritoImperfectoV.contentEquals("-")) {
+            c.subjuntivoPreteritoImperfectoV = QUE + VOSOTROS + c.subjuntivoPreteritoImperfectoV
+        }
+        if (!c.subjuntivoPreteritoImperfectoEll.contentEquals("-")) {
+            c.subjuntivoPreteritoImperfectoEll = QUE + ELLOS + c.subjuntivoPreteritoImperfectoEll
+        }
+    }
+
+    private fun addPronomsSubjuntivoPreteritoPluscuamperfecto(c: Conjugation) {
+        if (!c.subjuntivoPreteritoPluscuamperfectoYo.contentEquals("-")) {
+            c.subjuntivoPreteritoPluscuamperfectoYo = QUE + YO + c.subjuntivoPreteritoPluscuamperfectoYo
+        }
+        if (!c.subjuntivoPreteritoPluscuamperfectoTu.contentEquals("-")) {
+            c.subjuntivoPreteritoPluscuamperfectoTu = QUE + TU + c.subjuntivoPreteritoPluscuamperfectoTu
+        }
+        if (!c.subjuntivoPreteritoPluscuamperfectoEl.contentEquals("-")) {
+            c.subjuntivoPreteritoPluscuamperfectoEl = QUE + EL + c.subjuntivoPreteritoPluscuamperfectoEl
+        }
+        if (!c.subjuntivoPreteritoPluscuamperfectoN.contentEquals("-")) {
+            c.subjuntivoPreteritoPluscuamperfectoN = QUE + NOSOTROS + c.subjuntivoPreteritoPluscuamperfectoN
+        }
+        if (!c.subjuntivoPreteritoPluscuamperfectoV.contentEquals("-")) {
+            c.subjuntivoPreteritoPluscuamperfectoV = QUE + VOSOTROS + c.subjuntivoPreteritoPluscuamperfectoV
+        }
+        if (!c.subjuntivoPreteritoPluscuamperfectoEll.contentEquals("-")) {
+            c.subjuntivoPreteritoPluscuamperfectoEll = QUE + ELLOS + c.subjuntivoPreteritoPluscuamperfectoEll
+        }
+    }
+
+    private fun addPronomsSubjuntivoFuturoSimple(c: Conjugation) {
+        if (!c.subjuntivoFuturoSimpleYo.contentEquals("-")) {
+            c.subjuntivoFuturoSimpleYo = QUE + YO + c.subjuntivoFuturoSimpleYo
+        }
+        if (!c.subjuntivoFuturoSimpleTu.contentEquals("-")) {
+            c.subjuntivoFuturoSimpleTu = QUE + TU + c.subjuntivoFuturoSimpleTu
+        }
+        if (!c.subjuntivoFuturoSimpleEl.contentEquals("-")) {
+            c.subjuntivoFuturoSimpleEl = QUE + EL + c.subjuntivoFuturoSimpleEl
+        }
+        if (!c.subjuntivoFuturoSimpleN.contentEquals("-")) {
+            c.subjuntivoFuturoSimpleN = QUE + NOSOTROS + c.subjuntivoFuturoSimpleN
+        }
+        if (!c.subjuntivoFuturoSimpleV.contentEquals("-")) {
+            c.subjuntivoFuturoSimpleV = QUE + VOSOTROS + c.subjuntivoFuturoSimpleV
+        }
+        if (!c.subjuntivoFuturoSimpleEll.contentEquals("-")) {
+            c.subjuntivoFuturoSimpleEll = QUE + ELLOS + c.subjuntivoFuturoSimpleEll
+        }
+    }
+
+    private fun addPronomsSubjuntivoFuturoCompuesto(c: Conjugation) {
+        if (!c.subjuntivoFuturoCompuestoYo.contentEquals("-")) {
+            c.subjuntivoFuturoCompuestoYo = QUE + YO + c.subjuntivoFuturoCompuestoYo
+        }
+        if (!c.subjuntivoFuturoCompuestoTu.contentEquals("-")) {
+            c.subjuntivoFuturoCompuestoTu = QUE + TU + c.subjuntivoFuturoCompuestoTu
+        }
+        if (!c.subjuntivoFuturoCompuestoEl.contentEquals("-")) {
+            c.subjuntivoFuturoCompuestoEl = QUE + EL + c.subjuntivoFuturoCompuestoEl
+        }
+        if (!c.subjuntivoFuturoCompuestoN.contentEquals("-")) {
+            c.subjuntivoFuturoCompuestoN = QUE + NOSOTROS + c.subjuntivoFuturoCompuestoN
+        }
+        if (!c.subjuntivoFuturoCompuestoV.contentEquals("-")) {
+            c.subjuntivoFuturoCompuestoV = QUE + VOSOTROS + c.subjuntivoFuturoCompuestoV
+        }
+        if (!c.subjuntivoFuturoCompuestoEll.contentEquals("-")) {
+            c.subjuntivoFuturoCompuestoEll = QUE + ELLOS + c.subjuntivoFuturoCompuestoEll
+        }
+    }
+
 
     /**
      * Start a show case view for demo mode.
