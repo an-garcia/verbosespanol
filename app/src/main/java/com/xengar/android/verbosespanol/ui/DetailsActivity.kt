@@ -714,7 +714,7 @@ class DetailsActivity
     private fun processConjugation(c:Conjugation) {
         if (!c.infinitivoSimple.isEmpty() && !c.infinitivoSimple.contentEquals(verbName)) {
             // if we need, conjugate the verb model.
-            // TODO:
+            conjugateVerb(c, verbName)
         }
         addPronoms(c)
     }
@@ -1316,6 +1316,241 @@ class DetailsActivity
 
             else -> onClickDemo()
         }
+    }
+
+
+    /**
+     * Conjugates the verb according to the model.
+     * @param c Conjugation conjugation
+     * @param isPronominal boolean
+     */
+    private fun conjugateVerb(c:Conjugation, verbInfinitive:String) {
+        // Generate verb radicals for each time and person based on the radical's model.
+        val modelRadicals = ArrayList<String>()
+        val verbRadicals = ArrayList<String>()
+        val modelRs = c.radicals
+        if (!modelRs.isEmpty()) {
+            val arrayModelRs = modelRs.split(", ".toRegex()).dropLastWhile{ it.isEmpty() }.toTypedArray()
+            for (modelR in arrayModelRs) {
+                modelRadicals.add(modelR)
+                val verbR = generateRadical(verbInfinitive, modelR, c.id.toInt())
+                verbRadicals.add(verbR)
+            }
+
+            val participio = c.participio
+            replaceRadicals(c, modelRadicals, verbRadicals)
+            replaceParticipio(c, participio, c.participio)
+        }
+    }
+
+    /**
+     * Generates the verb radical based on the model.
+     * @param infinitive String verb
+     * @param modelR String radical of the model
+     * @param id int model id
+     * @return list of radicals
+     */
+    private fun generateRadical(infinitive:String, modelR:String, id:Int):String {
+        var verbR = infinitive
+        // remove termination
+        when {
+            infinitive.endsWith("ar") -> verbR = infinitive.substring(0, infinitive.length - 2)
+            infinitive.endsWith("er") -> verbR = infinitive.substring(0, infinitive.length - 2)
+            infinitive.endsWith("ir") -> verbR = infinitive.substring(0, infinitive.length - 2)
+        }
+
+        // know models
+        when (id) {
+            /*
+            88 -> // cuire, cuit : all verbes,
+                // known: cuire, recuire, conduire, deduire, econduire, enduire, introduire, produire, (.)uire
+                if (modelR.contentEquals("cui")) {
+                    verbR = if (infinitive.endsWith("uire")) infinitive.replace("uire", "ui") else verbR
+                } */
+        }
+
+        return verbR
+    }
+
+    /**
+     * Replaces the radicals with the ones from the verb.
+     * @param c Conjugation
+     * @param modelR  List of model radicals
+     * @param verbR  List of verb radicals
+     */
+    private fun replaceRadicals(c:Conjugation, modelR:List<String>, verbR:List<String>) {
+        c.infinitivoSimple = verbName
+        c.participio = replaceRadical(c.participio, modelR, verbR)
+        c.gerundioSimple = replaceRadical(c.gerundioSimple, modelR, verbR)
+
+
+        c.imperativoTu = replaceRadical(c.imperativoTu, modelR, verbR)
+        c.imperativoEl = replaceRadical(c.imperativoEl, modelR, verbR)
+        c.imperativoN = replaceRadical(c.imperativoN, modelR, verbR)
+        c.imperativoV = replaceRadical(c.imperativoV, modelR, verbR)
+        c.imperativoEll = replaceRadical(c.imperativoEll, modelR, verbR)
+
+        c.imperativoNegTu = replaceRadical(c.imperativoNegTu, modelR, verbR)
+        c.imperativoNegEl = replaceRadical(c.imperativoNegEl, modelR, verbR)
+        c.imperativoNegN = replaceRadical(c.imperativoNegN, modelR, verbR)
+        c.imperativoNegV = replaceRadical(c.imperativoNegV, modelR, verbR)
+        c.imperativoNegEll = replaceRadical(c.imperativoNegEll, modelR, verbR)
+
+
+        c.indicativoPresenteYo = replaceRadical(c.indicativoPresenteYo, modelR, verbR)
+        c.indicativoPresenteTu = replaceRadical(c.indicativoPresenteTu, modelR, verbR)
+        c.indicativoPresenteEl = replaceRadical(c.indicativoPresenteEl, modelR, verbR)
+        c.indicativoPresenteN = replaceRadical(c.indicativoPresenteN, modelR, verbR)
+        c.indicativoPresenteV = replaceRadical(c.indicativoPresenteV, modelR, verbR)
+        c.indicativoPresenteEll = replaceRadical(c.indicativoPresenteEll, modelR, verbR)
+
+        c.indicativoPreteritoImperfectoYo = replaceRadical(c.indicativoPreteritoImperfectoYo, modelR, verbR)
+        c.indicativoPreteritoImperfectoTu = replaceRadical(c.indicativoPreteritoImperfectoTu, modelR, verbR)
+        c.indicativoPreteritoImperfectoEl = replaceRadical(c.indicativoPreteritoImperfectoEl, modelR, verbR)
+        c.indicativoPreteritoImperfectoN = replaceRadical(c.indicativoPreteritoImperfectoN, modelR, verbR)
+        c.indicativoPreteritoImperfectoV = replaceRadical(c.indicativoPreteritoImperfectoV, modelR, verbR)
+        c.indicativoPreteritoImperfectoEll = replaceRadical(c.indicativoPreteritoImperfectoEll, modelR, verbR)
+
+        c.indicativoPreteritoPerfectoSimpleYo = replaceRadical(c.indicativoPreteritoPerfectoSimpleYo, modelR, verbR)
+        c.indicativoPreteritoPerfectoSimpleTu = replaceRadical(c.indicativoPreteritoPerfectoSimpleTu, modelR, verbR)
+        c.indicativoPreteritoPerfectoSimpleEl = replaceRadical(c.indicativoPreteritoPerfectoSimpleEl, modelR, verbR)
+        c.indicativoPreteritoPerfectoSimpleN = replaceRadical(c.indicativoPreteritoPerfectoSimpleN, modelR, verbR)
+        c.indicativoPreteritoPerfectoSimpleV = replaceRadical(c.indicativoPreteritoPerfectoSimpleV, modelR, verbR)
+        c.indicativoPreteritoPerfectoSimpleEll = replaceRadical(c.indicativoPreteritoPerfectoSimpleEll, modelR, verbR)
+
+        c.indicativoFuturoSimpleYo = replaceRadical(c.indicativoFuturoSimpleYo, modelR, verbR)
+        c.indicativoFuturoSimpleTu = replaceRadical(c.indicativoFuturoSimpleTu, modelR, verbR)
+        c.indicativoFuturoSimpleEl = replaceRadical(c.indicativoFuturoSimpleEl, modelR, verbR)
+        c.indicativoFuturoSimpleN = replaceRadical(c.indicativoFuturoSimpleN, modelR, verbR)
+        c.indicativoFuturoSimpleV = replaceRadical(c.indicativoFuturoSimpleV, modelR, verbR)
+        c.indicativoFuturoSimpleEll = replaceRadical(c.indicativoFuturoSimpleEll, modelR, verbR)
+
+        c.indicativoCondicionalSimpleYo = replaceRadical(c.indicativoCondicionalSimpleYo, modelR, verbR)
+        c.indicativoCondicionalSimpleTu = replaceRadical(c.indicativoCondicionalSimpleTu, modelR, verbR)
+        c.indicativoCondicionalSimpleEl = replaceRadical(c.indicativoCondicionalSimpleEl, modelR, verbR)
+        c.indicativoCondicionalSimpleN = replaceRadical(c.indicativoCondicionalSimpleN, modelR, verbR)
+        c.indicativoCondicionalSimpleV = replaceRadical(c.indicativoCondicionalSimpleV, modelR, verbR)
+        c.indicativoCondicionalSimpleEll = replaceRadical(c.indicativoCondicionalSimpleEll, modelR, verbR)
+
+
+        c.subjuntivoPresenteYo = replaceRadical(c.subjuntivoPresenteYo, modelR, verbR)
+        c.subjuntivoPresenteTu = replaceRadical(c.subjuntivoPresenteTu, modelR, verbR)
+        c.subjuntivoPresenteEl = replaceRadical(c.subjuntivoPresenteEl, modelR, verbR)
+        c.subjuntivoPresenteN = replaceRadical(c.subjuntivoPresenteN, modelR, verbR)
+        c.subjuntivoPresenteV = replaceRadical(c.subjuntivoPresenteV, modelR, verbR)
+        c.subjuntivoPresenteEll = replaceRadical(c.subjuntivoPresenteEll, modelR, verbR)
+
+        c.subjuntivoPreteritoImperfectoYo = replaceRadical(c.subjuntivoPreteritoImperfectoYo, modelR, verbR)
+        c.subjuntivoPreteritoImperfectoTu = replaceRadical(c.subjuntivoPreteritoImperfectoTu, modelR, verbR)
+        c.subjuntivoPreteritoImperfectoEl = replaceRadical(c.subjuntivoPreteritoImperfectoEl, modelR, verbR)
+        c.subjuntivoPreteritoImperfectoN = replaceRadical(c.subjuntivoPreteritoImperfectoN, modelR, verbR)
+        c.subjuntivoPreteritoImperfectoV = replaceRadical(c.subjuntivoPreteritoImperfectoV, modelR, verbR)
+        c.subjuntivoPreteritoImperfectoEll = replaceRadical(c.subjuntivoPreteritoImperfectoEll, modelR, verbR)
+
+        c.subjuntivoFuturoSimpleYo = replaceRadical(c.subjuntivoFuturoSimpleYo, modelR, verbR)
+        c.subjuntivoFuturoSimpleTu = replaceRadical(c.subjuntivoFuturoSimpleTu, modelR, verbR)
+        c.subjuntivoFuturoSimpleEl = replaceRadical(c.subjuntivoFuturoSimpleEl, modelR, verbR)
+        c.subjuntivoFuturoSimpleN = replaceRadical(c.subjuntivoFuturoSimpleN, modelR, verbR)
+        c.subjuntivoFuturoSimpleV = replaceRadical(c.subjuntivoFuturoSimpleV, modelR, verbR)
+        c.subjuntivoFuturoSimpleEll = replaceRadical(c.subjuntivoFuturoSimpleEll, modelR, verbR)
+    }
+
+    /**
+     * Replaces the radical in the conjugation form.
+     * @param text  verb conjugation
+     * @param modelR List of model radicals
+     * @param verbR List of verb radicals
+     * @return radical
+     */
+    private fun replaceRadical(text:String, modelR:List<String>, verbR:List<String>):String {
+        var newText = text
+        var radicalM:String
+        var radicalV:String
+        for (i in modelR.indices)
+        {
+            radicalM = modelR[i]
+            radicalV = verbR[i]
+            if (!radicalM.isEmpty() && !radicalV.isEmpty() && text.contains(radicalM))
+            {
+                // There could be only 2 radicals at most.
+                // forms like: 'tu temes (temés)' or 'yo temiera o temiese'
+                if (text.contains(" o ")) {
+                    newText = newText.replaceFirst(" o $radicalM", " o $radicalV")
+                } else if (text.endsWith(")")){
+                    newText = newText.replaceFirst("($radicalM", "($radicalV")
+                }
+                newText = newText.replaceFirst(radicalM, radicalV)
+            }
+        }
+        return newText
+    }
+
+    /**
+     * Replaces the participio string with the one for the verb.
+     * @param c Conjugation
+     * @param old String
+     * @param new String
+     */
+    private fun replaceParticipio(c:Conjugation, old:String, new:String) {
+        c.infinitivoCompuesto = c.infinitivoCompuesto.replace(old, new)
+        c.gerundioCompuesto = c.gerundioCompuesto.replace(old, new)
+
+        c.indicativoPreteritoPerfectoCompuestoYo = c.indicativoPreteritoPerfectoCompuestoYo.replace(old, new)
+        c.indicativoPreteritoPerfectoCompuestoTu = c.indicativoPreteritoPerfectoCompuestoTu.replace(old, new)
+        c.indicativoPreteritoPerfectoCompuestoEl = c.indicativoPreteritoPerfectoCompuestoEl.replace(old, new)
+        c.indicativoPreteritoPerfectoCompuestoN = c.indicativoPreteritoPerfectoCompuestoN.replace(old, new)
+        c.indicativoPreteritoPerfectoCompuestoV = c.indicativoPreteritoPerfectoCompuestoV.replace(old, new)
+        c.indicativoPreteritoPerfectoCompuestoEll = c.indicativoPreteritoPerfectoCompuestoEll.replace(old, new)
+
+        c.indicativoPreteritoPluscuamperfectoYo = c.indicativoPreteritoPluscuamperfectoYo.replace(old, new)
+        c.indicativoPreteritoPluscuamperfectoTu = c.indicativoPreteritoPluscuamperfectoTu.replace(old, new)
+        c.indicativoPreteritoPluscuamperfectoEl = c.indicativoPreteritoPluscuamperfectoEl.replace(old, new)
+        c.indicativoPreteritoPluscuamperfectoN = c.indicativoPreteritoPluscuamperfectoN.replace(old, new)
+        c.indicativoPreteritoPluscuamperfectoV = c.indicativoPreteritoPluscuamperfectoV.replace(old, new)
+        c.indicativoPreteritoPluscuamperfectoEll = c.indicativoPreteritoPluscuamperfectoEll.replace(old, new)
+
+        c.indicativoPreteritoAnteriorYo = c.indicativoPreteritoAnteriorYo.replace(old, new)
+        c.indicativoPreteritoAnteriorTu = c.indicativoPreteritoAnteriorTu.replace(old, new)
+        c.indicativoPreteritoAnteriorEl = c.indicativoPreteritoAnteriorEl.replace(old, new)
+        c.indicativoPreteritoAnteriorN = c.indicativoPreteritoAnteriorN.replace(old, new)
+        c.indicativoPreteritoAnteriorV = c.indicativoPreteritoAnteriorV.replace(old, new)
+        c.indicativoPreteritoAnteriorEll = c.indicativoPreteritoAnteriorEll.replace(old, new)
+
+        c.indicativoFuturoCompuestoYo = c.indicativoFuturoCompuestoYo.replace(old, new)
+        c.indicativoFuturoCompuestoTu = c.indicativoFuturoCompuestoTu.replace(old, new)
+        c.indicativoFuturoCompuestoEl = c.indicativoFuturoCompuestoEl.replace(old, new)
+        c.indicativoFuturoCompuestoN = c.indicativoFuturoCompuestoN.replace(old, new)
+        c.indicativoFuturoCompuestoV = c.indicativoFuturoCompuestoV.replace(old, new)
+        c.indicativoFuturoCompuestoEll = c.indicativoFuturoCompuestoEll.replace(old, new)
+
+        c.indicativoCondicionalCompuestoYo = c.indicativoCondicionalCompuestoYo.replace(old, new)
+        c.indicativoCondicionalCompuestoTu = c.indicativoCondicionalCompuestoTu.replace(old, new)
+        c.indicativoCondicionalCompuestoEl = c.indicativoCondicionalCompuestoEl.replace(old, new)
+        c.indicativoCondicionalCompuestoN = c.indicativoCondicionalCompuestoN.replace(old, new)
+        c.indicativoCondicionalCompuestoV = c.indicativoCondicionalCompuestoV.replace(old, new)
+        c.indicativoCondicionalCompuestoEll = c.indicativoCondicionalCompuestoEll.replace(old, new)
+
+
+        c.subjuntivoPreteritoPerfectoCompuestoYo = c.subjuntivoPreteritoPerfectoCompuestoYo.replace(old, new)
+        c.subjuntivoPreteritoPerfectoCompuestoTu = c.subjuntivoPreteritoPerfectoCompuestoTu.replace(old, new)
+        c.subjuntivoPreteritoPerfectoCompuestoEl = c.subjuntivoPreteritoPerfectoCompuestoEl.replace(old, new)
+        c.subjuntivoPreteritoPerfectoCompuestoN = c.subjuntivoPreteritoPerfectoCompuestoN.replace(old, new)
+        c.subjuntivoPreteritoPerfectoCompuestoV = c.subjuntivoPreteritoPerfectoCompuestoV.replace(old, new)
+        c.subjuntivoPreteritoPerfectoCompuestoEll = c.subjuntivoPreteritoPerfectoCompuestoEll.replace(old, new)
+
+        c.subjuntivoPreteritoPluscuamperfectoYo = c.subjuntivoPreteritoPluscuamperfectoYo.replace(old, new)
+        c.subjuntivoPreteritoPluscuamperfectoTu = c.subjuntivoPreteritoPluscuamperfectoTu.replace(old, new)
+        c.subjuntivoPreteritoPluscuamperfectoEl = c.subjuntivoPreteritoPluscuamperfectoEl.replace(old, new)
+        c.subjuntivoPreteritoPluscuamperfectoN = c.subjuntivoPreteritoPluscuamperfectoN.replace(old, new)
+        c.subjuntivoPreteritoPluscuamperfectoV = c.subjuntivoPreteritoPluscuamperfectoV.replace(old, new)
+        c.subjuntivoPreteritoPluscuamperfectoEll = c.subjuntivoPreteritoPluscuamperfectoEll.replace(old, new)
+
+        c.subjuntivoFuturoCompuestoYo = c.subjuntivoFuturoCompuestoYo.replace(old, new)
+        c.subjuntivoFuturoCompuestoTu = c.subjuntivoFuturoCompuestoTu.replace(old, new)
+        c.subjuntivoFuturoCompuestoEl = c.subjuntivoFuturoCompuestoEl.replace(old, new)
+        c.subjuntivoFuturoCompuestoN = c.subjuntivoFuturoCompuestoN.replace(old, new)
+        c.subjuntivoFuturoCompuestoV = c.subjuntivoFuturoCompuestoV.replace(old, new)
+        c.subjuntivoFuturoCompuestoEll = c.subjuntivoFuturoCompuestoEll.replace(old, new)
     }
 
 
