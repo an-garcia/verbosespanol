@@ -1455,21 +1455,109 @@ class DetailsActivity
                 }
             21 -> // caber, : no known
                 {}
-            23 -> // ceñir, -eñir: constreñir, desceñir, estreñir, etc.
-                if (model.contains("c")) {
+            23 -> // ceñir, verbs ending -eñir: constreñir, desceñir, estreñir, etc.
+                if (model.equals("c", true)) {
                     when {
                         v.endsWith("eñir")   -> rad = v.substring(0, v.length - 4)
                         v.endsWith("eñirse") -> rad = v.substring(0, v.length - 6)
                     }
                 }
-            24 -> // conducir, -ucir: deducir, introducir, reproducir, etc.
+            24 -> // conducir, verbs ending -ucir: deducir, introducir, reproducir, etc.
                 if (model.contains("condu")) {
                     when {
                         v.endsWith("ucir")   -> rad = v.substring(0, v.length - 3)
                         v.endsWith("ucirse") -> rad = v.substring(0, v.length - 5)
                     }
                 }
-
+            26 -> // contar, verbs ending -o-ar: acordar, afollarse, desollar, etc.
+                if (model.contains("cuent")) {
+                    rad = rad.reversed().replaceFirst("o", "eu").reversed()
+                }
+            28 -> // decir, verbs ending -ecir: decir, bendecir, maldecir, etc.
+                if (model.equals("d", true)) {
+                    when {
+                        v.endsWith("ecir")   -> rad = v.substring(0, v.length - 4)
+                        v.endsWith("ecirse") -> rad = v.substring(0, v.length - 6)
+                    }
+                }
+            29 -> // discernir, verbs ending -e-ir: cernir, concernir, hendir, etc.
+                if (model.contains("disciern")) {
+                    rad = rad.reversed().replaceFirst("e", "ei").reversed()
+                }
+            30 -> // dormir, verbs ending -o-ir: dormir, morir, premorir, etc.
+                if (model.contains("durm")) {
+                    rad = rad.reversed().replaceFirst("o", "u").reversed()
+                } else if (model.contains("duerm")) {
+                    rad = rad.reversed().replaceFirst("o", "eu").reversed()
+                }
+            31 -> // entender, verbs ending -e-er: ascender, heder, verter, etc.
+                if (model.contains("entiend")) {
+                    rad = rad.reversed().replaceFirst("e", "ei").reversed()
+                }
+            32 -> // erguir, : no known
+                {}
+            33 -> // errar, : no known
+                {}
+            35 -> // haber, : no known
+                {}
+            36 -> // hacer, verbs ending -a-er: deshacer, satisfacer, etc.
+                if (model.equals("h", true)) {
+                    when {
+                        v.endsWith("acer")   -> rad = v.substring(0, v.length - 4)
+                        v.endsWith("acerse") -> rad = v.substring(0, v.length - 6)
+                    }
+                }
+            38 -> // jugar, no known
+                {}
+            40 -> // lucir, verbs ending -ucir: balbucir, relucir, translucir, etc.
+                if (model.contains("luzc")) {
+                    rad = rad.reversed().replaceFirst("c", "cz").reversed()
+                }
+            41 -> // mover, verbs ending -o-er: absolver, condolerse, llover, etc.
+                if (model.contains("muev")) {
+                    rad = rad.reversed().replaceFirst("o", "eu").reversed()
+                }
+            44 -> // oler, no known
+                {}
+            45 -> // pedir, verbs ending -e-ir: acomedirse, competir, vestir, etc.
+                if (model.contains("pid")) {
+                    rad = rad.reversed().replaceFirst("e", "i").reversed()
+                }
+            46 -> // poder, no known
+                {}
+            47 -> // poner, no known
+                {}
+            48 -> // podrir o pudrir, verbs ending -o-ir or -u-ir: podrir, repudrir, etc.
+                if (model.contains("podr")) {
+                    rad = rad.reversed().replaceFirst("u", "o").reversed()
+                }
+            49 -> // querer, verbs ending -querer:
+                if (model.contains("qui")) {
+                    when {
+                        v.endsWith("querer")   -> rad = v.substring(0, v.length - 4) + "i"
+                        v.endsWith("quererse") -> rad = v.substring(0, v.length - 6) + "i"
+                    }
+                }
+            51 -> // saber, no known
+                {}
+            53 -> // sentir, verbs ending -e-ir : advertir, arrepentirse, hervir, requerir, etc.
+                if (model.contains("sint")) {
+                    rad = rad.reversed().replaceFirst("e", "i").reversed()
+                } else if (model.contains("sient")) {
+                    rad = rad.reversed().replaceFirst("e", "ei").reversed()
+                }
+            55 -> // sonreír, verbs ending -eír : reír, engreír, freír, etc.
+                if (model.contains("sonr")) {
+                    rad = rad.reversed().replaceFirst("e", "").reversed()
+                }
+            57 -> // tener, no know
+                {}
+            60 -> // venir, no know
+                {}
+            62 -> // yacer, verbs ending -acer : subyacer, etc.
+                if (model.contains("ya")) {
+                    rad = rad.reversed().replaceFirst("c", "").reversed()
+                }
         }
 
         return rad
@@ -1575,12 +1663,17 @@ class DetailsActivity
             radicalV = verbR[i]
             if (!radicalM.isEmpty() && !radicalV.isEmpty() && text.contains(radicalM))
             {
-                // There could be only 2 radicals at most.
-                // forms like: 'tu temes (temés)' or 'yo temiera o temiese'
+                // There could be 3 radicals at most.
                 if (text.contains(" o ")) {
-                    newText = newText.replaceFirst(" o $radicalM", " o $radicalV")
+                    // forms like: 'yo roo o roigo o royo'  or 'yo temiera o temiese'
+                    newText = newText.replace(" o $radicalM", " o $radicalV")
                 } else if (text.endsWith(")")){
-                    newText = newText.replaceFirst("($radicalM", "($radicalV")
+                    // know exception Model 26 contar - 'tu cuentas (contás)' both radicals in the same line
+                    val ignore = radicalM.equals("cont", true)
+                    if (!ignore) {
+                        // forms like: 'tu temes (temés)'
+                        newText = newText.replaceFirst("($radicalM", "($radicalV")
+                    }
                 }
                 newText = newText.replaceFirst(radicalM, radicalV)
             }

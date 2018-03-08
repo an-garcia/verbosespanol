@@ -3482,7 +3482,7 @@
     <conjugation
         id                    = "26"
         term                  = ""
-        radicals              = "cont"
+        radicals              = "cont, cuent"
         inf_si                = "contar"
         inf_co                = "haber contado"
         pa                    = "contado"
@@ -3881,7 +3881,7 @@
     <conjugation
         id                    = "29"
         term                  = ""
-        radicals              = ""
+        radicals              = "discern, disciern"
         inf_si                = "discernir"
         inf_co                = "haber discernido"
         pa                    = "discernido"
@@ -4014,7 +4014,7 @@
     <conjugation
         id                    = "30"
         term                  = ""
-        radicals              = "d"
+        radicals              = "dorm, durm, duerm"
         inf_si                = "dormir"
         inf_co                = "haber dormido"
         pa                    = "dormido"
@@ -4147,7 +4147,7 @@
     <conjugation
         id                    = "31"
         term                  = ""
-        radicals              = ""
+        radicals              = "entend, entiend"
         inf_si                = "entender"
         inf_co                = "haber entendido"
         pa                    = "entendido"
@@ -4280,7 +4280,7 @@
     <conjugation
         id                    = "32"
         term                  = ""
-        radicals              = ""
+        radicals              = "ergu, irgu, yerg"
         inf_si                = "erguir"
         inf_co                = "haber erguido"
         pa                    = "erguido"
@@ -4413,7 +4413,7 @@
     <conjugation
         id                    = "33"
         term                  = ""
-        radicals              = ""
+        radicals              = "err, yerr"
         inf_si                = "errar"
         inf_co                = "haber errado"
         pa                    = "errado"
@@ -4546,7 +4546,7 @@
     <conjugation
         id                    = "34"
         term                  = ""
-        radicals              = ""
+        radicals              = "est"
         inf_si                = "estar"
         inf_co                = "haber estado"
         pa                    = "estado"
@@ -4679,7 +4679,7 @@
     <conjugation
         id                    = "35"
         term                  = ""
-        radicals              = ""
+        radicals              = "hab, hub, hay, h"
         inf_si                = "haber"
         inf_co                = "haber habido"
         pa                    = "habido"
@@ -4812,7 +4812,7 @@
     <conjugation
         id                    = "36"
         term                  = ""
-        radicals              = ""
+        radicals              = "h"
         inf_si                = "hacer"
         inf_co                = "haber hecho"
         pa                    = "hecho"
@@ -5078,7 +5078,7 @@
     <conjugation
         id                    = "38"
         term                  = ""
-        radicals              = ""
+        radicals              = "jug, jueg, jugu"
         inf_si                = "jugar"
         inf_co                = "haber jugado"
         pa                    = "jugado"
@@ -5211,7 +5211,7 @@
     <conjugation
         id                    = "39"
         term                  = ""
-        radicals              = ""
+        radicals              = "le"
         inf_si                = "leer"
         inf_co                = "haber leído"
         pa                    = "leído"
@@ -5344,7 +5344,7 @@
     <conjugation
         id                    = "40"
         term                  = ""
-        radicals              = ""
+        radicals              = "luc, luzc"
         inf_si                = "lucir"
         inf_co                = "haber lucido"
         pa                    = "lucido"
@@ -5477,7 +5477,7 @@
     <conjugation
         id                    = "41"
         term                  = ""
-        radicals              = ""
+        radicals              = "mov, muev"
         inf_si                = "mover"
         inf_co                = "haber movido"
         pa                    = "movido"
@@ -5610,7 +5610,7 @@
     <conjugation
         id                    = "42"
         term                  = ""
-        radicals              = ""
+        radicals              = "mull"
         inf_si                = "mullir"
         inf_co                = "haber mullido"
         pa                    = "mullido"
@@ -5743,7 +5743,7 @@
     <conjugation
         id                    = "43"
         term                  = ""
-        radicals              = ""
+        radicals              = "o"
         inf_si                = "oír"
         inf_co                = "haber oído"
         pa                    = "oído"
@@ -5876,7 +5876,7 @@
     <conjugation
         id                    = "44"
         term                  = ""
-        radicals              = ""
+        radicals              = "ol, huel"
         inf_si                = "oler"
         inf_co                = "haber olido"
         pa                    = "olido"
@@ -6009,7 +6009,7 @@
     <conjugation
         id                    = "45"
         term                  = ""
-        radicals              = ""
+        radicals              = "ped, pid"
         inf_si                = "pedir"
         inf_co                = "haber pedido"
         pa                    = "pedido"
@@ -6142,7 +6142,7 @@
     <conjugation
         id                    = "46"
         term                  = ""
-        radicals              = ""
+        radicals              = "pod, pud, pued"
         inf_si                = "poder"
         inf_co                = "haber podido"
         pa                    = "podido"
@@ -6275,7 +6275,7 @@
     <conjugation
         id                    = "47"
         term                  = ""
-        radicals              = ""
+        radicals              = "pon, puest, pus"
         inf_si                = "poner"
         inf_co                = "haber puesto"
         pa                    = "puesto"
@@ -6408,7 +6408,7 @@
     <conjugation
         id                    = "48"
         term                  = ""
-        radicals              = ""
+        radicals              = "pudr, podr"
         inf_si                = "pudrir o podrir"
         inf_co                = "haber podrido"
         pa                    = "podrido"
@@ -6541,7 +6541,7 @@
     <conjugation
         id                    = "49"
         term                  = ""
-        radicals              = ""
+        radicals              = "quer, qui"
         inf_si                = "querer"
         inf_co                = "haber querido"
         pa                    = "querido"
@@ -6674,7 +6674,7 @@
     <conjugation
         id                    = "50"
         term                  = ""
-        radicals              = ""
+        radicals              = "ro"
         inf_si                = "roer"
         inf_co                = "haber roído"
         pa                    = "roído"
@@ -6807,7 +6807,7 @@
     <conjugation
         id                    = "51"
         term                  = ""
-        radicals              = ""
+        radicals              = "s"
         inf_si                = "saber"
         inf_co                = "haber sabido"
         pa                    = "sabido"
@@ -6940,7 +6940,7 @@
     <conjugation
         id                    = "52"
         term                  = ""
-        radicals              = ""
+        radicals              = "sal"
         inf_si                = "salir"
         inf_co                = "haber salido"
         pa                    = "salido"
@@ -7073,7 +7073,7 @@
     <conjugation
         id                    = "53"
         term                  = ""
-        radicals              = ""
+        radicals              = "sent, sint, sient"
         inf_si                = "sentir"
         inf_co                = "haber sentido"
         pa                    = "sentido"
@@ -7339,7 +7339,7 @@
     <conjugation
         id                    = "55"
         term                  = ""
-        radicals              = ""
+        radicals              = "sonr"
         inf_si                = "sonreír"
         inf_co                = "haber sonreído"
         pa                    = "sonreído"
@@ -7472,7 +7472,7 @@
     <conjugation
         id                    = "56"
         term                  = ""
-        radicals              = ""
+        radicals              = "tañ"
         inf_si                = "tañer"
         inf_co                = "haber tañido"
         pa                    = "tañido"
@@ -7605,7 +7605,7 @@
     <conjugation
         id                    = "57"
         term                  = ""
-        radicals              = ""
+        radicals              = "ten, tien, tuv"
         inf_si                = "tener"
         inf_co                = "haber tenido"
         pa                    = "tenido"
@@ -7738,7 +7738,7 @@
     <conjugation
         id                    = "58"
         term                  = ""
-        radicals              = ""
+        radicals              = "tra"
         inf_si                = "traer"
         inf_co                = "haber traído"
         pa                    = "traído"
@@ -7871,7 +7871,7 @@
     <conjugation
         id                    = "59"
         term                  = ""
-        radicals              = ""
+        radicals              = "val"
         inf_si                = "valer"
         inf_co                = "haber valido"
         pa                    = "valido"
@@ -8004,7 +8004,7 @@
     <conjugation
         id                    = "60"
         term                  = ""
-        radicals              = ""
+        radicals              = "ven, vin, vien"
         inf_si                = "venir"
         inf_co                = "haber venido"
         pa                    = "venido"
@@ -8137,7 +8137,7 @@
     <conjugation
         id                    = "61"
         term                  = ""
-        radicals              = ""
+        radicals              = "v"
         inf_si                = "ver"
         inf_co                = "haber visto"
         pa                    = "visto"
