@@ -1324,9 +1324,9 @@ class DetailsActivity
     /**
      * Conjugates the verb according to the model.
      * @param c Conjugation conjugation
-     * @param isPronominal boolean
+     * @param infinitive String infinitive
      */
-    private fun conjugateVerb(c:Conjugation, verbInfinitive:String) {
+    private fun conjugateVerb(c:Conjugation, infinitive:String) {
         // Generate verb radicals for each time and person based on the radical's model.
         val modelRadicals = ArrayList<String>()
         val verbRadicals = ArrayList<String>()
@@ -1335,7 +1335,7 @@ class DetailsActivity
             val arrayModelRs = modelRs.split(", ".toRegex()).dropLastWhile{ it.isEmpty() }.toTypedArray()
             for (modelR in arrayModelRs) {
                 modelRadicals.add(modelR)
-                val verbR = generateRadical(verbInfinitive, modelR, c.id.toInt())
+                val verbR = generateRadical(infinitive, modelR, c.id.toInt())
                 verbRadicals.add(verbR)
             }
 
@@ -1347,94 +1347,132 @@ class DetailsActivity
 
     /**
      * Generates the verb radical based on the model.
-     * @param infinitive String verb
-     * @param modelR String radical of the model
+     * @param v String infinitive
+     * @param model String radical of the model
      * @param id int model id
      * @return list of radicals
      */
-    private fun generateRadical(infinitive:String, modelR:String, id:Int):String {
-        var verbR = infinitive
+    private fun generateRadical(v:String, model:String, id:Int):String {
         // remove termination
-        when {
-            infinitive.endsWith("ar") -> verbR = infinitive.substring(0, infinitive.length - 2)
-            infinitive.endsWith("er") -> verbR = infinitive.substring(0, infinitive.length - 2)
-            infinitive.endsWith("ir") -> verbR = infinitive.substring(0, infinitive.length - 2)
+        var rad = when {
+            v.endsWith("ar")   -> v.substring(0, v.length - 2)
+            v.endsWith("er")   -> v.substring(0, v.length - 2)
+            v.endsWith("ir")   -> v.substring(0, v.length - 2)
+            v.endsWith("arse") -> v.substring(0, v.length - 4)
+            v.endsWith("erse") -> v.substring(0, v.length - 4)
+            v.endsWith("irse") -> v.substring(0, v.length - 4)
+            else -> v
         }
 
         // know models
         when (id) {
             5 -> // enviar, verbs ending -iar : aliar, amnistiar, confiar, etc.
-                if (modelR.contentEquals("enví") && infinitive.endsWith("iar")) {
-                    verbR = infinitive.substring(0, infinitive.length - 3) + "í"
+                if (model.contentEquals("enví")) {
+                    when {
+                        v.endsWith("iar")   -> rad = v.substring(0, v.length - 3) + "í"
+                        v.endsWith("iarse") -> rad = v.substring(0, v.length - 5) + "í"
+                    }
                 }
             6 -> // averiguar, verbs ending -guar, -guarse : achiguar, amortiguar, apaniguarse, etc.
-                if (modelR.contains("averigü")) {
-                    verbR = if (infinitive.endsWith("ar")) infinitive.substring(0, infinitive.length - 3) + "ü" else verbR
-                    verbR = if (infinitive.endsWith("arse")) infinitive.substring(0, infinitive.length - 5) + "ü" else verbR
-                } else if (modelR.contains("averigu")) {
-                    verbR = if (infinitive.endsWith("ar")) infinitive.substring(0, infinitive.length - 2) else verbR
-                    verbR = if (infinitive.endsWith("arse")) infinitive.substring(0, infinitive.length - 4) else verbR
+                if (model.contains("averigü")) {
+                    when {
+                        v.endsWith("ar")   -> rad = v.substring(0, v.length - 3) + "ü"
+                        v.endsWith("arse") -> rad = v.substring(0, v.length - 5) + "ü"
+                    }
                 }
             7 -> // actuar, verbs ending -uar : acentuar, atenuar, situar, etc.
-                if (modelR.contains("actú") && infinitive.endsWith("uar")) {
-                    verbR = infinitive.substring(0, infinitive.length - 3) + "ú"
+                if (model.contains("actú")) {
+                    when {
+                        v.endsWith("uar")   -> rad = v.substring(0, v.length - 3) + "ú"
+                        v.endsWith("uarse") -> rad = v.substring(0, v.length - 5) + "ú"
+                    }
                 }
             9 -> // aislar, verbs ending -i-ar : ahijar, airar, descafeinar, etc.
-                if (modelR.contains("aísl") && infinitive.endsWith("ar")) {
-                    val aux = infinitive.reversed().replaceFirst("i", "í").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("aísl")) {
+                    val aux = v.reversed().replaceFirst("i", "í").reversed()
+                    when {
+                        v.endsWith("ar")   -> rad = aux.substring(0, aux.length - 2)
+                        v.endsWith("arse") -> rad = aux.substring(0, aux.length - 4)
+                    }
                 }
             11 -> // aunar, verbs ending -u-ar : ahumar, maullar, rehusar, etc.
-                if (modelR.contains("aún") && infinitive.endsWith("ar")) {
-                    val aux = infinitive.reversed().replaceFirst("u", "ú").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("aún")) {
+                    val aux = v.reversed().replaceFirst("u", "ú").reversed()
+                    when {
+                        v.endsWith("ar")   -> rad = aux.substring(0, aux.length - 2)
+                        v.endsWith("arse") -> rad = aux.substring(0, aux.length - 4)
+                    }
                 }
             13 -> // descafeinar, verbs ending -i-ar : airar, desahijar, sobrehilar, etc.
-                if (modelR.contains("descafeín") && infinitive.endsWith("ar")) {
-                    val aux = infinitive.reversed().replaceFirst("i", "í").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("descafeín")) {
+                    val aux = v.reversed().replaceFirst("i", "í").reversed()
+                    when {
+                        v.endsWith("ar")   -> rad = aux.substring(0, aux.length - 2)
+                        v.endsWith("arse") -> rad = aux.substring(0, aux.length - 4)
+                    }
                 }
             15 -> // rehusar, verbs ending -u-ar : ahumar, aunar, maullar, etc.
-                if (modelR.contains("rehús") && infinitive.endsWith("ar")) {
-                    val aux = infinitive.reversed().replaceFirst("u", "ú").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("rehús")) {
+                    val aux = v.reversed().replaceFirst("u", "ú").reversed()
+                    when {
+                        v.endsWith("ar")   -> rad = aux.substring(0, aux.length - 2)
+                        v.endsWith("arse") -> rad = aux.substring(0, aux.length - 4)
+                    }
                 }
             16 -> // acertar, verbs ending -e-ar : acrecentar, arrendar, merendar, etc.
-                if (modelR.contains("aciert") && infinitive.endsWith("ar")) {
-                    val aux = infinitive.reversed().replaceFirst("e", "ei").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("aciert")) {
+                    val aux = when {
+                        v.endsWith("ar")   -> v.substring(0, v.length - 2)
+                        v.endsWith("arse") -> v.substring(0, v.length - 4)
+                        else -> rad
+                    }
+                    rad = aux.reversed().replaceFirst("e", "ei").reversed()
                 }
             17 -> // adquirir, verbs ending -i-ir : no know
-                if (modelR.contains("adquier") && infinitive.endsWith("ir")) {
-                    val aux = infinitive.reversed().replaceFirst("i", "ei").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("adquier")) {
+                    val aux = v.reversed().replaceFirst("i", "ei").reversed()
+                    when {
+                        v.endsWith("ir")   -> rad = aux.substring(0, v.length - 2)
+                        v.endsWith("irse") -> rad = aux.substring(0, v.length - 4)
+                    }
                 }
             18 -> // agradecer, verbs ending -cer : abastecer, conocer, enriquecer, etc.
-                if (modelR.contains("agradezc") && infinitive.endsWith("er")) {
-                    val aux = infinitive.reversed().replaceFirst("c", "cz").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("agradezc")) {
+                    val aux = v.reversed().replaceFirst("c", "cz").reversed()
+                    when {
+                        v.endsWith("er")   -> rad = aux.substring(0, v.length - 2)
+                        v.endsWith("erse") -> rad = aux.substring(0, v.length - 4)
+                    }
                 }
             20 -> // asir, verbs ending -ir : desasir, etc.
-                if (modelR.contains("asg") && infinitive.endsWith("ir")) {
-                    val aux = infinitive.reversed().replaceFirst("s", "gs").reversed()
-                    verbR = aux.substring(0, aux.length - 2)
+                if (model.contains("asg")) {
+                    val aux = when {
+                        v.endsWith("ir")   -> v.substring(0, v.length - 2)
+                        v.endsWith("irse") -> v.substring(0, v.length - 4)
+                        else -> rad
+                    }
+                    rad = aux.reversed().replaceFirst("s", "gs").reversed()
                 }
             21 -> // caber, : no known
                 {}
             23 -> // ceñir, -eñir: constreñir, desceñir, estreñir, etc.
-                if (modelR.contains("c")) {
-                    verbR = if (infinitive.endsWith("eñir")) infinitive.substring(0, infinitive.length - 4) else verbR
-                    verbR = if (infinitive.endsWith("eñirse")) infinitive.substring(0, infinitive.length - 6) else verbR
+                if (model.contains("c")) {
+                    when {
+                        v.endsWith("eñir")   -> rad = v.substring(0, v.length - 4)
+                        v.endsWith("eñirse") -> rad = v.substring(0, v.length - 6)
+                    }
                 }
             24 -> // conducir, -ucir: deducir, introducir, reproducir, etc.
-                if (modelR.contains("condu")) {
-                    verbR = if (infinitive.endsWith("ucir")) infinitive.substring(0, infinitive.length - 3) else verbR
-                    verbR = if (infinitive.endsWith("ucirse")) infinitive.substring(0, infinitive.length - 5) else verbR
+                if (model.contains("condu")) {
+                    when {
+                        v.endsWith("ucir")   -> rad = v.substring(0, v.length - 3)
+                        v.endsWith("ucirse") -> rad = v.substring(0, v.length - 5)
+                    }
                 }
 
         }
 
-        return verbR
+        return rad
     }
 
     /**
