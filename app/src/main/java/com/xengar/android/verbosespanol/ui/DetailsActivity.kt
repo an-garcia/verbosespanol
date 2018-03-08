@@ -1419,6 +1419,19 @@ class DetailsActivity
                     val aux = infinitive.reversed().replaceFirst("s", "gs").reversed()
                     verbR = aux.substring(0, aux.length - 2)
                 }
+            21 -> // caber, : no known
+                {}
+            23 -> // ceñir, -eñir: constreñir, desceñir, estreñir, etc.
+                if (modelR.contains("c")) {
+                    verbR = if (infinitive.endsWith("eñir")) infinitive.substring(0, infinitive.length - 4) else verbR
+                    verbR = if (infinitive.endsWith("eñirse")) infinitive.substring(0, infinitive.length - 6) else verbR
+                }
+            24 -> // conducir, -ucir: deducir, introducir, reproducir, etc.
+                if (modelR.contains("condu")) {
+                    verbR = if (infinitive.endsWith("ucir")) infinitive.substring(0, infinitive.length - 3) else verbR
+                    verbR = if (infinitive.endsWith("ucirse")) infinitive.substring(0, infinitive.length - 5) else verbR
+                }
+
         }
 
         return verbR
