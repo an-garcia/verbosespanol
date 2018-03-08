@@ -554,7 +554,7 @@
     <conjugation
         id                    = "4"
         term                  = ""
-        radicals              = ""
+        radicals              = "anunci"
         inf_si                = "anunciar"
         inf_co                = "haber anunciado"
         pa                    = "anunciado"
@@ -687,7 +687,7 @@
     <conjugation
         id                    = "5"
         term                  = ""
-        radicals              = ""
+        radicals              = "enví, envi"
         inf_si                = "enviar"
         inf_co                = "haber enviado"
         pa                    = "enviado"
@@ -820,7 +820,7 @@
     <conjugation
         id                    = "6"
         term                  = ""
-        radicals              = ""
+        radicals              = "averigu, averigü"
         inf_si                = "averiguar"
         inf_co                = "haber averiguado"
         pa                    = "averiguado"
@@ -953,7 +953,7 @@
     <conjugation
         id                    = "7"
         term                  = ""
-        radicals              = ""
+        radicals              = "actu, actú"
         inf_si                = "actuar"
         inf_co                = "haber actuado"
         pa                    = "actuado"
@@ -1086,7 +1086,7 @@
     <conjugation
         id                    = "8"
         term                  = ""
-        radicals              = ""
+        radicals              = "bail"
         inf_si                = "bailar"
         inf_co                = "haber bailado"
         pa                    = "bailado"
@@ -1219,7 +1219,7 @@
     <conjugation
         id                    = "9"
         term                  = ""
-        radicals              = ""
+        radicals              = "aisl, aísl"
         inf_si                = "aislar"
         inf_co                = "haber aislado"
         pa                    = "aislado"
@@ -1352,7 +1352,7 @@
     <conjugation
         id                    = "10"
         term                  = ""
-        radicals              = ""
+        radicals              = "caus"
         inf_si                = "causar"
         inf_co                = "haber causado"
         pa                    = "causado"
@@ -1485,7 +1485,7 @@
     <conjugation
         id                    = "11"
         term                  = ""
-        radicals              = ""
+        radicals              = "aun, aún"
         inf_si                = "aunar"
         inf_co                = "haber aunado"
         pa                    = "aunado"
@@ -1618,7 +1618,7 @@
     <conjugation
         id                    = "12"
         term                  = ""
-        radicals              = ""
+        radicals              = "pein"
         inf_si                = "peinar"
         inf_co                = "haber peinado"
         pa                    = "peinado"
@@ -1751,7 +1751,7 @@
     <conjugation
         id                    = "13"
         term                  = ""
-        radicals              = ""
+        radicals              = "descafein, descafeín"
         inf_si                = "descafeinar"
         inf_co                = "haber descafeinado"
         pa                    = "descafeinado"
@@ -1884,7 +1884,7 @@
     <conjugation
         id                    = "14"
         term                  = ""
-        radicals              = ""
+        radicals              = "adeud"
         inf_si                = "adeudar"
         inf_co                = "haber adeudado"
         pa                    = "adeudado"
@@ -2017,7 +2017,7 @@
     <conjugation
         id                    = "15"
         term                  = ""
-        radicals              = ""
+        radicals              = "rehus, rehús"
         inf_si                = "rehusar"
         inf_co                = "haber rehusado"
         pa                    = "rehusado"

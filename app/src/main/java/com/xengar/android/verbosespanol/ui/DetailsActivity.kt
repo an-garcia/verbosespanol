@@ -715,6 +715,8 @@ class DetailsActivity
         if (!c.infinitivoSimple.isEmpty() && !c.infinitivoSimple.contentEquals(verbName)) {
             // if we need, conjugate the verb model.
             conjugateVerb(c, verbName)
+
+            // TODO: Add pronomial. Like emborracharse
         }
         addPronoms(c)
     }
@@ -1361,12 +1363,42 @@ class DetailsActivity
 
         // know models
         when (id) {
-            /*
-            88 -> // cuire, cuit : all verbes,
-                // known: cuire, recuire, conduire, deduire, econduire, enduire, introduire, produire, (.)uire
-                if (modelR.contentEquals("cui")) {
-                    verbR = if (infinitive.endsWith("uire")) infinitive.replace("uire", "ui") else verbR
-                } */
+            5 -> // enviar, verbs ending -iar : aliar, amnistiar, confiar, etc.
+                if (modelR.contentEquals("enví") && infinitive.endsWith("iar")) {
+                    verbR = infinitive.substring(0, infinitive.length - 3) + "í"
+                }
+            6 -> // averiguar, verbs ending -guar, -guarse : achiguar, amortiguar, apaniguarse, etc.
+                if (modelR.contains("averigü")) {
+                    verbR = if (infinitive.endsWith("ar")) infinitive.substring(0, infinitive.length - 3) + "ü" else verbR
+                    verbR = if (infinitive.endsWith("arse")) infinitive.substring(0, infinitive.length - 5) + "ü" else verbR
+                } else if (modelR.contains("averigu")) {
+                    verbR = if (infinitive.endsWith("ar")) infinitive.substring(0, infinitive.length - 2) else verbR
+                    verbR = if (infinitive.endsWith("arse")) infinitive.substring(0, infinitive.length - 4) else verbR
+                }
+            7 -> // actuar, verbs ending -uar : acentuar, atenuar, situar, etc.
+                if (modelR.contains("actú") && infinitive.endsWith("uar")) {
+                    verbR = infinitive.substring(0, infinitive.length - 3) + "ú"
+                }
+            9 -> // aislar, verbs ending -i-ar : ahijar, airar, descafeinar, etc.
+                if (modelR.contains("aísl") && infinitive.endsWith("ar")) {
+                    val aux = infinitive.reversed().replaceFirst("i", "í").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
+            11 -> // aunar, verbs ending -u-ar : ahumar, maullar, rehusar, etc.
+                if (modelR.contains("aún") && infinitive.endsWith("ar")) {
+                    val aux = infinitive.reversed().replaceFirst("u", "ú").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
+            13 -> // descafeinar, verbs ending -i-ar : airar, desahijar, sobrehilar, etc.
+                if (modelR.contains("descafeín") && infinitive.endsWith("ar")) {
+                    val aux = infinitive.reversed().replaceFirst("i", "í").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
+            15 -> // rehusar, verbs ending -u-ar : ahumar, aunar, maullar, etc.
+                if (modelR.contains("rehús") && infinitive.endsWith("ar")) {
+                    val aux = infinitive.reversed().replaceFirst("u", "ú").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
         }
 
         return verbR
