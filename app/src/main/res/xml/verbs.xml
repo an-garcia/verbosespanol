@@ -313,7 +313,7 @@
         trpt = "viajar" />
     <verb
         id   = "21"
-        ta   = ""
+        ta   = "63"
         in   = "buscar"
         s1   = "¿Qué os parece? Si un hombre tiene cien ovejas, y se descarría una de ellas, ¿no deja las noventa y nueve y va por los montes a buscar la que se había descarriado?"
         s2   = "Tenía un hombre una higuera plantada en su viña, y vino a buscar fruto en ella, y no lo halló."
@@ -708,7 +708,7 @@
         trpt = "usar" />
     <verb
         id   = "49"
-        ta   = ""
+        ta   = "63"
         in   = "comunicarse"
         s1   = ""
         s2   = ""
@@ -767,7 +767,7 @@
         trpt = "despertar" />
     <verb
         id   = "53"
-        ta   = ""
+        ta   = "63"
         in   = "sacar"
         s1   = ""
         s2   = ""
@@ -935,7 +935,7 @@
         trpt = "limpar" />
     <verb
         id   = "65"
-        ta   = ""
+        ta   = "63"
         in   = "practicar"
         s1   = ""
         s2   = ""
@@ -1047,7 +1047,7 @@
         trpt = "enviar" />
     <verb
         id   = "73"
-        ta   = ""
+        ta   = "63"
         in   = "atacar"
         s1   = ""
         s2   = ""
@@ -1369,7 +1369,7 @@
         trpt = "molhar" />
     <verb
         id   = "96"
-        ta   = ""
+        ta   = "63"
         in   = "secar"
         s1   = ""
         s2   = ""

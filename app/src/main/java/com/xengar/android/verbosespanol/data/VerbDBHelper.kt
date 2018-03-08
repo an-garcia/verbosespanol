@@ -189,11 +189,11 @@ class VerbDBHelper
         private val DATABASE_VERSION = 1
 
         // List of pre-loaded favorite verbs.
-        private val favorites = arrayOf(arrayOf("1"), // être
-                arrayOf("2"), // avoir
-                arrayOf("3"), // faire
-                arrayOf("4"), // dire
-                arrayOf("5")  // pouvoir
+        private val favorites = arrayOf(arrayOf("1"), // ser
+                arrayOf("2"), // estar
+                arrayOf("3"), // decir
+                arrayOf("4"), // venir
+                arrayOf("5")  // ir
         )
 
         /**

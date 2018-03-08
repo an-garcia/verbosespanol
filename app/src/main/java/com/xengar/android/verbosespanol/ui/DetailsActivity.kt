@@ -1558,6 +1558,10 @@ class DetailsActivity
                 if (model.contains("ya")) {
                     rad = rad.reversed().replaceFirst("c", "").reversed()
                 }
+            63 -> // sacar, verbs ending -car : abanicar, acurrucarse, alambicar, churruscar, etc.
+                if (model.contains("saqu")) {
+                    rad = rad.reversed().replaceFirst("c", "uq").reversed()
+                }
         }
 
         return rad
