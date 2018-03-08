@@ -1085,6 +1085,17 @@ class DetailsActivity
             R.id.play_sample2 -> ActivityUtils.speak(applicationContext, tts, verb?.sample2)
             R.id.play_sample3 -> ActivityUtils.speak(applicationContext, tts, verb?.sample3)
 
+            R.id.infinitivo_simple ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.infinitivoSimple)
+            R.id.infinitivo_compuesto ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.infinitivoCompuesto)
+            R.id.participio ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.participio)
+            R.id.gerundio_simple ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.gerundioSimple)
+            R.id.gerundio_compuesto ->
+                ActivityUtils.speak(applicationContext, tts, conjugation?.gerundioCompuesto)
+
             R.id.imperativo_presente_tu ->
                 ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoTu)
             R.id.imperativo_presente_el ->
@@ -1105,7 +1116,7 @@ class DetailsActivity
             R.id.imperativo_negativo_vosotros ->
                 ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoNegV)
             R.id.imperativo_negativo_ellos ->
-                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoEll)
+                ActivityUtils.speak(applicationContext, tts, conjugation?.imperativoNegEll)
 
             R.id.play_indicativo_presente_yo ->
                 ActivityUtils.speak(applicationContext, tts, conjugation?.indicativoPresenteYo)
