@@ -2152,7 +2152,7 @@
     <conjugation
         id                    = "16"
         term                  = ""
-        radicals              = ""
+        radicals              = "acert, aciert"
         inf_si                = "acertar"
         inf_co                = "haber acertado"
         pa                    = "acertado"
@@ -2285,7 +2285,7 @@
     <conjugation
         id                    = "17"
         term                  = ""
-        radicals              = ""
+        radicals              = "adquir, adquier"
         inf_si                = "adquirir"
         inf_co                = "haber adquirido"
         pa                    = "adquirido"
@@ -2418,7 +2418,7 @@
     <conjugation
         id                    = "18"
         term                  = ""
-        radicals              = ""
+        radicals              = "agradec, agradezc"
         inf_si                = "agradecer"
         inf_co                = "haber agradecido"
         pa                    = "agradecido"
@@ -2551,7 +2551,7 @@
     <conjugation
         id                    = "19"
         term                  = ""
-        radicals              = ""
+        radicals              = "and"
         inf_si                = "andar"
         inf_co                = "haber andado"
         pa                    = "andado"
@@ -2684,7 +2684,7 @@
     <conjugation
         id                    = "20"
         term                  = ""
-        radicals              = "as"
+        radicals              = "as, asg"
         inf_si                = "asir"
         inf_co                = "haber asido"
         pa                    = "asido"

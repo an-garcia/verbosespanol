@@ -1399,6 +1399,26 @@ class DetailsActivity
                     val aux = infinitive.reversed().replaceFirst("u", "ú").reversed()
                     verbR = aux.substring(0, aux.length - 2)
                 }
+            16 -> // acertar, verbs ending -e-ar : acrecentar, arrendar, merendar, etc.
+                if (modelR.contains("aciert") && infinitive.endsWith("ar")) {
+                    val aux = infinitive.reversed().replaceFirst("e", "ei").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
+            17 -> // adquirir, verbs ending -i-ir : no know
+                if (modelR.contains("adquier") && infinitive.endsWith("ir")) {
+                    val aux = infinitive.reversed().replaceFirst("i", "ei").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
+            18 -> // agradecer, verbs ending -cer : abastecer, conocer, enriquecer, etc.
+                if (modelR.contains("agradezc") && infinitive.endsWith("er")) {
+                    val aux = infinitive.reversed().replaceFirst("c", "cz").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
+            20 -> // asir, verbs ending -ir : desasir, etc.
+                if (modelR.contains("asg") && infinitive.endsWith("ir")) {
+                    val aux = infinitive.reversed().replaceFirst("s", "gs").reversed()
+                    verbR = aux.substring(0, aux.length - 2)
+                }
         }
 
         return verbR
